@@ -1,25 +1,32 @@
-import { NavigationContainer } from '@react-navigation/native';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { NavigationContainer, DefaultTheme } from '@react-navigation/native';
+import { BottomTabBar, createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons'
 
 //Screens
 import HomeScreen from './screens/HomeScreen';
 import MapScreen from './screens/MapScreen';
 import MarkerScreen from './screens/MarkerScreen';
+import TestMarker from './screens/TestMarker';
 
 // Screen names
 
 const HomeName = 'Home';
 const MapName= 'Map';
-const MarkerName= 'Marker';
+const MarkerName= 'Markers';
+const TestMarkerName = 'TestMarker';
 
 const Tab = createBottomTabNavigator();
 //initialRouteName specifies which screen will appear first
 //route is where we're going 
 
+const MyTheme = {
+    ... DefaultTheme,
+    backgroundColor: "blue"
+}
+
 export default function mainContainer(){
     return(
-        <NavigationContainer>
+        <NavigationContainer theme={MyTheme}>
             <Tab.Navigator initialRouteName={HomeName}
             screenOptions={({route}) => ({
                 tabBarIcon: ({focused, color, size}) => {
@@ -34,19 +41,30 @@ export default function mainContainer(){
                     else if (rn === MarkerName){
                         iconName=focused ? 'apps' : 'apps-outline'
                     }
+                    else if (rn === TestMarkerName){
+                        iconName=focused ? 'apps' : 'apps-outline'
+                    }
+                    size = 30
                     return <Ionicons name={iconName} size={size} color={color}/>
                 },
+                
+                headerStyle: {backgroundColor:"#90C6CA"},
+                tabBarStyle: {backgroundColor: "#90C6CA", padding: 10, height: 90},
+                tabBarLabelStyle: {fontSize: 12}
+                // tabBarInactiveBackgroundColor: "#90C6CA",
+                // tabBarActiveBackgroundColor: "#90C6CA"
             })}
             tabBarOptions={{
-                activeTintColor: '#588D98',
-                inactiveTintColor: 'grey',
-                backgroundColor: 'red',
+                activeTintColor: 'white',
+                inactiveTintColor: '#efe4be',
+                backgroundColor: 'red'
             }}
             >
 
             <Tab.Screen name={HomeName} component= {HomeScreen}/>
             <Tab.Screen name={MapName} component= {MapScreen}/>
             <Tab.Screen name={MarkerName} component= {MarkerScreen}/>
+            <Tab.Screen name={TestMarkerName} component= {TestMarker}/>
 
 
             </Tab.Navigator>
