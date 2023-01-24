@@ -5451,6 +5451,11 @@
   "resolved" "https://registry.npmjs.org/react-is/-/react-is-17.0.2.tgz"
   "version" "17.0.2"
 
+"react-native-animated-dots@^0.0.4":
+  "integrity" "sha512-o++NAUqy5V5vE9a+YpT0G4TedDb32WC3GUW2h0c/tqBxpLzCjD6TgtQ1unmuSWOVX0rlXq2i0MAwdPgPlAp03w=="
+  "resolved" "https://registry.npmjs.org/react-native-animated-dots/-/react-native-animated-dots-0.0.4.tgz"
+  "version" "0.0.4"
+
 "react-native-codegen@^0.69.2":
   "integrity" "sha512-yPcgMHD4mqLbckqnWjFBaxomDnBREfRjDi2G/WxNyPBQLD+PXUEmZTkDx6QoOXN+Bl2SkpnNOSsLE2+/RUHoPw=="
   "resolved" "https://registry.npmjs.org/react-native-codegen/-/react-native-codegen-0.69.2.tgz"
