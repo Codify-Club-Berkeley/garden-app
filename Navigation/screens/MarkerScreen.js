@@ -73,7 +73,7 @@ export default function MarkerScreen ({navigation}) {
               
                 return <View style={styles.item} 
                 onStartShouldSetResponder ={() => true}
-                onResponderRelease={() => navigation.navigate('TestMarker')}>
+                onResponderRelease={() => navigation.navigate('Home')}>
                     <Image
                         source= {{uri: item.imge}}
                         style={styles.imge}
