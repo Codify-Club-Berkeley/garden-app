@@ -5451,10 +5451,22 @@ react-is@^17.0.1:
   resolved "https://registry.npmjs.org/react-is/-/react-is-17.0.2.tgz"
   integrity sha512-w2GsyukL62IJnlaff/nRegPQR94C/XXamvMWmSHRJ4y7Ts/4ocGRmTHvOs8PSE6pB3dWOrD/nueuU5sduBsQ4w==
 
+<<<<<<< HEAD
 react-native-codegen@^0.69.2:
   version "0.69.2"
   resolved "https://registry.npmjs.org/react-native-codegen/-/react-native-codegen-0.69.2.tgz"
   integrity sha512-yPcgMHD4mqLbckqnWjFBaxomDnBREfRjDi2G/WxNyPBQLD+PXUEmZTkDx6QoOXN+Bl2SkpnNOSsLE2+/RUHoPw==
+=======
+"react-native-animated-dots@^0.0.4":
+  "integrity" "sha512-o++NAUqy5V5vE9a+YpT0G4TedDb32WC3GUW2h0c/tqBxpLzCjD6TgtQ1unmuSWOVX0rlXq2i0MAwdPgPlAp03w=="
+  "resolved" "https://registry.npmjs.org/react-native-animated-dots/-/react-native-animated-dots-0.0.4.tgz"
+  "version" "0.0.4"
+
+"react-native-codegen@^0.69.2":
+  "integrity" "sha512-yPcgMHD4mqLbckqnWjFBaxomDnBREfRjDi2G/WxNyPBQLD+PXUEmZTkDx6QoOXN+Bl2SkpnNOSsLE2+/RUHoPw=="
+  "resolved" "https://registry.npmjs.org/react-native-codegen/-/react-native-codegen-0.69.2.tgz"
+  "version" "0.69.2"
+>>>>>>> 1975e291e63cc7dd6827f44ec4041e017a7869e4
   dependencies:
     "@babel/parser" "^7.14.0"
     flow-parser "^0.121.0"
