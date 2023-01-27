@@ -1,6 +1,8 @@
+import { NavigationContainer } from '@react-navigation/native';
 import * as React from 'react';
-import { StatusBar, FlatList, Image, Animated, Text, View, Dimensions, StyleSheet, TouchableOpacity, Easing, SafeAreaViewBase, SafeAreaView , TouchableHighlight} from 'react-native';
+import { StatusBar, FlatList, Image, Animated, Text, View, Dimensions, StyleSheet, createStackNavigator, createAppContainer, TouchableOpacity, Easing, SafeAreaViewBase, SafeAreaView , TouchableHighlight} from 'react-native';
 const { width, height } = Dimensions.get('screen');
+
 
 //TODO: create more markers (make sure the photo and text correspond), make box highlight upon click
 // Inspiration: https://dribbble.com/shots/14154226-Rolodex-Scrolling-Animation/attachments/5780833?mode=media
@@ -11,40 +13,142 @@ const DATA = [
         id: "1",
         title: "Marker 1 (Test)",
         plant: 'Valley Oak Tree',
-        imge: "https://drive.google.com/drive/folders/1VgdO-ugHeXzY3M5lJIciYK5Sma_-O6Zi"
+        imge: require('../images/Marker_1_1.jpg'),
+        whereTo: 'Marker1'
     },
     {
         id: "2",
         title: "Marker 2",
         plant: 'Yucca',
-        imge: "https://www.bhg.com/thmb/EYnd02FlY3OEOTeiQ7gq8npIjtI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/100032070.jpg.rendition.largest-62b5190b7d514854b41520e361650138.jpg"
+        imge: require('../images/Marker_1_2.jpg'),
+        whereTo: 'Marker2'
     },
     {
         id: "3",
         title: "Marker 3",
         plant: "Jubaea chilensis",
-        imge: "https://www.bhg.com/thmb/EYnd02FlY3OEOTeiQ7gq8npIjtI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/100032070.jpg.rendition.largest-62b5190b7d514854b41520e361650138.jpg"
+        imge: require('../images/Marker_3_1.jpg')
     
     },
     {
         id: "4",
         title: "Marker 4",
         plant: "Aloes",
-        imge: "https://www.bhg.com/thmb/EYnd02FlY3OEOTeiQ7gq8npIjtI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/100032070.jpg.rendition.largest-62b5190b7d514854b41520e361650138.jpg"
+        imge: require('../images/Marker_4_1.jpg')
     },
     {
         id: "5",
         title: "Marker 5",
         plant: "California Natives",
-        imge: "https://www.bhg.com/thmb/EYnd02FlY3OEOTeiQ7gq8npIjtI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/100032070.jpg.rendition.largest-62b5190b7d514854b41520e361650138.jpg"
+        imge: require('../images/Marker_5_1.jpg')
     },
     {
         id: "6",
         title: "Marker 6",
         plant: "Torrey and Hellskloof",
-        imge: "https://www.bhg.com/thmb/EYnd02FlY3OEOTeiQ7gq8npIjtI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/100032070.jpg.rendition.largest-62b5190b7d514854b41520e361650138.jpg"
+        imge: require('../images/Marker_6_1.jpg')
+    },
+    {
+      id: "7",
+      title: "Marker 7",
+      plant: "Manzanita and Melaleuca",
+      imge: require('../images/Marker_7_1.jpg')
+    },
+    {
+      id: "8",
+      title: "Marker 8",
+      plant: "Xanthorrhoea preissii",
+      imge: require('../images/Marker_8_1.jpg')
+    },
+    {
+      id: "9",
+      title: "Marker 9",
+      plant: "Dasylirion longissimum",
+      imge: require('../images/Marker_9_1.jpg')
+    },
+    {
+      id: "10",
+      title: "Marker 10",
+      plant: "Gasteria",
+      imge: require('../images/Marker_10_1.jpg')
+    },
+    {
+      id: "11",
+      title: "Marker 11",
+      plant: "Eucalyptus kitsoniana",
+      imge: require('../images/Marker_11_1.jpg')
+    },
+    {
+      id: "12",
+      title: "Marker 12",
+      plant: "Euphorbia rigida",
+      imge: require('../images/Marker_12_1.jpg')
+    },
+    {
+      id: "13",
+      title: "Marker 13",
+      plant: "Dykia, Mangave",
+      imge: require('../images/Marker_13_1.jpg')
+    },
+    {
+      id: "14",
+      title: "Marker 14",
+      plant: "Brahea, Euphorbia",
+      imge: require('../images/Marker_14_1.jpg')
+    },
+    {
+      id: "15",
+      title: "Marker 15",
+      imge: require('../images/Marker_15-_1.jpg')
+    },
+    {
+      id: "16",
+      title: "Marker 16",
+      imge: require('../images/Marker_16-_1.jpg')
+    },
+    {
+      id: "17",
+      title: "Marker 17",
+      imge: require('../images/Marker_17_2.jpg')
+    },
+    {
+      id: "18",
+      title: "Marker 18",
+      imge: require('../images/Marker_18_1.jpg')
+    },
+    {
+      id: "19",
+      title: "Marker 19",
+      imge: require('../images/Marker_19_1.jpg')
+    },
+    {
+      id: "20",
+      title: "Marker 20",
+      imge: require('../images/Marker_20_1.jpg')
+    },
+    {
+      id: "21",
+      title: "Marker 21",
+      imge: require('../images/Marker_21_1.jpg')
+    },
+    {
+      id: "22",
+      title: "Marker 22",
+      imge: require('../images/Marker_22_1.jpg')
+    },
+    {
+      id: "23",
+      title: "Marker 23",
+      imge: require('../images/Marker_23_1.jpg')
+    },
+    {
+      id: "24",
+      title: "Marker 24",
+      imge: require('../images/Marker_24_1.jpg')
     },
 ]
+
+
 //background image that's blurred later on
 const BG_IMG = 'https://cdn.pixabay.com/photo/2013/07/02/22/20/bouquet-142876__340.jpg'
 
@@ -56,11 +160,12 @@ export default function MarkerScreen ({navigation}) {
       return (
         //first <Image> is the markerscreen's background
         //second is the display of the plant image from DATA along with the title and plant 
+        //onResponderRelease={() => navigation.navigate('Marker1')}>
         <SafeAreaView style={styles.container}>
           <Image 
-            source= {{uri: BG_IMG}}
+            source={{uri: BG_IMG}}
             style={StyleSheet.absoluteFillObject}
-            blurRadius={50}
+            blurRadius={25}
             >
           </Image>
           <FlatList
@@ -73,9 +178,9 @@ export default function MarkerScreen ({navigation}) {
               
                 return <View style={styles.item} 
                 onStartShouldSetResponder ={() => true}
-                onResponderRelease={() => navigation.navigate('TestMarker')}>
+                onResponderRelease={() => navigation.navigate(item.whereTo)}> 
                     <Image
-                        source= {{uri: item.imge}}
+                        source= {item.imge}
                         style={styles.imge}
                         />
 
@@ -89,9 +194,7 @@ export default function MarkerScreen ({navigation}) {
         </SafeAreaView>
       );
     }
-    
-
-
+   
 
     //styling of various parts of each component
 
