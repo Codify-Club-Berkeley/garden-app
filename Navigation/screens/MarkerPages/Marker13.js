@@ -3,8 +3,10 @@ import { View, Text, Image, FlatList, StyleSheet} from 'react-native';
 import Marker from '../../../assets/Marker';
 
 const images = [
-    require('../../images/Marker_2_1.jpg'),
-    require('../../images/Marker_2_2.jpg')
+    require('../../images/Marker_13_1.jpg'),
+    require('../../images/Marker_13_2.jpg'),
+    require('../../images/Marker_13_3.jpg'),
+    require('../../images/Marker_13_4.jpg')
 ]
 const text = 
     <Text style={{ padding: 20, paddingBottom: 37, fontFamily: "Times New Roman", fontSize: '20' }}>   

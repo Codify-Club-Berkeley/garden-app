@@ -8,9 +8,13 @@ const images = [
 ]
 const text = 
     <Text style={{ padding: 20, paddingBottom: 37, fontFamily: "Times New Roman", fontSize: '20' }}>   
-        This majestic Valley Oak (Quercus lobata) is one of the few plants Ruth Bancroft did not plant in the Garden. At 250 years old, it is a reminder that this landscape was once oak woodland until early 1900 when orchards came to dominate.
+        This 250-year-old Valley Oak (Quercus lobata) is a reminder that this landscape was once oak woodland, the land of the Bay Miwoks.
         {"\n"} {"\n"}
-        In front of the oak, the enormous, powdery blue-gray Agave franzosinni is something Ruth did plant. Agaves were one of Ruth’s favorite plants and you can see their rosette form in various shapes and sizes throughout the Garden.   
+        In front of the oak is the enormous Agave franzosinni. Agaves are distinguished by their rosettes of tough leaves, often with a spiny margin terminating in a sharp point. 
+        {"\n"} {"\n"}
+        Look for Agaves in various shapes and sizes throughout the Garden. 
+        {"\n"} {"\n"}
+
     </Text>
 
 export default function MarkerScreen({ navigation }) {
