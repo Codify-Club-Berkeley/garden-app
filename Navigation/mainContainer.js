@@ -7,13 +7,15 @@ import HomeScreen from './screens/HomeScreen';
 import MapScreen from './screens/MapScreen';
 import MarkerScreen from './screens/MarkerScreen';
 import TestMarker from './screens/MarkerPages/Marker1';
+import Marker2 from './screens/MarkerPages/Marker2';
 
 // Screen names
 
 const HomeName = 'Home';
 const MapName= 'Map';
 const MarkerName= 'Markers';
-const TestMarkerName = 'TestMarker';
+const TestMarkerName = 'Marker1';
+const Marker2Name = 'Marker2';
 
 const Tab = createBottomTabNavigator();
 //initialRouteName specifies which screen will appear first
@@ -65,10 +67,10 @@ export default function mainContainer(){
             <Tab.Screen name={MapName} component= {MapScreen}/>
             <Tab.Screen name={MarkerName} component= {MarkerScreen}/>
             <Tab.Screen name={TestMarkerName} component= {TestMarker}/>
-
-
+            <Tab.Screen name={Marker2Name} component= {Marker2}/>
             </Tab.Navigator>
             
         </NavigationContainer>
     );
+
 }

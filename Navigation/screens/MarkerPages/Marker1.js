@@ -8,9 +8,9 @@ const images = [
 ]
 const text = 
     <Text style={{ padding: 20, paddingBottom: 37, fontFamily: "Times New Roman", fontSize: '20' }}>   
-        This 250-year-old Valley Oak (Quercus lobata) is a reminder that this landscape was once oak woodland, the land of the Bay Miwoks.
+        This <Text style={{fontWeight: "bold"}}>250-year-old Valley Oak <Text style={{fontStyle: "italic"}}>(Quercus lobata)</Text></Text> is a reminder that <Text style={{fontWeight: "bold"}}>this landscape was once oak woodland, the land of the Bay Miwoks.</Text>
         {"\n"} {"\n"}
-        In front of the oak is the enormous Agave franzosinni. Agaves are distinguished by their rosettes of tough leaves, often with a spiny margin terminating in a sharp point. 
+        In front of the oak is the enormous <Text style={{fontWeight: "bold", fontStyle: "italic"}}>Agave franzosinni</Text>. Agaves are distinguished by their rosettes of tough leaves, often with a spiny margin terminating in a sharp point. 
         {"\n"} {"\n"}
         Look for Agaves in various shapes and sizes throughout the Garden. 
         {"\n"} {"\n"}
