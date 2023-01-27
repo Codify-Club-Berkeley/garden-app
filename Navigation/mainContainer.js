@@ -46,6 +46,9 @@ export default function mainContainer(){
                     else if (rn === TestMarkerName){
                         iconName=focused ? 'apps' : 'apps-outline'
                     }
+                    else if (rn === Marker2Name){
+                        iconName=focused ? 'apps' : 'apps-outline'
+                    }
                     size = 30
                     return <Ionicons name={iconName} size={size} color={color}/>
                 },
