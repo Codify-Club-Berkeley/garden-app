@@ -15,7 +15,7 @@ const HomeName = 'Home';
 const MapName= 'Map';
 const MarkerName= 'Markers';
 const TestMarkerName = 'Marker1';
-const Marker2Name = 'Marker2';
+const Marker2Name = 'Marker2';   
 
 const Tab = createBottomTabNavigator();
 //initialRouteName specifies which screen will appear first

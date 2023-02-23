@@ -1,17 +1,18 @@
 import * as React from 'react';
 import { View, Text, Image, FlatList, StyleSheet} from 'react-native';
-import Marker from '../../../assets/Marker';
+import Marker from '../Marker';
 
 const images = [
     require('../../images/Marker_2_1.jpg'),
     require('../../images/Marker_2_2.jpg')
 ]
+
 const text = 
-    <Text style={{ padding: 20, paddingBottom: 37, fontFamily: "Times New Roman", fontSize: '20' }}>   
-        This majestic Oak (Quercus lobata) is one of the few plants Ruth Bancroft did not plant in the Garden. At 250 years old, it is a reminder that this landscape was once oak woodland until early 1900 when orchards came to dominate.
-        {"\n"} {"\n"}
-        In front of the oak, the enormous, powdery blue-gray Agave franzosinni is something Ruth did plant. Agaves were one of Ruth’s favorite plants and you can see their rosette form in various shapes and sizes throughout the Garden.   
-    </Text>
+<Text style={{ padding: 20, fontFamily: "Times New Roman", fontSize: '20' }}>
+  These <Text style={{fontWeight: 'bold'}}>yucca species</Text> look a lot like palms, but they are from a completely different plant family. {'\n\n'}
+  Yuccas have a <Text style={{fontWeight: 'bold'}}>mutual relationship with the yucca moth</Text> (<Text style={{fontStyle: "italic"}}>Tegeticula</Text> sp.) which is the only insect that pollinates them, and not present in Walnut Creek.
+</Text>
+
 
 export default function MarkerScreen({ navigation }) {
     return (
