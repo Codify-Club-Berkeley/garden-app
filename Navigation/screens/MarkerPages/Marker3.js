@@ -15,6 +15,6 @@ const text =
 
 export default function MarkerScreen({ navigation }) {
     return (
-        <Marker images={images} num={1} text={text}></Marker>
+        <Marker images={images} num={3} text={text}></Marker>
     );
 }
