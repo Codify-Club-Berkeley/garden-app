@@ -1,4 +1,3 @@
-import { NavigationContainer } from '@react-navigation/native';
 import * as React from 'react';
 import { StatusBar, FlatList, Image, Animated, Text, View, Dimensions, StyleSheet, createStackNavigator, createAppContainer, TouchableOpacity, Easing, SafeAreaViewBase, SafeAreaView , TouchableHighlight} from 'react-native';
 const { width, height } = Dimensions.get('screen');
@@ -11,140 +10,140 @@ const { width, height } = Dimensions.get('screen');
 const DATA = [
     {
         id: "1",
-        title: "Marker 1 (Test)",
+        title: "Marker 1",
         plant: 'Valley Oak Tree',
-        imge: require('../images/Marker_1_1.jpg'),
+        imge: require('../images/thumbnail_images/M1.jpg'),
         whereTo: 'Marker1'
     },
     {
         id: "2",
         title: "Marker 2",
         plant: 'Yucca',
-        imge: require('../images/Marker_1_2.jpg'),
+        imge: require('../images/thumbnail_images/M2.jpg'),
         whereTo: 'Marker2'
     },
     {
         id: "3",
         title: "Marker 3",
         plant: "Jubaea chilensis",
-        imge: require('../images/Marker_3_1.jpg')
+        imge: require('../images/thumbnail_images/M3.jpg')
     
     },
     {
         id: "4",
         title: "Marker 4",
         plant: "Aloes",
-        imge: require('../images/Marker_4_1.jpg')
+        imge: require('../images/thumbnail_images/M4.jpg')
     },
     {
         id: "5",
         title: "Marker 5",
         plant: "California Natives",
-        imge: require('../images/Marker_5_1.jpg')
+        imge: require('../images/thumbnail_images/M5.jpg')
     },
     {
         id: "6",
         title: "Marker 6",
         plant: "Torrey and Hellskloof",
-        imge: require('../images/Marker_6_1.jpg')
+        imge: require('../images/thumbnail_images/M6.jpg')
     },
     {
       id: "7",
       title: "Marker 7",
       plant: "Manzanita and Melaleuca",
-      imge: require('../images/Marker_7_1.jpg')
+      imge: require('../images/thumbnail_images/M7.jpg')
     },
     {
       id: "8",
       title: "Marker 8",
       plant: "Xanthorrhoea preissii",
-      imge: require('../images/Marker_8_1.jpg')
+      imge: require('../images/thumbnail_images/M8.jpg')
     },
     {
       id: "9",
       title: "Marker 9",
       plant: "Dasylirion longissimum",
-      imge: require('../images/Marker_9_1.jpg')
+      imge: require('../images/thumbnail_images/M9.jpg')
     },
     {
       id: "10",
       title: "Marker 10",
       plant: "Gasteria",
-      imge: require('../images/Marker_10_1.jpg')
+      imge: require('../images/thumbnail_images/M10.jpg')
     },
     {
       id: "11",
       title: "Marker 11",
       plant: "Eucalyptus kitsoniana",
-      imge: require('../images/Marker_11_1.jpg')
+      imge: require('../images/thumbnail_images/M11.jpg')
     },
     {
       id: "12",
       title: "Marker 12",
       plant: "Euphorbia rigida",
-      imge: require('../images/Marker_12_1.jpg')
+      imge: require('../images/thumbnail_images/M12.jpg')
     },
     {
       id: "13",
       title: "Marker 13",
       plant: "Dykia, Mangave",
-      imge: require('../images/Marker_13_1.jpg')
+      imge: require('../images/thumbnail_images/M13.jpg')
     },
     {
       id: "14",
       title: "Marker 14",
       plant: "Brahea, Euphorbia",
-      imge: require('../images/Marker_14_1.jpg')
+      imge: require('../images/thumbnail_images/M14.jpg')
     },
     {
       id: "15",
       title: "Marker 15",
-      imge: require('../images/Marker_15-_1.jpg')
+      imge: require('../images/thumbnail_images/M15.jpg')
     },
     {
       id: "16",
       title: "Marker 16",
-      imge: require('../images/Marker_16-_1.jpg')
+      imge: require('../images/thumbnail_images/M16.jpg')
     },
     {
       id: "17",
       title: "Marker 17",
-      imge: require('../images/Marker_17_2.jpg')
+      imge: require('../images/thumbnail_images/M17.jpg')
     },
     {
       id: "18",
       title: "Marker 18",
-      imge: require('../images/Marker_18_1.jpg')
+      imge: require('../images/thumbnail_images/M18.jpg')
     },
     {
       id: "19",
       title: "Marker 19",
-      imge: require('../images/Marker_19_1.jpg')
+      imge: require('../images/thumbnail_images/M19.jpg')
     },
     {
       id: "20",
       title: "Marker 20",
-      imge: require('../images/Marker_20_1.jpg')
+      imge: require('../images/thumbnail_images/M20.jpg')
     },
     {
       id: "21",
       title: "Marker 21",
-      imge: require('../images/Marker_21_1.jpg')
+      imge: require('../images/thumbnail_images/M21.jpg')
     },
     {
       id: "22",
       title: "Marker 22",
-      imge: require('../images/Marker_22_1.jpg')
+      imge: require('../images/thumbnail_images/M22.jpg')
     },
     {
       id: "23",
       title: "Marker 23",
-      imge: require('../images/Marker_23_1.jpg')
+      imge: require('../images/thumbnail_images/M23.jpg')
     },
     {
       id: "24",
       title: "Marker 24",
-      imge: require('../images/Marker_24_1.jpg')
+      imge: require('../images/thumbnail_images/M24.jpg')
     },
 ]
 
