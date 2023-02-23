@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { StatusBar, FlatList, Image, Animated, Text, View, Dimensions, StyleSheet, createStackNavigator, createAppContainer, TouchableOpacity, Easing, SafeAreaViewBase, SafeAreaView , TouchableHighlight} from 'react-native';
+import { StatusBar, FlatList, Image, Text, View, Dimensions, StyleSheet, SafeAreaView} from 'react-native';
 const { width, height } = Dimensions.get('screen');
 
 
@@ -11,14 +11,14 @@ const DATA = [
     {
         id: "1",
         title: "Marker 1",
-        plant: 'Valley Oak Tree',
+        plant: 'Quercus lobata',
         imge: require('../images/thumbnail_images/M1.jpg'),
-        whereTo: 'Marker1'
+        whereTo: 'Home'
     },
     {
         id: "2",
         title: "Marker 2",
-        plant: 'Yucca',
+        plant: 'Variety of Yucca',
         imge: require('../images/thumbnail_images/M2.jpg'),
         whereTo: 'Marker2'
     },
@@ -26,37 +26,38 @@ const DATA = [
         id: "3",
         title: "Marker 3",
         plant: "Jubaea chilensis",
-        imge: require('../images/thumbnail_images/M3.jpg')
+        imge: require('../images/thumbnail_images/M3.jpg'),
+        whereTo: 'Home'
     
     },
     {
         id: "4",
         title: "Marker 4",
-        plant: "Aloes",
+        plant: "Aloe ferox",
         imge: require('../images/thumbnail_images/M4.jpg')
     },
     {
         id: "5",
         title: "Marker 5",
-        plant: "California Natives",
+        plant: "Agave shawii",
         imge: require('../images/thumbnail_images/M5.jpg')
     },
     {
         id: "6",
         title: "Marker 6",
-        plant: "Torrey and Hellskloof",
+        plant: "Pinus torreyana",
         imge: require('../images/thumbnail_images/M6.jpg')
     },
     {
       id: "7",
       title: "Marker 7",
-      plant: "Manzanita and Melaleuca",
+      plant: "Arcostaphylos Ruth Bancroft Check",
       imge: require('../images/thumbnail_images/M7.jpg')
     },
     {
       id: "8",
       title: "Marker 8",
-      plant: "Xanthorrhoea preissii",
+      plant: "Xanthorrhoea preisii",
       imge: require('../images/thumbnail_images/M8.jpg')
     },
     {
@@ -68,13 +69,13 @@ const DATA = [
     {
       id: "10",
       title: "Marker 10",
-      plant: "Gasteria",
+      plant: "Gasteria bicolor",
       imge: require('../images/thumbnail_images/M10.jpg')
     },
     {
       id: "11",
       title: "Marker 11",
-      plant: "Eucalyptus kitsoniana",
+      plant: "Aloe speciosa",
       imge: require('../images/thumbnail_images/M11.jpg')
     },
     {
@@ -86,69 +87,79 @@ const DATA = [
     {
       id: "13",
       title: "Marker 13",
-      plant: "Dykia, Mangave",
+      plant: "Dykia encholiriodes",
       imge: require('../images/thumbnail_images/M13.jpg')
     },
     {
       id: "14",
       title: "Marker 14",
-      plant: "Brahea, Euphorbia",
+      plant: "Brahea armata",
       imge: require('../images/thumbnail_images/M14.jpg')
     },
     {
       id: "15",
       title: "Marker 15",
+      plant: "Filling the Pond Ruth and Philip Bancroft",
       imge: require('../images/thumbnail_images/M15.jpg')
     },
     {
       id: "16",
       title: "Marker 16",
+      plant: "Aloe striata x reynoldsii Option 2",
       imge: require('../images/thumbnail_images/M16.jpg')
     },
     {
       id: "17",
       title: "Marker 17",
+      plant: "Agave victoria-reginae",
       imge: require('../images/thumbnail_images/M17.jpg')
     },
     {
       id: "18",
       title: "Marker 18",
+      plant: "Opunita leucotricha",
       imge: require('../images/thumbnail_images/M18.jpg')
     },
     {
       id: "19",
       title: "Marker 19",
+      plant: "Chilopsis linearis",
       imge: require('../images/thumbnail_images/M19.jpg')
     },
     {
       id: "20",
       title: "Marker 20",
+      plant: "Cereus species",
       imge: require('../images/thumbnail_images/M20.jpg')
     },
     {
       id: "21",
       title: "Marker 21",
+      plant: "Ceiba speciosa",
       imge: require('../images/thumbnail_images/M21.jpg')
     },
     {
       id: "22",
       title: "Marker 22",
+      plant: "Aeonium canariense",
       imge: require('../images/thumbnail_images/M22.jpg')
     },
     {
       id: "23",
       title: "Marker 23",
+      plant: "Agave mitis",
       imge: require('../images/thumbnail_images/M23.jpg')
     },
     {
       id: "24",
       title: "Marker 24",
+      plant: "Encephalartos horridus",
       imge: require('../images/thumbnail_images/M24.jpg')
     },
 ]
 
 
-//background image that's blurred later on
+//background image that's blurred later on                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
 const BG_IMG = 'https://cdn.pixabay.com/photo/2013/07/02/22/20/bouquet-142876__340.jpg'
 
 const SPACING = 20;
