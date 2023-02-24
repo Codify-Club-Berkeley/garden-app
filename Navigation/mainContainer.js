@@ -6,7 +6,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import HomeScreen from './screens/HomeScreen';
 import MapScreen from './screens/MapScreen';
 import MarkerScreen from './screens/MarkerScreen';
-import TestMarker from './screens/MarkerPages/Marker3';
+import TestMarker from './screens/MarkerPages/Marker1';
 import Marker2 from './screens/MarkerPages/Marker2';
 
 // Screen names
@@ -48,7 +48,7 @@ export default function mainContainer(){
                     }
                     else if (rn === Marker2Name){
                         iconName=focused ? 'apps' : 'apps-outline'
-                }
+                    }
                     size = 30
                     return <Ionicons name={iconName} size={size} color={color}/>
                 },

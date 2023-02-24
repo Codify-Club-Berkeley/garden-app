@@ -9,9 +9,11 @@ const images = [
 ]
 const text = 
     <Text style={{ padding: 20, paddingBottom: 37, fontFamily: "Times New Roman", fontSize: '20' }}>   
-        This majestic Valley Oak (Quercus lobata) is one of the few plants Ruth Bancroft did not plant in the Garden. At 250 years old, it is a reminder that this landscape was once oak woodland until early 1900 when orchards came to dominate.
+        The path here is constricted by two interesting plants. On the right is the native, 
+        <Text style={{fontWeight: "bold"}}>red-barked manzanita (<Text style={{fontWeight: "italics"}}>Arctostaphylos</Text> ‘Ruth Bancroft’).</Text>
         {"\n"} {"\n"}
-        In front of the oak, the enormous, powdery blue-gray Agave franzosinni is something Ruth did plant. Agaves were one of Ruth’s favorite plants and you can see their rosette form in various shapes and sizes throughout the Garden.   
+        The tree on the left, with <Text style={{fontWeight: "bold"}}>weeping foliage, is the Australian <Text style={{fontWeight: "italics"}}>Melaleuca preissiana</Text>, </Text>
+        also known as a tea tree.
     </Text>
 
 export default function MarkerScreen({ navigation }) {

@@ -9,13 +9,17 @@ const images = [
 ]
 const text = 
     <Text style={{ padding: 20, paddingBottom: 37, fontFamily: "Times New Roman", fontSize: '20' }}>   
-        This majestic Valley Oak (Quercus lobata) is one of the few plants Ruth Bancroft did not plant in the Garden. At 250 years old, it is a reminder that this landscape was once oak woodland until early 1900 when orchards came to dominate.
+        This bed displays two dramatic specimens, 
+        the <Text style={{fontWeight: "bold"}}>golden barrel cacti (<Text style={{fontWeight: "italic"}}>Echinocactus grusonii</Text>) </Text>
+        and the <Text style={{fontWeight: "bold"}}>Queen Victoria’s agave (<Text style={{fontWeight: "italic"}}>Agave victoriae-reginae</Text>) </Text>
+        with their striking white markings on sculptural, dark-green leaves.
         {"\n"} {"\n"}
-        In front of the oak, the enormous, powdery blue-gray Agave franzosinni is something Ruth did plant. Agaves were one of Ruth’s favorite plants and you can see their rosette form in various shapes and sizes throughout the Garden.   
+        Following the small path to the right, you will arrive at a stout tree whose swollen trunk gives it the name of
+        <Text style={{fontWeight: "bold"}}> Australian bottle tree (<Text style={{fontWeight: "italics"}}>Brachychiton rupestris</Text>).</Text>
     </Text>
 
 export default function MarkerScreen({ navigation }) {
     return (
-        <Marker images={images} num={1} text={text}></Marker>
+        <Marker images={images} num={17} text={text}></Marker>
     );
 }

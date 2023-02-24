@@ -8,13 +8,13 @@ const images = [
 ]
 const text = 
     <Text style={{ padding: 20, paddingBottom: 37, fontFamily: "Times New Roman", fontSize: '20' }}>   
-        This majestic Valley Oak (Quercus lobata) is one of the few plants Ruth Bancroft did not plant in the Garden. At 250 years old, it is a reminder that this landscape was once oak woodland until early 1900 when orchards came to dominate.
-        {"\n"} {"\n"}
-        In front of the oak, the enormous, powdery blue-gray Agave franzosinni is something Ruth did plant. Agaves were one of Ruth’s favorite plants and you can see their rosette form in various shapes and sizes throughout the Garden.   
+        This bed contains numerous <Text style={{fontWeight: "bold"}}> gasterias </Text>. 
+        Relatives of the aloe, the name <Text style={{fontWeight: "italics"}}>gaster</Text> (Greek for stomach), 
+        describes the plant’s pot-bellied flowers.
     </Text>
 
 export default function MarkerScreen({ navigation }) {
     return (
-        <Marker images={images} num={1} text={text}></Marker>
+        <Marker images={images} num={10} text={text}></Marker>
     );
 }
