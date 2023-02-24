@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { View, Text, Image, FlatList, StyleSheet} from 'react-native';
-import Marker from '../../../assets/Marker';
+import Marker from '../Marker';
 
 const images = [
     require('../../images/Marker_12_1.jpg'),
@@ -12,11 +12,11 @@ const images = [
 const text = 
     <Text style={{ padding: 20, paddingBottom: 37, fontFamily: "Times New Roman", fontSize: '20' }}>   
         On both sides of the path you will see <Text style={{fontWeight: "bold"}}>Ruth’s incredible use of color and texture </Text>
-        in the <Text style={{fontWeight: "bold"}}> groundcover tapestry of blue-gray <Text style={{fontWeight: "italics"}}>Euphorbia rigida</Text>, 
-        bright green (to red) <Text style={{fontWeight: "italics"}}>Sedum rubrotinctum</Text>, 
-        and purple <Text style={{fontWeight: "italics"}}>Tradescantia pallida ‘Purple Heart’</Text>.</Text>
+        in the <Text style={{fontWeight: "bold"}}> groundcover tapestry of blue-gray <Text style={{fontStyle: "italic"}}>Euphorbia rigida</Text>, 
+        bright green (to red) <Text style={{fontStyle: "italic"}}>Sedum rubrotinctum</Text>, 
+        and purple <Text style={{fontStyle: "italic"}}>Tradescantia pallida ‘Purple Heart’</Text>.</Text>
         {"\n"} {"\n"}
-        Look ahead to see the <Text style={{fontWeight: "bold"}}>Mexican palo verde (<Text style={{fontWeight: "italic"}}>Parkinsonia aculeata</Text>)</Text>, 
+        Look ahead to see the <Text style={{fontWeight: "bold"}}>Mexican palo verde (<Text style={{fontStyle: "italic"}}>Parkinsonia aculeata</Text>)</Text>, 
         with its green bark and fine-textured canopy.
     </Text>
 

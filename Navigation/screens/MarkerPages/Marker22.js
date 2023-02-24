@@ -13,8 +13,8 @@ const text =
         The plants in this central covered bed all need extra protection from the summer sun and winter cold.
         {"\n"} {"\n"}
         Many of these plants are from the <Text style={{fontWeight: "bold"}}> Crassulaceae family, 
-        including <Text style={{fontWeight: "italic"}}>Aeonium, Echeveria, Crassula, </Text> 
-        and <Text style={{fontWeight: "italic"}}>Sedum</Text>.</Text>
+        including <Text style={{fontStyle: "italic"}}>Aeonium, Echeveria, Crassula, </Text> 
+        and <Text style={{fontStyle: "italic"}}>Sedum</Text>.</Text>
     </Text>
 
 export default function MarkerScreen({ navigation }) {

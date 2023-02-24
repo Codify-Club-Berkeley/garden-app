@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { View, Text, Image, FlatList, StyleSheet} from 'react-native';
-import Marker from '../../../assets/Marker';
+import Marker from '../Marker';
 
 const images = [
     require('../../images/Marker_14_1.jpg'),
@@ -10,7 +10,7 @@ const images = [
 ]
 const text = 
     <Text style={{ padding: 20, paddingBottom: 37, fontFamily: "Times New Roman", fontSize: '20' }}>   
-        Overhead, the <Text style={{fontWeight: "bold"}}> Mexican blue fan palm (<Text style={{fontWeight: "italics"}}>Brahea armata</Text>) </Text>
+        Overhead, the <Text style={{fontWeight: "bold"}}>Mexican blue fan palm (<Text style={{fontStyle: "italic"}}>Brahea armata</Text>) </Text>
         is an example of a palmate leaf palm.
         {"\n"} {"\n"}
         <Text style={{fontWeight: "bold"}}>Palm leaves may also take a feather form, also known as pinnate.</Text>

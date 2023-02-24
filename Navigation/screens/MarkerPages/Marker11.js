@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { View, Text, Image, FlatList, StyleSheet} from 'react-native';
-import Marker from '../../../assets/Marker';
+import Marker from '../Marker';
 
 const images = [
     require('../../images/Marker_11_1.jpg'),
@@ -10,9 +10,9 @@ const images = [
 ]
 const text = 
     <Text style={{ padding: 20, paddingBottom: 37, fontFamily: "Times New Roman", fontSize: '20' }}>   
-        Three remarkable specimens are in this bed, the <Text style={{fontWeight: "bold"}}><Text style={{fontWeight: "italic"}}>Eucalyptus kitsoniana</Text> with its wavy bark, </Text>
-        a hedge of <Text style={{fontWeight: "bold"}}>torch aloes (<Text style={{fontWeight: "italic"}}>Aloe arborescens</Text>) </Text>
-        before you, and to the right, the <Text style={{fontWeight: "bold"}}>tree-like Hercules aloe (<Text style={{fontWeight: "italics"}}>Aloe barberae x A. dichotoma</Text>).</Text>
+        Three remarkable specimens are in this bed, the <Text style={{fontWeight: "bold"}}><Text style={{fontStyle: "italic"}}>Eucalyptus kitsoniana</Text> with its wavy bark, </Text>
+        a hedge of <Text style={{fontWeight: "bold"}}>torch aloes (<Text style={{fontStyle: "italic"}}>Aloe arborescens</Text>) </Text>
+        before you, and to the right, the <Text style={{fontWeight: "bold"}}>tree-like Hercules aloe (<Text style={{fontStyle: "italic"}}>Aloe barberae x A. dichotoma</Text>).</Text>
     </Text>
 
 export default function MarkerScreen({ navigation }) {

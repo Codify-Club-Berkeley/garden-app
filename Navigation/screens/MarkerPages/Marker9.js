@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { View, Text, Image, FlatList, StyleSheet} from 'react-native';
-import Marker from '../../../assets/Marker';
+import Marker from '../Marker';
 
 const images = [
     require('../../images/Marker_9_1.jpg'),
@@ -8,7 +8,7 @@ const images = [
 ]
 const text = 
     <Text style={{ padding: 20, paddingBottom: 37, fontFamily: "Times New Roman", fontSize: '20' }}>   
-        While this <Text style={{fontWeight: "bold"}}>Mexican grass tree (<Text style={{fontWeight: "italics"}}>Dasylirion longissimum</Text>) </Text>
+        While this <Text style={{fontWeight: "bold"}}>Mexican grass tree (<Text style={{fontStyle: "italic"}}>Dasylirion longissimum</Text>) </Text>
         with its fountain-like form looks strikingly similar to the grass tree at tour stop 8, 
         it is a member of a different plant family from a different continent. 
     </Text>

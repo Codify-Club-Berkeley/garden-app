@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { View, Text, Image, FlatList, StyleSheet} from 'react-native';
-import Marker from '../../../assets/Marker';
+import Marker from '../Marker';
 
 const images = [
     require('../../images/Marker_19_1.jpg'),
@@ -11,8 +11,8 @@ const text =
         Growing below the Chilopsis linearis tree, many of the plants in this bed have 
         <Text style={{fontWeight: "bold"}}> white silky hairs or spines, a strategy for deflecting the hot summer sun.</Text>
         {"\n"} {"\n"}
-        Such specimens include <Text style={{fontWeight: "bold"}}><Text style={{fontWeight: "italics"}}> Cleistocactus, Oreocereus, </Text>
-        and the ground-covering <Text style={{fontWeight: "italics"}}>Sempervivum arachnoideumm</Text> </Text>
+        Such specimens include <Text style={{fontWeight: "bold"}}><Text style={{fontStyle: "italic"}}> Cleistocactus, Oreocereus, </Text>
+        and the ground-covering <Text style={{fontStyle: "italic"}}>Sempervivum arachnoideumm</Text> </Text>
         that look to be covered in white cobwebs.
     </Text>
 
