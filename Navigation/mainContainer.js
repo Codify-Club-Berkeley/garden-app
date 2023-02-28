@@ -6,7 +6,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import HomeScreen from './screens/HomeScreen';
 import MapScreen from './screens/MapScreen';
 import MarkerScreen from './screens/MarkerScreen';
-import TestMarker from './screens/MarkerPages/Marker3';
+import TestMarker from './screens/MarkerPages/Marker1';
 import Marker2 from './screens/MarkerPages/Marker2';
 
 // Screen names

@@ -24,8 +24,14 @@ const text =
         Look for Agaves in various shapes and sizes throughout the Garden. 
     </Text>
 
+const popUpText = 
+<Text style={{padding: 15, fontFamily: "Times New Roman", fontSize: '25' }}>Agaves are distinguished by their rosettes of tough leaves, often with a spiny margin terminating in a sharp point. 
+
+Look for Agaves in various shapes and sizes throughout the Garden.
+</Text>
+
 export default function MarkerScreen({ navigation }) {
     return (
-        <Marker images={images} num={1} text={text}></Marker>
+        <Marker images={images} num={1} text={text} popUpText={popUpText}></Marker>
     );
 }
