@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { View, Text, Image, FlatList, StyleSheet} from 'react-native';
-import Marker from '../../../assets/Marker';
+import Marker from '../Marker';
 
 const images = [
     require('../../images/Marker_12_1.jpg'),
@@ -11,13 +11,17 @@ const images = [
 ]
 const text = 
     <Text style={{ padding: 20, paddingBottom: 37, fontFamily: "Times New Roman", fontSize: '20' }}>   
-        This majestic Valley Oak (Quercus lobata) is one of the few plants Ruth Bancroft did not plant in the Garden. At 250 years old, it is a reminder that this landscape was once oak woodland until early 1900 when orchards came to dominate.
+        On both sides of the path you will see <Text style={{fontWeight: "bold"}}>Ruth’s incredible use of color and texture </Text>
+        in the <Text style={{fontWeight: "bold"}}> groundcover tapestry of blue-gray <Text style={{fontStyle: "italic"}}>Euphorbia rigida</Text>, 
+        bright green (to red) <Text style={{fontStyle: "italic"}}>Sedum rubrotinctum</Text>, 
+        and purple <Text style={{fontStyle: "italic"}}>Tradescantia pallida ‘Purple Heart’</Text>.</Text>
         {"\n"} {"\n"}
-        In front of the oak, the enormous, powdery blue-gray Agave franzosinni is something Ruth did plant. Agaves were one of Ruth’s favorite plants and you can see their rosette form in various shapes and sizes throughout the Garden.   
+        Look ahead to see the <Text style={{fontWeight: "bold"}}>Mexican palo verde (<Text style={{fontStyle: "italic"}}>Parkinsonia aculeata</Text>)</Text>, 
+        with its green bark and fine-textured canopy.
     </Text>
 
 export default function MarkerScreen({ navigation }) {
     return (
-        <Marker images={images} num={1} text={text}></Marker>
+        <Marker images={images} num={12} text={text}></Marker>
     );
 }
