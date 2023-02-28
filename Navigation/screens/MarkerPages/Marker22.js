@@ -10,13 +10,15 @@ const images = [
 ]
 const text = 
     <Text style={{ padding: 20, paddingBottom: 37, fontFamily: "Times New Roman", fontSize: '20' }}>   
-        This majestic Valley Oak (Quercus lobata) is one of the few plants Ruth Bancroft did not plant in the Garden. At 250 years old, it is a reminder that this landscape was once oak woodland until early 1900 when orchards came to dominate.
+        The plants in this central covered bed all need extra protection from the summer sun and winter cold.
         {"\n"} {"\n"}
-        In front of the oak, the enormous, powdery blue-gray Agave franzosinni is something Ruth did plant. Agaves were one of Ruth’s favorite plants and you can see their rosette form in various shapes and sizes throughout the Garden.   
+        Many of these plants are from the <Text style={{fontWeight: "bold"}}> Crassulaceae family, 
+        including <Text style={{fontStyle: "italic"}}>Aeonium, Echeveria, Crassula, </Text> 
+        and <Text style={{fontStyle: "italic"}}>Sedum</Text>.</Text>
     </Text>
 
 export default function MarkerScreen({ navigation }) {
     return (
-        <Marker images={images} num={1} text={text}></Marker>
+        <Marker images={images} num={22} text={text}></Marker>
     );
 }

@@ -1,6 +1,6 @@
 import { NavigationContainer, DefaultTheme } from '@react-navigation/native';
 import { BottomTabBar, createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import Ionicons from 'react-native-vector-icons/Ionicons'
+import Ionicons from 'react-native-vector-icons/Ionicons';
 
 //Screens
 import HomeScreen from './screens/HomeScreen';
@@ -8,6 +8,7 @@ import MapScreen from './screens/MapScreen';
 import MarkerScreen from './screens/MarkerScreen';
 import TestMarker from './screens/MarkerPages/Marker1';
 import Marker2 from './screens/MarkerPages/Marker2';
+import MarkerX from './screens/MarkerPages/Marker24';
 
 // Screen names
 
@@ -15,7 +16,8 @@ const HomeName = 'Home';
 const MapName= 'Map';
 const MarkerName= 'Markers';
 const TestMarkerName = 'Marker1';
-const Marker2Name = 'Marker2';   
+const Marker2Name = 'Marker2';
+const MarkerXName = 'MarkerX';
 
 const Tab = createBottomTabNavigator();
 //initialRouteName specifies which screen will appear first
@@ -49,6 +51,9 @@ export default function mainContainer(){
                     else if (rn === Marker2Name){
                         iconName=focused ? 'apps' : 'apps-outline'
                     }
+                    else if (rn === MarkerXName){
+                        iconName=focused ? 'apps' : 'apps-outline'
+                    }
                     size = 30
                     return <Ionicons name={iconName} size={size} color={color}/>
                 },
@@ -71,8 +76,8 @@ export default function mainContainer(){
             <Tab.Screen name={MarkerName} component= {MarkerScreen}/>
             <Tab.Screen name={TestMarkerName} component= {TestMarker}/>
             <Tab.Screen name={Marker2Name} component= {Marker2}/>
+            <Tab.Screen name={MarkerXName} component= {MarkerX}/>
             </Tab.Navigator>
-            
         </NavigationContainer>
     );
 
