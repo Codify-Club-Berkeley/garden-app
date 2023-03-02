@@ -15,8 +15,15 @@ const text =
         <Text style={{fontWeight: "bold"}}>A succulent, by definition, is any plant that stores water.</Text>
     </Text>
 
+const popUpText = 
+    <Text style={{padding: 15, fontFamily: "Times New Roman", fontSize: '25'}}>
+        This palm stores water in its trunk. The liquid inside can be harvested to make a type of wine.  
+        {"\n"} {"\n"}
+        This ability to store water is another <Text style={{fontWeight: "bold"}}>important adaptation</Text> of plants living in arid climates.
+    </Text> 
+
 export default function MarkerScreen({ navigation }) {
     return (
-        <Marker images={images} num={3} text={text}></Marker>
+        <Marker images={images} num={3} text={text} popUpText={popUpText}></Marker>
     );
 }

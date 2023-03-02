@@ -19,8 +19,17 @@ const text =
         and the <Text style={{fontWeight: "bold"}}>paddle cactus</Text> from the genus <Text style={{fontStyle: "italic"}}>Opuntia</Text>.
     </Text>
 
+const popUpText = 
+    <Text style={{padding: 15, fontFamily: "Times New Roman", fontSize: '25'}}>
+        Opuntia cactus pads <Text style={{fontWeight: "bold"}}>(<Text style={{fontStyle: "italic"}}>nopales</Text>) </Text>
+        are used in Mexican cuisine; their fruit is also edible (known as
+        <Text style={{fontWeight: "bold"}}><Text style={{fontStyle: "italic"}}> tunas</Text> or prickly pears)</Text>. 
+        {"\n"} {"\n"}
+        <Text style={{fontStyle: "italic"}}>Are any plants in the Garden used in your culture’s cuisine?</Text>
+    </Text>
+
 export default function MarkerScreen({ navigation }) {
     return (
-        <Marker images={images} num={18} text={text}></Marker>
+        <Marker images={images} num={18} text={text} popUpText={popUpText}></Marker>
     );
 }

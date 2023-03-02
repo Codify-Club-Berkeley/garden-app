@@ -17,8 +17,15 @@ const text =
         and <Text style={{fontStyle: "italic"}}>Sedum</Text>.</Text>
     </Text>
 
+const popUpText = 
+    <Text style={{padding: 15, fontFamily: "Times New Roman", fontSize: '25'}}>
+        Plants in the <Text style={{fontWeight: "bold"}}>Crassulaceae family have a unique adaptation for surviving heat and drought</Text>. 
+        To reduce water loss, they exchange CO2 only at night. 
+        CO2 is stored as malic acid until the sun comes up and the plant can complete their photosynthesis. 
+    </Text> 
+
 export default function MarkerScreen({ navigation }) {
     return (
-        <Marker images={images} num={22} text={text}></Marker>
+        <Marker images={images} num={22} text={text} popUpText={popUpText}></Marker>
     );
 }

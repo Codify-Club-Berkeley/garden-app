@@ -15,8 +15,14 @@ const text =
         named <Text style={{fontStyle: "italic"}}>Aloe</Text> ‘Hellskloof Bells.’</Text>
     </Text>
 
+const popUpText = 
+    <Text style={{padding: 15, fontFamily: "Times New Roman", fontSize: '25'}}>
+        Our curator, Brian Kemble, specializes in hybridizing many different kinds of plants, 
+        including aloes. Other than in this Garden, some of his creations can be seen nowhere else in the world. 
+    </Text> 
+
 export default function MarkerScreen({ navigation }) {
     return (
-        <Marker images={images} num={6} text={text}></Marker>
+        <Marker images={images} num={6} text={text} popUpText={popUpText}></Marker>
     );
 }

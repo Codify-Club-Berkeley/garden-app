@@ -15,8 +15,14 @@ const text =
         Its large, pink, orchid-like flowers are profuse in autumn, appearing just as its leaves drop.
     </Text>
 
+const popUpText = 
+    <Text style={{padding: 15, fontFamily: "Times New Roman", fontSize: '25'}}>
+        The <Text style={{fontWeight: "bold"}}>cavity in the silk floss tree’s trunk is from freeze damage that occurred in 1990</Text>. 
+        Nonetheless, it has recovered well.   
+    </Text> 
+
 export default function MarkerScreen({ navigation }) {
     return (
-        <Marker images={images} num={21} text={text}></Marker>
+        <Marker images={images} num={21} text={text} popUpText={popUpText}></Marker>
     );
 }

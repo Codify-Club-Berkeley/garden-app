@@ -15,8 +15,16 @@ const text =
         from Australia will eventually develop a trunk up to 12 feet tall!</Text>
     </Text>
 
+const popUpText = 
+    <Text style={{padding: 15, fontFamily: "Times New Roman", fontSize: '25'}}>
+        From the center of the Xanthorrhoea foliage arises a tall, 
+        spear-like flower stalk. Fire stimulates increased flower production.
+        {"\n"} {"\n"}
+        Unfortunately, many plants adapted to fire are no match for the mega-fires brought about by climate change.
+    </Text> 
+
 export default function MarkerScreen({ navigation }) {
     return (
-        <Marker images={images} num={8} text={text}></Marker>
+        <Marker images={images} num={8} text={text} popUpText={popUpText}></Marker>
     );
 }
