@@ -14,7 +14,7 @@ const text =
     </Text>
 
 const popUpText = 
-    <Text style={{padding: 15, fontFamily: "Times New Roman", fontSize: '25' }}>
+    <Text style={{padding: 15, fontFamily: "Times New Roman", fontSize: '20' }}>
         After pollinating a yucca, a moth will lay its eggs in the flowers. The emerging larvae survive only on Yucca seeds. 
         Fortunately, there are enough seeds that fall to the ground and ensure the tree’s survival.
     </Text>

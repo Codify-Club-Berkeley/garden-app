@@ -16,7 +16,7 @@ const text =
     </Text>
 
 const popUpText = 
-    <Text style={{padding: 15, fontFamily: "Times New Roman", fontSize: '25'}}>
+    <Text style={{padding: 15, fontFamily: "Times New Roman", fontSize: '20'}}>
         Large agaves are often <Text style={{fontWeight: "bold"}}>called century plants because they flower only once after a long life</Text>. 
         Although death follows, many produce ‘pups’ from the base, providing the next generation of plants.    
     </Text> 

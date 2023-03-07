@@ -14,10 +14,10 @@ const text =
     </Text>
 
 const popUpText = 
-    <Text style={{padding: 15, fontFamily: "Times New Roman", fontSize: '25'}}>
+    <Text style={{padding: 15, fontFamily: "Times New Roman", fontSize: '20'}}>
         Aloes’ thick, fleshy leaves, and often toothy leaf edges also distinguish them from agaves.
         {"\n"} {"\n"}
-        <Text style={{fontWeight: "bold"}}> Aloes are polycarpic (produce flowers season after season), 
+        <Text style={{fontWeight: "bold"}}>Aloes are polycarpic (produce flowers season after season), 
         whereas the agave is monocarpic (blooms only once in its lifetime).</Text>
     </Text> 
 

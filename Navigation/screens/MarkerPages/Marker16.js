@@ -18,7 +18,7 @@ const text =
     </Text>
 
 const popUpText = 
-    <Text style={{padding: 15, fontFamily: "Times New Roman", fontSize: '25'}}>
+    <Text style={{padding: 15, fontFamily: "Times New Roman", fontSize: '20'}}>
         Like the majority of plants in the Garden, these <Text style={{fontWeight: "bold"}}>specimens all come from Mediterranean climates, 
         characterized by hot dry summers and wet winters</Text>. 
         Gardeners wishing to save water, should select plants that are adapted to a Mediterranean climate.    

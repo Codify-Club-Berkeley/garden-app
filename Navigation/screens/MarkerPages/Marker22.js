@@ -18,7 +18,7 @@ const text =
     </Text>
 
 const popUpText = 
-    <Text style={{padding: 15, fontFamily: "Times New Roman", fontSize: '25'}}>
+    <Text style={{padding: 15, fontFamily: "Times New Roman", fontSize: '20'}}>
         Plants in the <Text style={{fontWeight: "bold"}}>Crassulaceae family have a unique adaptation for surviving heat and drought</Text>. 
         To reduce water loss, they exchange CO2 only at night. 
         CO2 is stored as malic acid until the sun comes up and the plant can complete their photosynthesis. 

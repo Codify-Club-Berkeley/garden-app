@@ -16,7 +16,7 @@ const text =
     </Text>
 
 const popUpText = 
-    <Text style={{padding: 15, fontFamily: "Times New Roman", fontSize: '25'}}>
+    <Text style={{padding: 15, fontFamily: "Times New Roman", fontSize: '20'}}>
         To improve drainage, create a natural look, and vary the topography,
         <Text style={{fontWeight: "bold"}}> many tons of crushed rock from Mt. Diablo were laid at the start of the Garden.</Text>
     </Text> 

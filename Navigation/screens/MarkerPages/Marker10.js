@@ -14,7 +14,7 @@ const text =
     </Text>
 
 const popUpText = 
-    <Text style={{padding: 15, fontFamily: "Times New Roman", fontSize: '25'}}>
+    <Text style={{padding: 15, fontFamily: "Times New Roman", fontSize: '20'}}>
         <Text style={{fontWeight: "bold"}}>Latin names</Text> can be descriptive, 
         tell of a plant’s origin, carry someone’s name, and much more. 
         {"\n"} {"\n"}

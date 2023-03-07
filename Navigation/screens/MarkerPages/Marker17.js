@@ -19,7 +19,7 @@ const text =
     </Text>
 
 const popUpText = 
-    <Text style={{padding: 15, fontFamily: "Times New Roman", fontSize: '25'}}>
+    <Text style={{padding: 15, fontFamily: "Times New Roman", fontSize: '20'}}>
         <Text style={{fontStyle: "italic"}}>Remember the Palo Verde with its green bark, 
         or the thick Chilean Wine Palm at the beginning of the tour? 
         Can you guess why the bottle tree is so stout, and possesses green bark?</Text>

@@ -19,7 +19,7 @@ const text =
     </Text>
 
 const popUpText = 
-    <Text style={{padding: 15, fontFamily: "Times New Roman", fontSize: '25'}}>
+    <Text style={{padding: 15, fontFamily: "Times New Roman", fontSize: '20'}}>
         <Text style={{fontWeight: "bold"}}>Both cacti are pollinated by bats</Text>, 
         yet take distinctively different forms.
     </Text>

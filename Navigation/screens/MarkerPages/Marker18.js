@@ -20,7 +20,7 @@ const text =
     </Text>
 
 const popUpText = 
-    <Text style={{padding: 15, fontFamily: "Times New Roman", fontSize: '25'}}>
+    <Text style={{padding: 15, fontFamily: "Times New Roman", fontSize: '20'}}>
         Opuntia cactus pads <Text style={{fontWeight: "bold"}}>(<Text style={{fontStyle: "italic"}}>nopales</Text>) </Text>
         are used in Mexican cuisine; their fruit is also edible (known as
         <Text style={{fontWeight: "bold"}}><Text style={{fontStyle: "italic"}}> tunas</Text> or prickly pears)</Text>. 

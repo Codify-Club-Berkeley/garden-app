@@ -16,7 +16,7 @@ const text =
     </Text>
 
 const popUpText = 
-    <Text style={{padding: 15, fontFamily: "Times New Roman", fontSize: '25'}}>
+    <Text style={{padding: 15, fontFamily: "Times New Roman", fontSize: '20'}}>
         This palm stores water in its trunk. The liquid inside can be harvested to make a type of wine.  
         {"\n"} {"\n"}
         This ability to store water is another <Text style={{fontWeight: "bold"}}>important adaptation</Text> of plants living in arid climates.

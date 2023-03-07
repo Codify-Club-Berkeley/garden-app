@@ -19,7 +19,7 @@ const text =
     </Text>
 
 const popUpText = 
-    <Text style={{padding: 15, fontFamily: "Times New Roman", fontSize: '25'}}>
+    <Text style={{padding: 15, fontFamily: "Times New Roman", fontSize: '20'}}>
         Some Euphorbia <Text style={{fontWeight: "bold"}}>look a lot like cacti, but once again, this is an example of convergent evolution</Text>. 
         Similar adaptations occur in lineages that emerged in geographic isolation from one another.
     </Text> 

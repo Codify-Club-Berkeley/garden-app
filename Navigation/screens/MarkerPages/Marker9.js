@@ -14,7 +14,7 @@ const text =
     </Text>
 
 const popUpText = 
-    <Text style={{padding: 15, fontFamily: "Times New Roman", fontSize: '25'}}>
+    <Text style={{padding: 15, fontFamily: "Times New Roman", fontSize: '20'}}>
         When <Text style={{fontWeight: "bold"}}>similar traits arise independently in unrelated lineages, 
         this is known as convergent evolution.</Text>
         {"\n"} {"\n"}

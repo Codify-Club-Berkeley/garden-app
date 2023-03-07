@@ -16,7 +16,7 @@ const text =
     </Text>
 
 const popUpText = 
-    <Text style={{padding: 15, fontFamily: "Times New Roman", fontSize: '25'}}>
+    <Text style={{padding: 15, fontFamily: "Times New Roman", fontSize: '20'}}>
         The <Text style={{fontWeight: "bold"}}>cavity in the silk floss tree’s trunk is from freeze damage that occurred in 1990</Text>. 
         Nonetheless, it has recovered well.   
     </Text> 

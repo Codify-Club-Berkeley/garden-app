@@ -16,7 +16,7 @@ const text =
     </Text>
 
 const popUpText = 
-    <Text style={{padding: 15, fontFamily: "Times New Roman", fontSize: '25'}}>
+    <Text style={{padding: 15, fontFamily: "Times New Roman", fontSize: '20'}}>
         Like many plants in the Garden, these plants have 
         <Text style={{fontWeight: "bold"}}> ethnobotanical importance</Text>; 
         Indigenous Californians use manzanita berries for cider (among other things), 

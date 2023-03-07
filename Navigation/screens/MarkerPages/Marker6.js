@@ -16,7 +16,7 @@ const text =
     </Text>
 
 const popUpText = 
-    <Text style={{padding: 15, fontFamily: "Times New Roman", fontSize: '25'}}>
+    <Text style={{padding: 15, fontFamily: "Times New Roman", fontSize: '20'}}>
         Our curator, Brian Kemble, specializes in hybridizing many different kinds of plants, 
         including aloes. Other than in this Garden, some of his creations can be seen nowhere else in the world. 
     </Text> 

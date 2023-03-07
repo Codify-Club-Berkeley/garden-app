@@ -21,7 +21,7 @@ const text =
     </Text>
 
 const popUpText = 
-    <Text style={{padding: 15, fontFamily: "Times New Roman", fontSize: '25'}}>
+    <Text style={{padding: 15, fontFamily: "Times New Roman", fontSize: '20'}}>
         To prevent water loss, Palo Verde drops its leaves during dry spells, 
         yet it can still <Text style={{fontWeight: "bold"}}>photosynthesize through its green bark</Text>. 
         Reduced surface area, via small leaves (or no leaves in the case of cacti and a stressed Palo Verde tree) are adaptations for reducing evaporation/transpiration.    

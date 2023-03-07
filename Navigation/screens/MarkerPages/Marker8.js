@@ -16,7 +16,7 @@ const text =
     </Text>
 
 const popUpText = 
-    <Text style={{padding: 15, fontFamily: "Times New Roman", fontSize: '25'}}>
+    <Text style={{padding: 15, fontFamily: "Times New Roman", fontSize: '20'}}>
         From the center of the Xanthorrhoea foliage arises a tall, 
         spear-like flower stalk. Fire stimulates increased flower production.
         {"\n"} {"\n"}

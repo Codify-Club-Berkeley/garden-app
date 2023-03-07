@@ -16,7 +16,7 @@ const text =
     </Text>
 
 const popUpText = 
-    <Text style={{padding: 15, fontFamily: "Times New Roman", fontSize: '25'}}>
+    <Text style={{padding: 15, fontFamily: "Times New Roman", fontSize: '20'}}>
         You will notice that unlike most gardens that are arranged by plant type or origin, 
         this Garden is arranged compositionally. There is an <Text style={{fontWeight: "bold"}}>intentional lack of signage</Text>, 
         to preserve Ruth’s original vision.

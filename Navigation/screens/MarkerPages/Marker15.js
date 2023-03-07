@@ -16,7 +16,7 @@ const text =
     </Text>
 
 const popUpText = 
-    <Text style={{padding: 15, fontFamily: "Times New Roman", fontSize: '25'}}>
+    <Text style={{padding: 15, fontFamily: "Times New Roman", fontSize: '20'}}>
         <Text style={{fontStyle: "italic"}}>Ruth started the Garden at age 63. What projects can you imagine starting at this age?</Text>
     </Text> 
 

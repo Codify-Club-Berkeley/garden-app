@@ -17,7 +17,7 @@ const text =
     </Text>
 
 const popUpText = 
-    <Text style={{padding: 15, fontFamily: "Times New Roman", fontSize: '25'}}>
+    <Text style={{padding: 15, fontFamily: "Times New Roman", fontSize: '20'}}>
         Further along the path, notice the <Text style={{fontWeight: "bold"}}>lumpy masses of <Text style={{fontStyle: "italic"}}>Deuterocohnia brevifolia</Text></Text>. 
         It may look like it covers a rock, but it doesn’t; this is just how it grows.     
     </Text>
