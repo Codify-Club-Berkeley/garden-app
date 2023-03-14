@@ -13,7 +13,7 @@ const DATA = [
         title: "Marker 1",
         plant: 'Quercus lobata',
         imge: require('../images/thumbnail_images/M1.jpg'),
-        whereTo: 'Home'
+        whereTo: 'Marker1'
     },
     {
         id: "2",
@@ -27,7 +27,7 @@ const DATA = [
         title: "Marker 3",
         plant: "Jubaea chilensis",
         imge: require('../images/thumbnail_images/M3.jpg'),
-        whereTo: 'Home'
+        whereTo: 'Marker3'
     
     },
     {

@@ -9,6 +9,7 @@ import MarkerScreen from './screens/MarkerScreen';
 import TestMarker from './screens/MarkerPages/Marker1';
 import Marker2 from './screens/MarkerPages/Marker2';
 import MarkerX from './screens/MarkerPages/Marker24';
+import MarkerHidden from './screens/MarkerPages/Marker15';
 
 // Screen names
 
@@ -18,6 +19,7 @@ const MarkerName= 'Markers';
 const TestMarkerName = 'Marker1';
 const Marker2Name = 'Marker2';
 const MarkerXName = 'MarkerX';
+const MarkerHiddenName = 'MarkerHidden';
 
 const Tab = createBottomTabNavigator();
 //initialRouteName specifies which screen will appear first
@@ -45,7 +47,7 @@ export default function mainContainer(){
                     else if (rn === MarkerName){
                         iconName=focused ? 'apps' : 'apps-outline'
                     }
-                    else if (rn === TestMarkerName){
+                   else if (rn === TestMarkerName){
                         iconName=focused ? 'apps' : 'apps-outline'
                     }
                     else if (rn === Marker2Name){
@@ -74,10 +76,11 @@ export default function mainContainer(){
             <Tab.Screen name={HomeName} component= {HomeScreen}/>
             <Tab.Screen name={MapName} component= {MapScreen}/>
             <Tab.Screen name={MarkerName} component= {MarkerScreen}/>
-            <Tab.Screen name={TestMarkerName} component= {TestMarker}/>
-            <Tab.Screen name={Marker2Name} component= {Marker2}/>
-            <Tab.Screen name={MarkerXName} component= {MarkerX}/>
+            {<Tab.Screen name={TestMarkerName} component= {TestMarker}/>}
+            {<Tab.Screen name={Marker2Name} component= {Marker2}/>}
+            {<Tab.Screen name={MarkerXName} component= {MarkerX}/>}
             </Tab.Navigator>
+
         </NavigationContainer>
     );
 
