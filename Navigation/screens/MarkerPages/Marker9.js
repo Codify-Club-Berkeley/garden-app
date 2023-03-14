@@ -13,8 +13,16 @@ const text =
         it is a member of a different plant family from a different continent. 
     </Text>
 
+const popUpText = 
+    <Text style={{padding: 15, fontFamily: "Times New Roman", fontSize: '20'}}>
+        When <Text style={{fontWeight: "bold"}}>similar traits arise independently in unrelated lineages, 
+        this is known as convergent evolution.</Text>
+        {"\n"} {"\n"}
+        <Text style={{fontStyle: "italic"}}>What other examples of convergent evolution in nature can you think of?</Text>
+    </Text> 
+
 export default function MarkerScreen({ navigation }) {
     return (
-        <Marker images={images} num={9} text={text}></Marker>
+        <Marker images={images} num={9} text={text} popUpText={popUpText}></Marker>
     );
 }

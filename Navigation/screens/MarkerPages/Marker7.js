@@ -15,8 +15,16 @@ const text =
         also known as a tea tree.
     </Text>
 
+const popUpText = 
+    <Text style={{padding: 15, fontFamily: "Times New Roman", fontSize: '20'}}>
+        Like many plants in the Garden, these plants have 
+        <Text style={{fontWeight: "bold"}}> ethnobotanical importance</Text>; 
+        Indigenous Californians use manzanita berries for cider (among other things), 
+        and the Australian Aboriginal people use the tea tree oil for traditional medicine.   
+    </Text> 
+
 export default function MarkerScreen({ navigation }) {
     return (
-        <Marker images={images} num={7} text={text}></Marker>
+        <Marker images={images} num={7} text={text} popUpText={popUpText}></Marker>
     );
 }

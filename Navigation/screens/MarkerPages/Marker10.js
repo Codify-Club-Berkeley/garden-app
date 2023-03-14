@@ -13,8 +13,17 @@ const text =
         describes the plant’s pot-bellied flowers.
     </Text>
 
+const popUpText = 
+    <Text style={{padding: 15, fontFamily: "Times New Roman", fontSize: '20'}}>
+        <Text style={{fontWeight: "bold"}}>Latin names</Text> can be descriptive, 
+        tell of a plant’s origin, carry someone’s name, and much more. 
+        {"\n"} {"\n"}
+        <Text style={{fontWeight: "bold"}}>Common names</Text> are often inconsistent or vary by region, 
+        making Latin names key to proper plant identification.
+    </Text> 
+
 export default function MarkerScreen({ navigation }) {
     return (
-        <Marker images={images} num={10} text={text}></Marker>
+        <Marker images={images} num={10} text={text} popUpText={popUpText}></Marker>
     );
 }
