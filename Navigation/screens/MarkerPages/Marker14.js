@@ -18,8 +18,14 @@ const text =
         The bed to the right contains many <Text style={{fontWeight: "bold"}}>Euphorbias. </Text>
     </Text>
 
+const popUpText = 
+    <Text style={{padding: 15, fontFamily: "Times New Roman", fontSize: '20'}}>
+        Some Euphorbia <Text style={{fontWeight: "bold"}}>look a lot like cacti, but once again, this is an example of convergent evolution</Text>. 
+        Similar adaptations occur in lineages that emerged in geographic isolation from one another.
+    </Text> 
+
 export default function MarkerScreen({ navigation }) {
     return (
-        <Marker images={images} num={14} text={text}></Marker>
+        <Marker images={images} num={14} text={text} popUpText={popUpText}></Marker>
     );
 }

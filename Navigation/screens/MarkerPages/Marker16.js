@@ -17,8 +17,15 @@ const text =
         to the right of the palms is a blaze with red flowers in the summer and is cut back in winter.
     </Text>
 
+const popUpText = 
+    <Text style={{padding: 15, fontFamily: "Times New Roman", fontSize: '20'}}>
+        Like the majority of plants in the Garden, these <Text style={{fontWeight: "bold"}}>specimens all come from Mediterranean climates, 
+        characterized by hot dry summers and wet winters</Text>. 
+        Gardeners wishing to save water, should select plants that are adapted to a Mediterranean climate.    
+    </Text> 
+
 export default function MarkerScreen({ navigation }) {
     return (
-        <Marker images={images} num={16} text={text}></Marker>
+        <Marker images={images} num={16} text={text} popUpText={popUpText}></Marker>
     );
 }

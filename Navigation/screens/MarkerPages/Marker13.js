@@ -18,8 +18,14 @@ const text =
        known as <Text style={{fontStyle: "italic"}}>Mangave</Text>.</Text>
     </Text>
 
+const popUpText = 
+    <Text style={{padding: 15, fontFamily: "Times New Roman", fontSize: '20'}}>
+        Dykias vary in color by species and can include green, silver, and purple. 
+        Mangaves also have unique coloring, including combinations of red, brown, white, and purple.    
+    </Text> 
+
 export default function MarkerScreen({ navigation }) {
     return (
-        <Marker images={images} num={13} text={text}></Marker>
+        <Marker images={images} num={13} text={text} popUpText={popUpText}></Marker>
     );
 }

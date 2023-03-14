@@ -15,8 +15,13 @@ const text =
         that once <Text style={{fontWeight: "bold"}}>served as the Garden’s entrance.</Text>
     </Text>
 
+const popUpText = 
+    <Text style={{padding: 15, fontFamily: "Times New Roman", fontSize: '20'}}>
+        <Text style={{fontStyle: "italic"}}>Ruth started the Garden at age 63. What projects can you imagine starting at this age?</Text>
+    </Text> 
+
 export default function MarkerScreen({ navigation }) {
     return (
-        <Marker images={images} num={15} text={text}></Marker>
+        <Marker images={images} num={15} text={text} popUpText={popUpText}></Marker>
     );
 }

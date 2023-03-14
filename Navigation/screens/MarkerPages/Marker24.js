@@ -16,8 +16,15 @@ const text =
         Members of the Proteaceae family are found in South Africa, South America and Australia.
     </Text>
 
+const popUpText = 
+    <Text style={{padding: 15, fontFamily: "Times New Roman", fontSize: '20'}}>
+        How do plants on three different continents share a family?
+        {"\n"} {"\n"}
+        It is because 150 million years ago, these continents were all part of the supercontinent of Gondwanaland.
+    </Text> 
+
 export default function MarkerScreen({ navigation }) {
     return (
-        <Marker images={images} num={24} text={text}></Marker>
+        <Marker images={images} num={24} text={text} popUpText={popUpText}></Marker>
     );
 }

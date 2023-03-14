@@ -16,8 +16,14 @@ const text =
         that look to be covered in white cobwebs.
     </Text>
 
+const popUpText = 
+    <Text style={{padding: 15, fontFamily: "Times New Roman", fontSize: '20'}}>
+        Further along the path, notice the <Text style={{fontWeight: "bold"}}>lumpy masses of <Text style={{fontStyle: "italic"}}>Deuterocohnia brevifolia</Text></Text>. 
+        It may look like it covers a rock, but it doesn’t; this is just how it grows.     
+    </Text>
+
 export default function MarkerScreen({ navigation }) {
     return (
-        <Marker images={images} num={19} text={text}></Marker>
+        <Marker images={images} num={19} text={text} popUpText={popUpText}></Marker>
     );
 }
