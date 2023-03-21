@@ -44,7 +44,7 @@ export default function Marker(props) {
                                 onPress={() => {
                                     setPopUp(!popUp)
                                 }}
-                                title="Back"
+                                title="More Pictures"
                                 color="black"
                                 accessibilityLabel="Learn more about this purple button"
                             />
