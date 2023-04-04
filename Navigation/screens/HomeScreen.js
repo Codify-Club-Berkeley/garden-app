@@ -21,18 +21,20 @@ export default function HomeScreen({ navigation }) {
 const styles = StyleSheet.create({
     container: {
         resizeMode: 'contain',
-        flex: 0.3,
+        flex: 0.5,
         height:  '100%',
         width: '100%',
 
       justifyContent: 'center',
     },
     titleText: {
-        fontSize: 26, 
+        padding: 20,
+        fontSize: 30, 
         fontWeight: 'bold',  
         textAlign: 'center',
     },
     bodyText: {
-
+        padding: 15,
+        fontSize: 20,
     },
   });
