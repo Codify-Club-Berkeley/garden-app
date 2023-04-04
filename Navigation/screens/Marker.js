@@ -44,7 +44,9 @@ export default function Marker(props) {
             index={1}
             paginationStyle={{ bottom: 28 }}
             dotStyle={styles.dot}
-            activeDotStyle={styles.activeDot}>
+            activeDotStyle={styles.activeDot}
+            dotColor={"#808080"}
+            activeDotColor={"#efe4be"}>
             {props.images.map((image, index) => (
                 <Image
                 key={index}
