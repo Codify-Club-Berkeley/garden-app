@@ -105,7 +105,7 @@ const DATA = [
     {
       id: "16",
       title: "Marker 16",
-      plant: "Aloe striata x reynoldsii Option 2",
+      plant: "Aloe striata x reynoldsii",
       imge: require('../images/thumbnail_images/M16.jpg')
     },
     {
