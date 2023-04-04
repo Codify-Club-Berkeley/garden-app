@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
-import { View, Text, Image, FlatList, StyleSheet, ScrollView, Button, Modal} from 'react-native';
+import { View, Text, Image, FlatList, StyleSheet, ScrollView, Button, Modal, Dimensions} from 'react-native';
 import Swiper from 'react-native-swiper';
+var height = Dimensions.get('window').height;
+var width = Dimensions.get('window').width;
 
 const styles = StyleSheet.create({
     wrapper: {},
@@ -13,7 +15,9 @@ const styles = StyleSheet.create({
         height: 350,
         width: 400,
         top: 0,
-        resizeMode: "resize"
+        resizeMode: "resize",
+        height: height*0.4, 
+        width: width,
     }
   })
 
@@ -40,7 +44,9 @@ export default function Marker(props) {
             index={1}
             paginationStyle={{ bottom: 28 }}
             dotStyle={styles.dot}
-            activeDotStyle={styles.activeDot}>
+            activeDotStyle={styles.activeDot}
+            dotColor={"#808080"}
+            activeDotColor={"#efe4be"}>
             {props.images.map((image, index) => (
                 <Image
                 key={index}
