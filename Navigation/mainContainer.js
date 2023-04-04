@@ -47,7 +47,7 @@ export default function mainContainer(){
                     else if (rn === MarkerName){
                         iconName=focused ? 'apps' : 'apps-outline'
                     }
-                   else if (rn === TestMarkerName){
+                    else if (rn === TestMarkerName){
                         iconName=focused ? 'apps' : 'apps-outline'
                     }
                     else if (rn === Marker2Name){
