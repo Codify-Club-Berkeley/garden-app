@@ -31,9 +31,9 @@ export default function Marker(props) {
                     }}
                     title="Learn More"
                     color="black"
-                    accessibilityLabel="Learn more about this purple button"
                 />
             </View>
+            {/* Pop-Up */}
             <Modal transparent={true} visible={popUp}>
                 <View style={{backgroundColor: "#000000aa", flex: 1, alignContent: 'center'}}>
                     <View style={{backgroundColor: "#efe4be", margin: 30, marginTop: 250, padding: 15, borderRadius: 10, alignSelf: 'center'}}>
