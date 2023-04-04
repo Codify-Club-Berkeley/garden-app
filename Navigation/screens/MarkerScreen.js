@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { StatusBar, FlatList, Image, Text, View, Dimensions, StyleSheet, SafeAreaView} from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 const { width, height } = Dimensions.get('screen');
 
 
@@ -13,7 +14,7 @@ const DATA = [
         title: "Marker 1",
         plant: 'Quercus lobata',
         imge: require('../images/thumbnail_images/M1.jpg'),
-        whereTo: 'Home'
+        whereTo: 'HomeScreen.js'
     },
     {
         id: "2",
@@ -165,8 +166,8 @@ const BG_IMG = 'https://cdn.pixabay.com/photo/2013/07/02/22/20/bouquet-142876__3
 const SPACING = 20;
 const AVATAR_SIZE = 70;
 
-
 export default function MarkerScreen ({navigation}) {
+  const myNavigation = useNavigation();
       return (
         //first <Image> is the markerscreen's background
         //second is the display of the plant image from DATA along with the title and plant 
@@ -188,7 +189,7 @@ export default function MarkerScreen ({navigation}) {
               
                 return <View style={styles.item} 
                 onStartShouldSetResponder ={() => true}
-                onResponderRelease={() => navigation.navigate(item.whereTo)}> 
+                onResponderRelease={() => myNavigation.navigate('Marker24')}> 
                     <Image
                         source= {item.imge}
                         style={styles.imge}
