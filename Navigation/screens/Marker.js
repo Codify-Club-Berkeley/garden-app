@@ -54,8 +54,8 @@ export default function Marker(props) {
                 <Text style={{ padding: 10, fontFamily: "Times New Roman", fontSize: '30', alignSelf: "center", color: "white" }}>Marker {props.num}</Text>
             </View>
             {/* Text */}
-            <ScrollView style={{height: 0}}>{props.text}</ScrollView>
-            <View style={{ borderColor: "#efe4be", borderWidth: 1, borderRadius: 15, backgroundColor: "#90C6CA", width: 150, marginBottom: 10, marginTop: 10, shadowOpacity: 0.3, shadowRadius: 10,}}>
+            <ScrollView>{props.text}</ScrollView>
+            <View style={{ borderColor: "#efe4be", borderWidth: 1, borderRadius: 15, backgroundColor: "#90C6CA", width: 150, marginBottom: 10, marginTop: -25, shadowOpacity: 0.3, shadowRadius: 10,}}>
                 <Button
                     onPress={() => {
                         setPopUp(!popUp)
