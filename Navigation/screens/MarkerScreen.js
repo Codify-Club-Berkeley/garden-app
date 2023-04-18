@@ -2,6 +2,9 @@ import * as React from 'react';
 import { StatusBar, FlatList, Image, Text, View, Dimensions, StyleSheet, SafeAreaView} from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 const { width, height } = Dimensions.get('screen');
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import Marker from './Marker';
 
 
 //TODO: create more markers (make sure the photo and text correspond), make box highlight upon click
@@ -159,6 +162,29 @@ const DATA = [
     },
 ]
 
+// const Stack = createStackNavigator();
+
+// function MainStackNavigator(MarkerX) {
+//   const markers = [];
+//   for (let i = 1; i <= 24; i++) {
+//     const name = "Marker" + i;
+//     markers.push(name);
+//   }
+//   return (
+//     <NavigationContainer independent={true}>
+//       <Stack.Navigator>
+//         <Stack.Screen name="Marker1" component={MarkerX} />
+//       </Stack.Navigator>
+//     </NavigationContainer>
+//   );
+// }
+
+// const MainStackNavigator =
+// <NavigationContainer independent={true}>
+//   <Stack.Navigator>
+//     <Stack.Screen name="Marker1" component={Marker} />
+//   </Stack.Navigator>
+// </NavigationContainer>
 
 //background image that's blurred later on                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
 const BG_IMG = 'https://cdn.pixabay.com/photo/2013/07/02/22/20/bouquet-142876__340.jpg'
@@ -166,8 +192,8 @@ const BG_IMG = 'https://cdn.pixabay.com/photo/2013/07/02/22/20/bouquet-142876__3
 const SPACING = 20;
 const AVATAR_SIZE = 70;
 
-export default function MarkerScreen ({navigation}) {
-  const myNavigation = useNavigation();
+export default function MarkerScreen ({navigation={MainStackNavigator}}) {
+  //const myNavigation = useNavigation();
       return (
         //first <Image> is the markerscreen's background
         //second is the display of the plant image from DATA along with the title and plant 
@@ -189,7 +215,7 @@ export default function MarkerScreen ({navigation}) {
               
                 return <View style={styles.item} 
                 onStartShouldSetResponder ={() => true}
-                onResponderRelease={() => myNavigation.navigate('Marker24')}> 
+                onResponderRelease={() => navigation.navigate('Marker1')}> 
                     <Image
                         source= {item.imge}
                         style={styles.imge}
