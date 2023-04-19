@@ -90,6 +90,7 @@ export default function Marker(props) {
                             <Button
                                 onPress={() => {
                                     setPopUp(!popUp)
+                                    props.navigation.navigate('Marker' + (eval(props.num) + 1))
                                 }}
                                 title="Next Marker"
                                 color="black"

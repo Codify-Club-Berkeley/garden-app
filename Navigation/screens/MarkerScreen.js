@@ -17,7 +17,7 @@ const DATA = [
         title: "Marker 1",
         plant: 'Quercus lobata',
         imge: require('../images/thumbnail_images/M1.jpg'),
-        whereTo: 'HomeScreen.js'
+        whereTo: 'Marker1'
     },
     {
         id: "2",
@@ -31,134 +31,155 @@ const DATA = [
         title: "Marker 3",
         plant: "Jubaea chilensis",
         imge: require('../images/thumbnail_images/M3.jpg'),
-        whereTo: 'Home'
+        whereTo: 'Marker3'
     
     },
     {
         id: "4",
         title: "Marker 4",
         plant: "Aloe ferox",
-        imge: require('../images/thumbnail_images/M4.jpg')
+        imge: require('../images/thumbnail_images/M4.jpg'),
+        whereTo: 'Marker4'
     },
     {
         id: "5",
         title: "Marker 5",
         plant: "Agave shawii",
-        imge: require('../images/thumbnail_images/M5.jpg')
+        imge: require('../images/thumbnail_images/M5.jpg'),
+        whereTo: 'Marker5'
     },
     {
         id: "6",
         title: "Marker 6",
         plant: "Pinus torreyana",
-        imge: require('../images/thumbnail_images/M6.jpg')
+        imge: require('../images/thumbnail_images/M6.jpg'),
+        whereTo: 'Marker6'
     },
     {
       id: "7",
       title: "Marker 7",
       plant: "Arcostaphylos Ruth Bancroft Check",
-      imge: require('../images/thumbnail_images/M7.jpg')
+      imge: require('../images/thumbnail_images/M7.jpg'),
+      whereTo: 'Marker7'
     },
     {
       id: "8",
       title: "Marker 8",
       plant: "Xanthorrhoea preisii",
-      imge: require('../images/thumbnail_images/M8.jpg')
+      imge: require('../images/thumbnail_images/M8.jpg'),
+      whereTo: 'Marker8'
     },
     {
       id: "9",
       title: "Marker 9",
       plant: "Dasylirion longissimum",
-      imge: require('../images/thumbnail_images/M9.jpg')
+      imge: require('../images/thumbnail_images/M9.jpg'),
+      whereTo: 'Marker9'
     },
     {
       id: "10",
       title: "Marker 10",
       plant: "Gasteria bicolor",
-      imge: require('../images/thumbnail_images/M10.jpg')
+      imge: require('../images/thumbnail_images/M10.jpg'),
+      whereTo: 'Marker10'
     },
     {
       id: "11",
       title: "Marker 11",
       plant: "Aloe speciosa",
-      imge: require('../images/thumbnail_images/M11.jpg')
+      imge: require('../images/thumbnail_images/M11.jpg'),
+      whereTo: 'Marker11'
     },
     {
       id: "12",
       title: "Marker 12",
       plant: "Euphorbia rigida",
-      imge: require('../images/thumbnail_images/M12.jpg')
+      imge: require('../images/thumbnail_images/M12.jpg'),
+      whereTo: 'Marker12'
     },
     {
       id: "13",
       title: "Marker 13",
       plant: "Dykia encholiriodes",
-      imge: require('../images/thumbnail_images/M13.jpg')
+      imge: require('../images/thumbnail_images/M13.jpg'),
+      whereTo: 'Marker13'
     },
     {
       id: "14",
       title: "Marker 14",
       plant: "Brahea armata",
-      imge: require('../images/thumbnail_images/M14.jpg')
+      imge: require('../images/thumbnail_images/M14.jpg'),
+      whereTo: 'Marker14'
     },
     {
       id: "15",
       title: "Marker 15",
       plant: "Filling the Pond Ruth and Philip Bancroft",
-      imge: require('../images/thumbnail_images/M15.jpg')
+      imge: require('../images/thumbnail_images/M15.jpg'),
+      whereTo: 'Marker15'
     },
     {
       id: "16",
       title: "Marker 16",
       plant: "Aloe striata x reynoldsii Option 2",
-      imge: require('../images/thumbnail_images/M16.jpg')
+      imge: require('../images/thumbnail_images/M16.jpg'),
+      whereTo: 'Marker16'
     },
     {
       id: "17",
       title: "Marker 17",
       plant: "Agave victoria-reginae",
-      imge: require('../images/thumbnail_images/M17.jpg')
+      imge: require('../images/thumbnail_images/M17.jpg'),
+      whereTo: 'Marker17'
     },
     {
       id: "18",
       title: "Marker 18",
       plant: "Opunita leucotricha",
-      imge: require('../images/thumbnail_images/M18.jpg')
+      imge: require('../images/thumbnail_images/M18.jpg'),
+      whereTo: 'Marker18'
     },
     {
       id: "19",
       title: "Marker 19",
       plant: "Chilopsis linearis",
-      imge: require('../images/thumbnail_images/M19.jpg')
+      imge: require('../images/thumbnail_images/M19.jpg'),
+      whereTo: 'Marker19'
     },
     {
       id: "20",
       title: "Marker 20",
       plant: "Cereus species",
-      imge: require('../images/thumbnail_images/M20.jpg')
+      imge: require('../images/thumbnail_images/M20.jpg'),
+      whereTo: 'Marker20'
     },
     {
       id: "21",
       title: "Marker 21",
       plant: "Ceiba speciosa",
-      imge: require('../images/thumbnail_images/M21.jpg')
+      imge: require('../images/thumbnail_images/M21.jpg'),
+      whereTo: 'Marker21'
     },
     {
       id: "22",
       title: "Marker 22",
       plant: "Aeonium canariense",
-      imge: require('../images/thumbnail_images/M22.jpg')
+      imge: require('../images/thumbnail_images/M22.jpg'),
+      whereTo: 'Marker22'
     },
     {
       id: "23",
       title: "Marker 23",
       plant: "Agave mitis",
-      imge: require('../images/thumbnail_images/M23.jpg')
+      imge: require('../images/thumbnail_images/M23.jpg'),
+      whereTo: 'Marker23'
     },
     {
       id: "24",
       title: "Marker 24",
       plant: "Encephalartos horridus",
-      imge: require('../images/thumbnail_images/M24.jpg')
+      imge: require('../images/thumbnail_images/M24.jpg'),
+      whereTo: 'Marker24'
     },
 ]
 
@@ -215,7 +236,7 @@ export default function MarkerScreen ({navigation={MainStackNavigator}}) {
               
                 return <View style={styles.item} 
                 onStartShouldSetResponder ={() => true}
-                onResponderRelease={() => navigation.navigate('Marker1')}> 
+                onResponderRelease={() => navigation.navigate(item.whereTo)}> 
                     <Image
                         source= {item.imge}
                         style={styles.imge}
