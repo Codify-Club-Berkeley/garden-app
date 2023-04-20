@@ -1,29 +1,46 @@
 import { NavigationContainer, DefaultTheme } from '@react-navigation/native';
 import { BottomTabBar, createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { createStackNavigator } from '@react-navigation/stack';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 //Screens
 import HomeScreen from './screens/HomeScreen';
 import MapScreen from './screens/MapScreen';
 import MarkerScreen from './screens/MarkerScreen';
-import TestMarker from './screens/MarkerPages/Marker1';
-import Marker2 from './screens/MarkerPages/Marker2';
-import MarkerX from './screens/MarkerPages/Marker24';
-import MarkerHidden from './screens/MarkerPages/Marker15';
+
+import * as Markers from './screens/MarkerExport';
 
 // Screen names
 
 const HomeName = 'Home';
 const MapName= 'Map';
 const MarkerName= 'Markers';
-const TestMarkerName = 'Marker1';
-const Marker2Name = 'Marker2';
-const MarkerXName = 'MarkerX';
-const MarkerHiddenName = 'MarkerHidden';
 
 const Tab = createBottomTabNavigator();
 //initialRouteName specifies which screen will appear first
 //route is where we're going 
+
+const Stack = createStackNavigator();
+
+function MainStackNavigator() {
+    const markers = [];
+    let i = 1;
+    for (let marker in Markers) {
+        const name = "Marker" + i;
+        markers.push([name, Markers[marker]]);
+        i = i + 1;
+    }
+    return (
+      <NavigationContainer independent={true}>
+        <Stack.Navigator initialRouteName='./screens/MarkerScreen'>
+            <Stack.Screen name="Markers" component={MarkerScreen}/>
+            {markers.map((name) => (
+                <Stack.Screen name={name[0]} component={name[1]} />
+            ))}
+        </Stack.Navigator>
+      </NavigationContainer>
+    );
+  }
 
 const MyTheme = {
     ... DefaultTheme,
@@ -47,15 +64,6 @@ export default function mainContainer(){
                     else if (rn === MarkerName){
                         iconName=focused ? 'apps' : 'apps-outline'
                     }
-                    else if (rn === TestMarkerName){
-                        iconName=focused ? 'apps' : 'apps-outline'
-                    }
-                    else if (rn === Marker2Name){
-                        iconName=focused ? 'apps' : 'apps-outline'
-                    }
-                    else if (rn === MarkerXName){
-                        iconName=focused ? 'apps' : 'apps-outline'
-                    }
                     size = 30
                     return <Ionicons name={iconName} size={size} color={color}/>
                 },
@@ -63,8 +71,6 @@ export default function mainContainer(){
                 headerStyle: {backgroundColor:"#90C6CA"},
                 tabBarStyle: {backgroundColor: "#90C6CA", padding: 10, height: 90},
                 tabBarLabelStyle: {fontSize: 12}
-                // tabBarInactiveBackgroundColor: "#90C6CA",
-                // tabBarActiveBackgroundColor: "#90C6CA"
             })}
             tabBarOptions={{
                 activeTintColor: 'white',
@@ -72,13 +78,10 @@ export default function mainContainer(){
                 backgroundColor: 'red'
             }}
             >
-
+            
             <Tab.Screen name={HomeName} component= {HomeScreen}/>
             <Tab.Screen name={MapName} component= {MapScreen}/>
-            <Tab.Screen name={MarkerName} component= {MarkerScreen}/>
-            {<Tab.Screen name={TestMarkerName} component= {TestMarker}/>}
-            {<Tab.Screen name={Marker2Name} component= {Marker2}/>}
-            {<Tab.Screen name={MarkerXName} component= {MarkerX}/>}
+            <Tab.Screen name={MarkerName} component= {MainStackNavigator}/>
             </Tab.Navigator>
 
         </NavigationContainer>
