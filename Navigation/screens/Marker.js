@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { View, Text, Image, FlatList, StyleSheet, ScrollView, Button, Modal, Dimensions} from 'react-native';
+import { View, Text, Image, FlatList, StyleSheet, ScrollView, Button, Modal,  AppRegistry, Dimensions} from 'react-native';
 import Swiper from 'react-native-swiper';
 var height = Dimensions.get('window').height;
 var width = Dimensions.get('window').width;
@@ -28,7 +28,7 @@ export default function Marker(props) {
             {/* images */}
              {/* <FlatList bounces="false" 
                 data={props.images}
-                renderItem={({item}) => <Image source={item} style={{ height: 350, width: 400, top: 0, resizeMode: "resize"}}></Image>}
+                renderItem={({item}) => <Image source={item} style={{falignSelf: 'center', height: height*0.4, width: width, top: 0, resizeMode: "resize"}}></Image>}
                 horizontal={true}
                 ItemSeparatorComponent={
                     (({highlighted}) => (
