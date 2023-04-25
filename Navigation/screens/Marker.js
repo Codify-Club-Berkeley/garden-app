@@ -43,13 +43,8 @@ const styles = StyleSheet.create({
 
 const renderPagination = (index, total, context) => {
     return (
-        <View style={{backgroundColor: 'grey', maxHeight: height/18, maxWidth: width/8, alignSelf: 'flex-end', marginRight:10, marginTop: -height/15, borderRadius: 10}}>
+        <View style={{backgroundColor: 'grey', maxHeight: height/16, maxWidth: width/6, alignSelf: 'flex-end', marginRight:10, marginTop: -65, borderRadius: 10}}>
             <Text style={styles.paginationText}>{index + 1}/{total}</Text>
-            {/*
-            <View style={styles.paginationStyle}>
-                <Text style={styles.paginationText}>{index + 1}/{total}</Text>
-            </View>
-    */}
         </View>
     )
   }
