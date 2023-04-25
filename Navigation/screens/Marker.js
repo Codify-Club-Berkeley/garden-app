@@ -67,7 +67,7 @@ export default function Marker(props) {
             <Swiper
             style={styles.swiperContainer}
             loop={false}
-            index={1}
+            index={0}
             renderPagination={renderPagination}
             // paginationStyle={{ bottom: 28 }}
             dotStyle={styles.dot}

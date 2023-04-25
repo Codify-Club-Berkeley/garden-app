@@ -23,6 +23,11 @@ const Tab = createBottomTabNavigator();
 
 const Stack = createStackNavigator();
 
+const navTheme = {
+    ... DefaultTheme, 
+    primary: 'blue'
+}
+
 function MainStackNavigator() {
     const markers = [];
     let i = 1;
@@ -32,7 +37,7 @@ function MainStackNavigator() {
         i = i + 1;
     }
     return (
-      <NavigationContainer independent={true}>
+      <NavigationContainer independent={true} theme={navTheme} screenOptions={headerStyle={backgroundColor:"#90C6CA"}}>
         <Stack.Navigator initialRouteName='./screens/MarkerScreen'>
             <Stack.Screen name="Markers" component={MarkerScreen}/>
             {markers.map((name) => (
