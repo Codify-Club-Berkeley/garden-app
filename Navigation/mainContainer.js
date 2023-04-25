@@ -4,6 +4,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 //Screens
+import HomeScreen from './screens/HomeScreen';
 import NavScreen from './screens/NavScreen';
 import MapScreen from './screens/MapScreen';
 import MarkerScreen from './screens/MarkerScreen';
@@ -13,7 +14,7 @@ import * as Markers from './screens/MarkerExport';
 // Screen names
 
 const HomeName = 'Home';
-const NavName = 'Navigation';
+const NavName = 'Guide';
 const MapName= 'Map';
 const MarkerName= 'Markers';
 
@@ -83,7 +84,7 @@ export default function mainContainer(){
             }}
             >
             
-            <Tab.Screen name={HomeName} component= {NavScreen}/>
+            <Tab.Screen name={HomeName} component= {HomeScreen}/>
             <Tab.Screen name={NavName} component= {NavScreen}/>
             <Tab.Screen name={MarkerName} component= {MainStackNavigator}/>
             </Tab.Navigator>
