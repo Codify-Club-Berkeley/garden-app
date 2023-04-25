@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { View, Text, Image, FlatList, StyleSheet, ScrollView, Button, Modal, AppRegistry Dimensions} from 'react-native';
+import { View, Text, Image, FlatList, StyleSheet, ScrollView, Button, Modal, AppRegistry, Dimensions} from 'react-native';
 import { color } from 'react-native-reanimated';
 import Swiper from 'react-native-swiper';
 

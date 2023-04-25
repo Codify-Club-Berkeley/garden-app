@@ -5,7 +5,7 @@ import { ScrollView } from 'react-native-gesture-handler';
 const logoImage= require('../images/Logo.png');
 const sampleMarker = require('../images/SampleMarker.jpg')
 
-export default function HomeScreen({ navigation }) {
+export default function NavScreen({ navigation }) {
     return (
         <ScrollView style = {styles.scrollStyle}>
             <Image source = {logoImage} style = {styles.container}/>
