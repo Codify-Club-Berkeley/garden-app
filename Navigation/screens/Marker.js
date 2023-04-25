@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
-import { View, Text, Image, FlatList, StyleSheet, ScrollView, Button, Modal, AppRegistry Dimensions} from 'react-native';
-import { color } from 'react-native-reanimated';
+import { View, Text, Image, FlatList, StyleSheet, ScrollView, Button, Modal, AppRegistry, Dimensions} from 'react-native';
 import Swiper from 'react-native-swiper';
 
 var height = Dimensions.get('window').height;
