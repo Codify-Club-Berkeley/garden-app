@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
-import { View, Text, Image, FlatList, StyleSheet, ScrollView, Button, Modal, Dimensions, TouchableHighlight} from 'react-native';
+import { View, Text, Image, FlatList, StyleSheet, ScrollView, Button, Modal, AppRegistry, Dimensions, TouchableHighlight} from 'react-native';
+import { color } from 'react-native-reanimated';
 import Swiper from 'react-native-swiper';
+
 var height = Dimensions.get('window').height;
 var width = Dimensions.get('window').width;
 
@@ -21,8 +23,33 @@ const styles = StyleSheet.create({
         resizeMode: "resize",
         height: height*0.4, 
         width: width,
-    }
+    },
+    paginationStyle: {
+        position: 'absolute',
+        bottom: 10,
+        right: 10,
+      },
+      paginationText: {
+        color: 'white',
+        fontSize: 17,
+        marginBottom: -4,
+        marginRight: -2
+      }
   })
+
+
+
+const renderPagination = (index, total, context) => {
+    return (
+        <View style={{backgroundColor: 'grey', height: 30, width: 40, marginLeft: 332, marginTop: -35 , borderRadius: 10}}>
+            <View style={styles.paginationStyle}>
+                <Text style={styles.paginationText}>
+                <Text style={styles.paginationText}>{index + 1}</Text>/{total}
+                </Text>
+            </View>
+        </View>
+    )
+  }
 
 export default function Marker(props) {
     const [popUp, setPopUp] = useState(false);
@@ -31,7 +58,7 @@ export default function Marker(props) {
             {/* images */}
              {/* <FlatList bounces="false" 
                 data={props.images}
-                renderItem={({item}) => <Image source={item} style={{ height: 350, width: 400, top: 0, resizeMode: "resize"}}></Image>}
+                renderItem={({item}) => <Image source={item} style={{falignSelf: 'center', height: height*0.4, width: width, top: 0, resizeMode: "resize"}}></Image>}
                 horizontal={true}
                 ItemSeparatorComponent={
                     (({highlighted}) => (
@@ -45,7 +72,8 @@ export default function Marker(props) {
             style={styles.swiperContainer}
             loop={false}
             index={1}
-            paginationStyle={{ bottom: 28 }}
+            renderPagination={renderPagination}
+            // paginationStyle={{ bottom: 28 }}
             dotStyle={styles.dot}
             activeDotStyle={styles.activeDot}
             dotColor={"#808080"}
@@ -99,6 +127,7 @@ export default function Marker(props) {
                             <Button
                                 onPress={() => {
                                     setPopUp(!popUp)
+                                    props.navigation.navigate('Marker' + (eval(props.num) + 1))
                                 }}
                                 title="Next Marker"
                                 color="black"

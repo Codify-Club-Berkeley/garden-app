@@ -27,6 +27,6 @@ const popUpText =
 
 export default function MarkerScreen({ navigation }) {
     return (
-        <Marker images={images} num={3} text={text} popUpText={popUpText}></Marker>
+        <Marker images={images} num={3} text={text} popUpText={popUpText} navigation={navigation}></Marker>
     );
 }

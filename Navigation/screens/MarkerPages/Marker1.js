@@ -6,6 +6,7 @@ Text.defaultProps = {}
 Text.defaultProps.maxFontSizeMultiplier = 2.5
 
 const images = [
+
     require('../../images/Marker_1_1.jpg'),
     require('../../images/Marker_1_2.jpg')
 ]
@@ -35,6 +36,6 @@ const popUpText =
 
 export default function MarkerScreen({ navigation }) {
     return (
-        <Marker images={images} num={1} text={text} popUpText={popUpText}></Marker>
+        <Marker images={images} num={1} text={text} popUpText={popUpText} navigation={navigation}></Marker>
     );
 }
