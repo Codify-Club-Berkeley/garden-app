@@ -2,8 +2,11 @@ import * as React from 'react';
 import { View, Text, Image, FlatList, StyleSheet} from 'react-native';
 import Marker from '../Marker';
 
-const images = 
-[
+Text.defaultProps = {}
+Text.defaultProps.maxFontSizeMultiplier = 2.5
+
+const images = [
+
     require('../../images/Marker_1_1.jpg'),
     require('../../images/Marker_1_2.jpg')
 ]
