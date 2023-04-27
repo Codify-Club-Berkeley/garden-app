@@ -10,7 +10,6 @@ export default function NavScreen({ navigation }) {
         <ScrollView style = {styles.scrollStyle}>
             <Image source = {logoImage} style = {styles.container}/>
             <Text
-                onPress={() => alert('This is the "worm" screen.')}
                 style={styles.titleText}>Welcome to the Garden!
             </Text>           
             <Text 
@@ -82,3 +81,14 @@ const styles = StyleSheet.create({
         lineHeight: 40,
     },
   });
+  /* 
+  For the button and rest of the text: 
+              <Text 
+                style={styles.bodyText}>For a deeper dive into our collection, our plant’s origins, and horticultural needs visit
+            </Text>
+            <View style = {styles.button}>
+            <TouchableOpacity style = {styles.button} onPress={() => Linking.openURL("https://www.ruthbancroftgarden.org/garden//")}>
+                <Text style={styles.buttonText}>{'here'}</Text>
+            </TouchableOpacity>
+            </View>   
+*/
