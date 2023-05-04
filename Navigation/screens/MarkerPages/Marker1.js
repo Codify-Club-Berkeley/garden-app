@@ -15,7 +15,7 @@ const styles = {
     text: {
         fontWeight: "bold", 
         fontStyle: "italic", 
-        fontSize: '25'
+        fontSize: '20'
     }
 }
 

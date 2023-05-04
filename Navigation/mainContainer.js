@@ -1,4 +1,4 @@
-import { NavigationContainer, DefaultTheme } from '@react-navigation/native';
+import { NavigationContainer, DefaultTheme, StackActions } from '@react-navigation/native';
 import { BottomTabBar, createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
 import Ionicons from 'react-native-vector-icons/Ionicons';
@@ -39,7 +39,7 @@ function MainStackNavigator() {
     }
     return (
       <NavigationContainer independent={true} theme={navTheme} screenOptions={headerStyle={backgroundColor:"#90C6CA"}}>
-        <Stack.Navigator initialRouteName='./screens/MarkerScreen'>
+        <Stack.Navigator initialRouteName='./screens/MarkerScreen' headerMode="none" >
             <Stack.Screen name="Markers" component={MarkerScreen}/>
             {markers.map((name) => (
                 <Stack.Screen name={name[0]} component={name[1]} />
