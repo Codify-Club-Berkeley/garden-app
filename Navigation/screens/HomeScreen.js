@@ -21,7 +21,7 @@ export default function HomeScreen({ navigation }) {
                     style = {styles.button}
                     onPress = {() => Linking.openURL("https://www.ruthbancroftgarden.org/garden//")}>
                     <Text style = {styles.buttonText}> website </Text>
-                    </TouchableOpacity>
+                </TouchableOpacity>
                 </View>
             </View>
         </ScrollView>
@@ -50,8 +50,9 @@ const styles = StyleSheet.create({
         paddingBottom: 20,
         paddingTop: 40,
         fontSize: 19,
-        lineHeight: 40,
+        lineHeight: 30,
         fontWeight: 'bold',
+        textAlign: 'justify'
     },
     scrollStyle: {
         flex: 1,
@@ -65,6 +66,6 @@ const styles = StyleSheet.create({
         paddingBottom: 10,
         fontSize: 16,
         //color: 'red',
-        lineHeight: 40,
+        lineHeight: 30,
     },
 })
