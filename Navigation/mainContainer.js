@@ -39,7 +39,7 @@ function MainStackNavigator() {
     }
     return (
       <NavigationContainer independent={true} theme={navTheme} screenOptions={headerStyle={backgroundColor:"#90C6CA"}}>
-        <Stack.Navigator initialRouteName='./screens/MarkerScreen' headerMode="none" >
+        <Stack.Navigator initialRouteName='./screens/MarkerScreen' headerMode="none">
             <Stack.Screen name="Markers" component={MarkerScreen}/>
             {markers.map((name) => (
                 <Stack.Screen name={name[0]} component={name[1]} />
