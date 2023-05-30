@@ -8,10 +8,7 @@ const sampleMarker = require('../images/SampleMarker.jpg')
 export default function NavScreen({ navigation }) {
     return (
         <ScrollView style = {styles.scrollStyle}>
-            <Image source = {logoImage} style = {styles.container}/>
-            <Text
-                style={styles.titleText}>Welcome to the Garden!
-            </Text>           
+            <Image source = {logoImage} style = {styles.container}/>         
             <Text 
                 style={styles.bodyText}>This self-guided tour highlights some of the iconic plants in the collection.  <Text style={{fontWeight: 'bold'}}>As you walk, look for brass markers to pair with the app descriptions.</Text>
             </Text>     
@@ -19,9 +16,11 @@ export default function NavScreen({ navigation }) {
             <Text 
                 style={styles.bodyText}>For a deeper dive into our collection, our plant’s origins, and horticultural needs visit
             </Text>
-            <View style = {styles.button}>
-            <TouchableOpacity style = {styles.button} onPress={() => Linking.openURL("https://www.ruthbancroftgarden.org/garden//")}>
-                <Text style={styles.buttonText}>{'here'}</Text>
+            <View style = {styles.buttonText}>
+            <TouchableOpacity
+                style = {styles.button}
+                onPress = {() => Linking.openURL("https://www.ruthbancroftgarden.org/garden//")}>
+                <Text style = {styles.buttonText}> website </Text>
             </TouchableOpacity>
             </View>   
         </ScrollView>
@@ -29,22 +28,15 @@ export default function NavScreen({ navigation }) {
 }
 const styles = StyleSheet.create({
     buttonText: {
-
-        fontSize: 20,
-        lineHeight: 21,
-        fontWeight: 'bold',
-        letterSpacing: 1,
-        color: 'white',
-        paddingBottom: 10,
+        fontSize: "25",
+        color: "white",
+        padding: 10,
+        paddingLeft: 80,
+        paddingRight: 80,
+        textAlign: 'center',
     },
     button: {
-        alignItems: 'center',
-        justifyContent: 'center',
-        // paddingVertical: 12,
-        // paddingHorizontal: 12,
-        padding: 12,
-        borderRadius: 5,
-        elevation: 3,
+        borderRadius: 10,
         backgroundColor: "#90C6CA",
     },
     scrollStyle: {

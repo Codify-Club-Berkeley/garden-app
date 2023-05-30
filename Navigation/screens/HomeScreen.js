@@ -9,6 +9,9 @@ export default function HomeScreen({ navigation }) {
             <Image source = {logoImage} style = {styles.container}/>
             <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: "#efe4be" }}>
                 <Text
+                    style={styles.titleText}>Welcome to the Garden
+                </Text>
+                <Text
                     style={styles.bodyText}>
                         The Garden’s mission is to preserve, promote, and enhance Ruth Bancroft’s world-class collection of water-conserving plants displayed in her exceptionally designed garden, for the education, inspiration, and enjoyment of the public.
                 </Text>
@@ -36,6 +39,14 @@ const styles = StyleSheet.create({
         fontSize: "25",
         color: "white",
         padding: 10,
+        paddingLeft: 80,
+        paddingRight: 80,
+    },
+    titleText: {
+        paddingTop: 30,
+        fontSize: 30, 
+        fontWeight: 'bold',  
+        textAlign: 'center',
     },
     container: {
         resizeMode: 'contain',
