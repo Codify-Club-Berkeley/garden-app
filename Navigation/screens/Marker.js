@@ -99,7 +99,7 @@ export default function Marker(props) {
                     color="black"
                 />
                 </View>*/}
-            <TouchableHighlight onPress={() => {setPopUp(!popUp)}} style={{ borderColor: "#efe4be", borderWidth: 5, borderRadius: 15, backgroundColor: "#90C6CA", maxWidth: width/1.2, marginBottom: 10, marginTop: 10, shadowOpacity: 0.3, shadowRadius: 10}}>
+            <TouchableHighlight onPress={() => {setPopUp(!popUp)}} style={{ borderColor: "#efe4be", borderWidth: 5, borderRadius: 15, backgroundColor: "#90C6CA", maxWidth: width/1.2, marginBottom: 10, marginTop: 0, shadowOpacity: 0.3, shadowRadius: 10}}>
                     <Text style={{ padding: 10, fontFamily: "Times New Roman", fontSize: '20', alignSelf: "center", color: "white" }}>Learn More</Text>
             </TouchableHighlight>
             {/* Pop-Up */}

@@ -1,12 +1,25 @@
 import * as React from 'react';
-import { View, Text} from 'react-native';
+import { View, Text, MapView} from 'react-native';
+import { Overlay} from 'react-native-maps';
 
 export default function MapScreen({ navigation }) {
     return (
-        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: "#efe4be" }}>
-            <Text
-                onPress={() => navigation.navigate('Home')}
-                style={{ fontSize: 26, fontWeight: 'bold' }}>Map Screen wow look at all the places we'll go!</Text>
-        </View>
+        <MapView
+        style={{ flex: 1 }}
+        initialRegion={{
+          latitude: 37.78825,
+          longitude: -122.4324,
+          latitudeDelta: 0.0922,
+          longitudeDelta: 0.0421,
+        }}
+      >
+        <Overlay 
+            image="https://www.lib.utexas.edu/maps/historical/newark_nj_1922.jpg"
+            bounds={[
+                [40.712216, -74.22655], 
+                [40.773941, -74.12544]
+            ]}
+        />
+    </MapView>
     );
 }

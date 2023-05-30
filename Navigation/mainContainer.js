@@ -86,6 +86,7 @@ export default function mainContainer(){
             
             <Tab.Screen name={HomeName} component= {HomeScreen}/>
             <Tab.Screen name={NavName} component= {NavScreen}/>
+            <Tab.Screen name={MapName} component= {MapScreen}/>
             <Tab.Screen name={MarkerName} component= {MainStackNavigator}/>
             </Tab.Navigator>
 
