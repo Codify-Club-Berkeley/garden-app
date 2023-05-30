@@ -10,6 +10,7 @@ import MapScreen from './screens/MapScreen';
 import MarkerScreen from './screens/MarkerScreen';
 
 import * as Markers from './screens/MarkerExport';
+import EndScreen from './screens/EndScreen';
 
 // Screen names
 
@@ -17,6 +18,7 @@ const HomeName = 'Home';
 const NavName = 'Guide';
 const MapName= 'Map';
 const MarkerName= 'Markers';
+const EndName = 'EndScreen';
 
 const Tab = createBottomTabNavigator();
 //initialRouteName specifies which screen will appear first
@@ -44,6 +46,7 @@ function MainStackNavigator() {
             {markers.map((name) => (
                 <Stack.Screen name={name[0]} component={name[1]} />
             ))}
+            <Stack.Screen name= "EndScreen" component = {EndScreen}/>
         </Stack.Navigator>
       </NavigationContainer>
     );

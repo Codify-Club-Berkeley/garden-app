@@ -156,7 +156,8 @@ export default function Marker(props) {
     );
     function nextMarker() {
         if (props.num == 24) {
-            alert('You have reached the end :)')
+           props.navigation.navigate('EndScreen')
+           //alert('You have reached the end :)')
         } else {
             props.navigation.navigate('Marker' + (eval(props.num) + 1))
         }
