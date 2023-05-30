@@ -61,8 +61,9 @@ const styles = StyleSheet.create({
         paddingBottom: 20,
         paddingTop: 40,
         fontSize: 19,
-        lineHeight: 40,
+        lineHeight: 30,
         fontWeight: 'bold',
+        textAlign: 'justify'
     },
     scrollStyle: {
         flex: 1,
@@ -76,6 +77,6 @@ const styles = StyleSheet.create({
         paddingBottom: 10,
         fontSize: 16,
         //color: 'red',
-        lineHeight: 40,
+        lineHeight: 30,
     },
 })
