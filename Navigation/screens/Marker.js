@@ -106,23 +106,30 @@ export default function Marker(props) {
                     color="black"
                 />
                 </View>*/}
+
+            {/* Bottom Buttons */}
             <View style={{flexDirection: 'row'}}>
+                {/* Learn More */}
                 <TouchableHighlight onPress={() => {setPopUp(!popUp)}} style={{ borderColor: "#efe4be", borderWidth: 5, borderRadius: 15, backgroundColor: "#90C6CA", maxWidth: width/1.2, marginBottom: 10, marginTop: 10, marginLeft: 20, shadowOpacity: 0.3, shadowRadius: 10}}>
                         <Text style={{ padding: 10, fontFamily: "Times New Roman", fontSize: '20', alignSelf: "center", color: "white" }}>Learn More</Text>
                 </TouchableHighlight>
+                {/* Next Marker Map Popup*/}
                 <TouchableHighlight onPress={() => {setMapPopUp(!mapPopUp)}} style={{ borderColor: "#efe4be", borderWidth: 5, borderRadius: 15, backgroundColor: "#90C6CA", maxWidth: width/1.2, marginBottom: 10, marginTop: 10, marginLeft: 20, shadowOpacity: 0.3, shadowRadius: 10}}>
                         <Text style={{ padding: 10, fontFamily: "Times New Roman", fontSize: '20', alignSelf: "center", color: "white" }}>Next Marker</Text>
                 </TouchableHighlight>
             </View>
-            {/* Pop-Up */}
+
+            {/* Learn More Pop-Up */}
             <Modal transparent={true} visible={popUp}>
                 <View style={{backgroundColor: "#000000aa", flex: 1, alignContent: 'center'}}>
                     <View style={{display: 'flex', backgroundColor: "#efe4be", margin: 30, marginTop: 250, padding: 15, borderRadius: 10, width: width/1.15, maxHeight: height/2, justifyContent: 'center', alignItems: 'center', alignSelf: 'center'}}>
                         <ScrollView>{props.popUpText}</ScrollView>
                         <View style={{flexDirection: 'row'}}>
+                            {/* More Pictures */}
                             <TouchableHighlight onPress={() => {setPopUp(!popUp)}} style={{ borderColor: "#efe4be", borderWidth: 5, borderRadius: 15, backgroundColor: "#90C6CA", justifyContent: 'center', width: width/2.7, marginBottom: 10, marginTop: 10, marginRight: 10, marginLeft: 5, shadowOpacity: 0.3, shadowRadius: 10}}>
                                 <Text style={{ padding: 10, fontFamily: "Times New Roman", fontSize: '19', alignSelf: "center", color: "white" }}>More Pictures</Text>
                             </TouchableHighlight>
+                            {/* Next Marker */}
                             <TouchableHighlight 
                                 onPress={() => 
                                     {setPopUp(!popUp)
@@ -134,14 +141,17 @@ export default function Marker(props) {
                     </View>
                 </View>
             </Modal>
+            {/* Map Pop-Up */}
             <Modal transparent={true} visible={mapPopUp}>
                 <View style={{backgroundColor: "#000000aa", flex: 1, alignContent: 'center'}}>
                     <View style={{display: 'flex', backgroundColor: "#efe4be", margin: 30, marginTop: 250, padding: 15, borderRadius: 10, width: width/1.15, maxHeight: height/2, justifyContent: 'center', alignItems: 'center', alignSelf: 'center'}}>
                         <Image source={props.map} style={styles.map}></Image>
                         <View style={{flexDirection: 'row'}}>
+                            {/* Back */}
                             <TouchableHighlight onPress={() => {setMapPopUp(!mapPopUp)}} style={{ borderColor: "#efe4be", borderWidth: 5, borderRadius: 15, backgroundColor: "#90C6CA", justifyContent: 'center', width: width/2.7, marginBottom: 10, marginTop: 10, marginRight: 10, marginLeft: 5, shadowOpacity: 0.3, shadowRadius: 10}}>
                                 <Text style={{ padding: 10, fontFamily: "Times New Roman", fontSize: '19', alignSelf: "center", color: "white" }}>Back</Text>
                             </TouchableHighlight>
+                            {/* Next Marker */}
                             <TouchableHighlight onPress={() => {setMapPopUp(!mapPopUp)
                                 nextMarker()}}
                                 style={{ borderColor: "#efe4be", borderWidth: 5, borderRadius: 15, backgroundColor: "#90C6CA", justifyContent: 'center', width: width/2.7, marginBottom: 10, marginTop: 10, shadowOpacity: 0.3, shadowRadius: 10}}>

@@ -22,7 +22,8 @@ export default function EndScreen({ navigation }) {
                     </Text>
                     <Text
                     style= {styles.learnMoreText}>
-                        {'\t'}Please consider becoming a member. Memberships help support our Garden and allow us to uphold our mission of education and preservation. We appreciate the valuable support our Members provide and are eager to continue to share Ruth’s Garden with our growing community!
+                        {'\t'}Please consider becoming a member. Memberships help support our Garden and allow us to uphold our mission of education and preservation. 
+                        We appreciate the valuable support our Members provide and are eager to continue to share Ruth’s Garden with our growing community!
                     </Text>
                     <View style={styles.buttonText}>
                 </View>

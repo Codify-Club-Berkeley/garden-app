@@ -6,7 +6,6 @@ Text.defaultProps = {}
 Text.defaultProps.maxFontSizeMultiplier = 2.5
 
 const images = [
-
     require('../../images/Marker_1_1.jpg'),
     require('../../images/Marker_1_2.jpg')
 ]
@@ -29,11 +28,16 @@ const text =
 const popUpText = 
     <Text style={{padding: 15, fontFamily: "Times New Roman", fontSize: '20' }}>
         Agaves are distinguished by their rosettes of tough leaves, often with a spiny margin terminating in a sharp point. 
-        Look for Agaves in various shapes and sizes throughout the Garden.
+        {"\n"} {"\n"}
+        <Text style={{fontStyle:"italic"}}>Look for Agaves in various shapes and sizes throughout the Garden.</Text>
     </Text>
+
+const map = [
+    require('../../images/1-2 map.jpg')
+]
 
 export default function MarkerScreen({ navigation }) {
     return (
-        <Marker images={images} num={1} text={text} popUpText={popUpText} navigation={navigation}></Marker>
+        <Marker images={images} num={1} text={text} popUpText={popUpText} navigation={navigation} map={map}></Marker>
     );
 }
