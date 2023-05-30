@@ -40,8 +40,8 @@ const styles = StyleSheet.create({
     button: {
         backgroundColor: "#90C6CA",
         borderRadius: 10,
-        shadowColor: '#00008B',
-        shadowOpacity: 0.9,
+        shadowColor: '#000',
+        shadowOpacity: 0.75,
         elevation: 6,
         shadowRadius: 10 ,
         shadowOffset : { width: 1, height: 6},
@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
     boxRound: {
         padding: 10,
         backgroundColor: "#efe4be",
-        borderRadius: 15,
+                borderRadius: 15,
         width: '95%',
     },
     titleText: {
