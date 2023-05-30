@@ -2,34 +2,37 @@
 
 import * as React from 'react';
 import { View, Text, Button, Linking, StyleSheet, TouchableOpacity, Image} from 'react-native';
-const logoImage= require('../images/thumbnail_images/M19.jpg');
+const BG_IMG= require('../images/thumbnail_images/M22.jpg');
 import { ScrollView } from 'react-native-gesture-handler'; //note: use M19 for image
 import { LinearGradient } from 'expo-linear-gradient';
 //const chosenImage= require('../images/thumbnail_images/M19.jpg');
 
 export default function EndScreen({ navigation }) {
     return (
-            <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: "#efe4be" }}>
+            <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: "#efe4be"}}>
             <Image 
-                source={{uri: BG_IMG}}
+                source={BG_IMG}
                 style={StyleSheet.absoluteFillObject}
-                blurRadius={25}
+                blurRadius={15}
                 >
             </Image>
-                <Text
-                    style={styles.titleText}> We hope you enjoyed this self-guided tour. 
-                </Text>
-                <Text
-                style= {styles.learnMoreText}>
-                    {'\t'}Please consider becoming a member. Memberships help support our Garden and allow us to uphold our mission of education and preservation. We appreciate the valuable support our Members provide and are eager to continue to share Ruth’s Garden with our growing community!
-                </Text>
-                <View style={styles.buttonText}>
+                <View style = {styles.boxRound}>
+                    <Text
+                        style={styles.titleText}> We hope you enjoyed this {'\n'} self-guided tour. 
+                    </Text>
+                    <Text
+                    style= {styles.learnMoreText}>
+                        {'\t'}Please consider becoming a member. Memberships help support our Garden and allow us to uphold our mission of education and preservation. We appreciate the valuable support our Members provide and are eager to continue to share Ruth’s Garden with our growing community!
+                    </Text>
+                    <View style={styles.buttonText}>
+                </View>
+                </View>
+                <View style = {{marginBottom: 20}}/>
                 <TouchableOpacity
                     style = {styles.button}
                     onPress = {() => Linking.openURL("https://www.ruthbancroftgarden.org/membership/")}>
                     <Text style = {styles.buttonText}> Join </Text>
                 </TouchableOpacity>
-                </View>
             </View>
     );
 }
@@ -37,15 +40,28 @@ const styles = StyleSheet.create({
     button: {
         backgroundColor: "#90C6CA",
         borderRadius: 10,
+        shadowColor: '#00008B',
+        shadowOpacity: 0.9,
+        elevation: 6,
+        shadowRadius: 10 ,
+        shadowOffset : { width: 1, height: 6},
     },
     buttonText: {
-        fontSize: "25",
+        fontSize: "30",
         color: "white",
         padding: 10,
     },
+    boxRound: {
+        padding: 10,
+        backgroundColor: "#efe4be",
+        borderRadius: 15,
+        width: '95%',
+    },
     titleText: {
         paddingTop: 30,
-        fontSize: 20, 
+        paddingBottom: 20,
+        lineHeight: 35,
+        fontSize: 25, 
         padding: 10,
         fontWeight: 'bold',  
         textAlign: 'center',
@@ -62,7 +78,7 @@ const styles = StyleSheet.create({
         paddingRight: 20,
         paddingBottom: 20,
         paddingTop: 40,
-        fontSize: 19,
+        fontSize: 25,
         lineHeight: 30,
         fontWeight: 'bold',
         textAlign: 'justify'
