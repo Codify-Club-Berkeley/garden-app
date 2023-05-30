@@ -1,6 +1,7 @@
-import React, {useState} from 'react';
-import { View, Text, Image, FlatList, StyleSheet, ScrollView, Button, Modal, AppRegistry, Dimensions, TouchableHighlight} from 'react-native';
+import React, {useEffect, useState} from 'react';
+import { View, Text, Image, FlatList, StyleSheet, ScrollView, Button, Modal, AppRegistry, Dimensions, TouchableHighlight, TouchableOpacity} from 'react-native';
 import Swiper from 'react-native-swiper';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 
 var height = Dimensions.get('window').height;
 var width = Dimensions.get('window').width;
@@ -58,21 +59,20 @@ const renderPagination = (index, total, context) => {
 export default function Marker(props) {
     const [popUp, setPopUp] = useState(false);
     const [mapPopUp, setMapPopUp] = useState(false);
+
+    useEffect(() => {
+        props.navigation.setOptions({
+            headerLeft: () => (
+                <TouchableOpacity onPress={() => {props.navigation.navigate("Markers")}}>
+                    <Ionicons name="chevron-back-outline" size={20}>All Markes</Ionicons>
+                </TouchableOpacity>
+            )
+        });
+    })
+
     return (
         <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: "#efe4be" }}>
             {/* images */}
-             {/* <FlatList bounces="false" 
-                data={props.images}
-                renderItem={({item}) => <Image source={item} style={{falignSelf: 'center', height: height*0.4, width: width, top: 0, resizeMode: "resize"}}></Image>}
-                horizontal={true}
-                ItemSeparatorComponent={
-                    (({highlighted}) => (
-                      <View
-                        style={{width: 10, marginLeft: 0}}
-                      />
-                    ))
-                  }
-            /> */}
             <Swiper
             style={styles.swiperContainer}
             loop={false}
@@ -158,7 +158,7 @@ export default function Marker(props) {
         if (props.num == 24) {
             alert('You have reached the end :)')
         } else {
-            props.navigation.navigate('Marker' + (eval(props.num) + 1))
+            props.navigation.navigate('Marker ' + (eval(props.num) + 1))
         }
     }
 }
