@@ -22,10 +22,10 @@ const popUpText =
         Fortunately, there are enough seeds that fall to the ground and ensure the tree’s survival.
     </Text>
 
-const map = require('../../images/2-3 map.jpg')
+const map = require('../../images/2_3map.jpg')
 
 export default function MarkerScreen({ navigation }) {
     return (
-        <Marker images={images} num={2} text={text} popUpText={popUpText} navigation={navigation}> map={map}</Marker>
+        <Marker images={images} num={2} text={text} popUpText={popUpText} navigation={navigation} map={map}></Marker>
     );
 }
