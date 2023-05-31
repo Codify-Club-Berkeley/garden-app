@@ -11,7 +11,7 @@ const images = [
 ]
 const text = 
     <Text style={{ padding: 20, paddingBottom: 37, fontFamily: "Times New Roman", fontSize: '20' }}>   
-        This tree with a remarkably spiny trunk is a <Text style={{fontWeight: "bold"}}>silk floss tree (<Text style={{fontStyle: "italic"}}>Ceiba speciosa</Text>.</Text>
+        This tree with a remarkably spiny trunk is a <Text style={{fontWeight: "bold"}}>silk floss tree (<Text style={{fontStyle: "italic"}}>Ceiba speciosa)</Text>.</Text>
         {"\n"} {"\n"}
         The cotton-like fibers within its seed pods were traditionally used for insulation in sleeping bags and clothing.
         {"\n"} {"\n"}

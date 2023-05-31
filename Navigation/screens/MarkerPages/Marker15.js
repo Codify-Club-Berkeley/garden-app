@@ -20,7 +20,9 @@ const text =
 
 const popUpText = 
     <Text style={{padding: 15, fontFamily: "Times New Roman", fontSize: '20'}}>
-        <Text style={{fontStyle: "italic"}}>Ruth started the Garden at age 63. What projects can you imagine starting at this age?</Text>
+        Ruth started the Garden <Text style={{fontStyle: "italic"}}>at age 63. 
+        {"\n"} {"\n"}
+        What projects can you imagine starting at this age?</Text>
     </Text> 
 
 const map = require('../../images/Marker_1_1.jpg')
