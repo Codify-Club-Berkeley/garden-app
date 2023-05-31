@@ -32,9 +32,7 @@ const popUpText =
         <Text style={{fontStyle:"italic"}}>Look for Agaves in various shapes and sizes throughout the Garden.</Text>
     </Text>
 
-const map = [
-    require('../../images/1-2 map.jpg')
-]
+const map = require('../../images/1-2 map.jpg')
 
 export default function MarkerScreen({ navigation }) {
     return (

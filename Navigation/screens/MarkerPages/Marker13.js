@@ -27,8 +27,10 @@ const popUpText =
         Mangaves also have unique coloring, including combinations of red, brown, white, and purple.    
     </Text> 
 
+const map = require('../../images/Marker_1_1.jpg')
+
 export default function MarkerScreen({ navigation }) {
     return (
-        <Marker images={images} num={13} text={text} popUpText={popUpText} navigation={navigation}></Marker>
+        <Marker images={images} num={13} text={text} popUpText={popUpText} navigation={navigation} map={map}></Marker>
     );
 }

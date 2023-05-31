@@ -27,8 +27,10 @@ const popUpText =
         Gardeners wishing to save water, should select plants that are adapted to a Mediterranean climate.    
     </Text> 
 
+const map = require('../../images/Marker_1_1.jpg')
+
 export default function MarkerScreen({ navigation }) {
     return (
-        <Marker images={images} num={16} text={text} popUpText={popUpText} navigation={navigation}></Marker>
+        <Marker images={images} num={16} text={text} popUpText={popUpText} navigation={navigation} map={map}></Marker>
     );
 }

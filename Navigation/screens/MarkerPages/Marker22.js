@@ -27,8 +27,10 @@ const popUpText =
         CO2 is stored as malic acid until the sun comes up and the plant can complete their photosynthesis. 
     </Text> 
 
+const map = require('../../images/Marker_1_1.jpg')
+
 export default function MarkerScreen({ navigation }) {
     return (
-        <Marker images={images} num={22} text={text} popUpText={popUpText} navigation={navigation}></Marker>
+        <Marker images={images} num={22} text={text} popUpText={popUpText} navigation={navigation} map={map}></Marker>
     );
 }

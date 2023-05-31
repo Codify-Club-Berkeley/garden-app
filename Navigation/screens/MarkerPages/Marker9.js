@@ -24,8 +24,10 @@ const popUpText =
         <Text style={{fontStyle: "italic"}}>What other examples of convergent evolution in nature can you think of?</Text>
     </Text> 
 
+const map = require('../../images/Marker_1_1.jpg')
+
 export default function MarkerScreen({ navigation }) {
     return (
-        <Marker images={images} num={9} text={text} popUpText={popUpText} navigation={navigation}></Marker>
+        <Marker images={images} num={9} text={text} popUpText={popUpText} navigation={navigation} map={map}></Marker>
     );
 }

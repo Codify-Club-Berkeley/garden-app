@@ -26,8 +26,10 @@ const popUpText =
         It is because 150 million years ago, these continents were all part of the supercontinent of Gondwanaland.
     </Text> 
 
+const map = require('../../images/Marker_1_1.jpg')
+
 export default function MarkerScreen({ navigation }) {
     return (
-        <Marker images={images} num={24} text={text} popUpText={popUpText} navigation={navigation}></Marker>
+        <Marker images={images} num={24} text={text} popUpText={popUpText} navigation={navigation} map={map}></Marker>
     );
 }

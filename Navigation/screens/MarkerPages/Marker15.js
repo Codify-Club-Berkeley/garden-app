@@ -23,8 +23,10 @@ const popUpText =
         <Text style={{fontStyle: "italic"}}>Ruth started the Garden at age 63. What projects can you imagine starting at this age?</Text>
     </Text> 
 
+const map = require('../../images/Marker_1_1.jpg')
+
 export default function MarkerScreen({ navigation }) {
     return (
-        <Marker images={images} num={15} text={text} popUpText={popUpText} navigation={navigation}></Marker>
+        <Marker images={images} num={15} text={text} popUpText={popUpText} navigation={navigation} map={map}></Marker>
     );
 }

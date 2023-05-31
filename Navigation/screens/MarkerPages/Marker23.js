@@ -24,8 +24,10 @@ const popUpText =
         Although death follows, many produce ‘pups’ from the base, providing the next generation of plants.    
     </Text> 
 
+const map = require('../../images/Marker_1_1.jpg')
+
 export default function MarkerScreen({ navigation }) {
     return (
-        <Marker images={images} num={23} text={text} popUpText={popUpText} navigation={navigation}></Marker>
+        <Marker images={images} num={23} text={text} popUpText={popUpText} navigation={navigation} map={map}></Marker>
     );
 }

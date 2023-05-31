@@ -31,8 +31,10 @@ const popUpText =
         <Text style={{fontStyle: "italic"}}>Are any plants in the Garden used in your culture’s cuisine?</Text>
     </Text>
 
+const map = require('../../images/Marker_1_1.jpg')
+
 export default function MarkerScreen({ navigation }) {
     return (
-        <Marker images={images} num={18} text={text} popUpText={popUpText} navigation={navigation}></Marker>
+        <Marker images={images} num={18} text={text} popUpText={popUpText} navigation={navigation} map={map}></Marker>
     );
 }
