@@ -25,7 +25,7 @@ const popUpText =
         This ability to store water is another <Text style={{fontWeight: "bold"}}>important adaptation</Text> of plants living in arid climates.
     </Text> 
 
-const map = require('../../images/Marker_1_1.jpg')
+const map = require('../../images/map/3.jpg')
 
 export default function MarkerScreen({ navigation }) {
     return (

@@ -24,7 +24,7 @@ const popUpText =
         including aloes. Other than in this Garden, some of his creations can be seen nowhere else in the world. 
     </Text> 
 
-const map = require('../../images/Marker_1_1.jpg')
+const map = require('../../images/map/6.jpg')
 
 export default function MarkerScreen({ navigation }) {
     return (

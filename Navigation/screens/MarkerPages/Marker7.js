@@ -26,7 +26,7 @@ const popUpText =
         and the Australian Aboriginal people use the tea tree oil for traditional medicine.   
     </Text> 
 
-const map = require('../../images/Marker_1_1.jpg')
+const map = require('../../images/map/7.jpg')
 
 export default function MarkerScreen({ navigation }) {
     return (

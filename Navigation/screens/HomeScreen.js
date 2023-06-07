@@ -8,22 +8,22 @@ export default function HomeScreen({ navigation }) {
         <ScrollView style = {styles.scrollStyle}>
             <Image source = {logoImage} style = {styles.container}/>
             <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: "#efe4be" }}>
-                <Text
-                    style={styles.titleText}>Welcome to the Garden
-                </Text>
+                <View style={styles.titleblock}>
+                    <Text style={styles.titleText}>Welcome to the Garden!</Text>
+                </View>
                 <Text
                     style={styles.bodyText}>
                         The Garden’s mission is to preserve, promote, and enhance Ruth Bancroft’s world-class collection of water-conserving plants displayed in her exceptionally designed garden, for the education, inspiration, and enjoyment of the public.
                 </Text>
                 <Text
                 style= {styles.learnMoreText}>
-                To learn more about our history collection and organizational offerings please visit our
+                To learn more about our history collection and organizational offerings please visit our website below.
                 </Text>
                 <View style={styles.buttonText}>
                 <TouchableOpacity
                     style = {styles.button}
                     onPress = {() => Linking.openURL("https://www.ruthbancroftgarden.org/garden//")}>
-                    <Text style = {styles.buttonText}> website </Text>
+                    <Text style = {styles.buttonText}> Website </Text>
                 </TouchableOpacity>
                 </View>
             </View>
@@ -39,14 +39,20 @@ const styles = StyleSheet.create({
         fontSize: "25",
         color: "white",
         padding: 10,
-        paddingLeft: 80,
-        paddingRight: 80,
     },
     titleText: {
-        paddingTop: 30,
+        padding: 10,
         fontSize: 30, 
         fontWeight: 'bold',  
         textAlign: 'center',
+        
+    },
+    titleblock: {
+        marginTop: '5%',
+        borderRadius: "20px",
+        backgroundColor: "#90C6CA",
+        shadowOpacity: 0.9,
+        shadowOffset: {height: 0, width: 1}        
     },
     container: {
         resizeMode: 'contain',
@@ -56,27 +62,31 @@ const styles = StyleSheet.create({
       justifyContent: 'center',
     },
     bodyText: {
+        marginTop: 10,
         paddingLeft: 30,
         paddingRight: 20,
         paddingBottom: 20,
-        paddingTop: 40,
+        paddingTop: 30,
         fontSize: 19,
         lineHeight: 30,
         fontWeight: 'bold',
-        textAlign: 'justify'
+        textAlign: 'left',
+        width: "100%"
     },
     scrollStyle: {
         flex: 1,
         backgroundColor: "#efe4be",
         paddingTop: 25,
-        paddingBottom: 25,  
+        paddingBottom: 50,  
      },
     learnMoreText: {
         paddingLeft: 30,
         paddingRight: 20,
         paddingBottom: 10,
+        paddingTop: 10,
         fontSize: 16,
         //color: 'red',
         lineHeight: 30,
+        width: "100%"
     },
 })

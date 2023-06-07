@@ -25,7 +25,7 @@ const popUpText =
         to preserve Ruth’s original vision.
     </Text> 
 
-const map = require('../../images/Marker_1_1.jpg')
+const map = require('../../images/map/11.jpg')
 
 export default function MarkerScreen({ navigation }) {
     return (

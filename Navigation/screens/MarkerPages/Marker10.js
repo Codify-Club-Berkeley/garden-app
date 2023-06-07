@@ -25,7 +25,7 @@ const popUpText =
         making Latin names key to proper plant identification.
     </Text> 
 
-const map = require('../../images/Marker_1_1.jpg')
+const map = require('../../images/map/10.jpg')
 
 export default function MarkerScreen({ navigation }) {
     return (

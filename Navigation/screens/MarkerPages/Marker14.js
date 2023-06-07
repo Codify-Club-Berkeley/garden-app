@@ -27,7 +27,7 @@ const popUpText =
         Similar adaptations occur in lineages that emerged in geographic isolation from one another.
     </Text> 
 
-const map = require('../../images/Marker_1_1.jpg')
+const map = require('../../images/map/14.jpg')
 
 export default function MarkerScreen({ navigation }) {
     return (

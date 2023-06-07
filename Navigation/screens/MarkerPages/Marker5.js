@@ -24,7 +24,7 @@ const popUpText =
         <Text style={{fontWeight: "bold"}}> many tons of crushed rock from Mt. Diablo were laid at the start of the Garden.</Text>
     </Text> 
 
-const map = require('../../images/Marker_1_1.jpg')
+const map = require('../../images/map/5.jpg')
 
 export default function MarkerScreen({ navigation }) {
     return (

@@ -24,7 +24,7 @@ const popUpText =
         Nonetheless, it has recovered well.   
     </Text> 
 
-const map = require('../../images/Marker_1_1.jpg')
+const map = require('../../images/map/21.jpg')
 
 export default function MarkerScreen({ navigation }) {
     return (

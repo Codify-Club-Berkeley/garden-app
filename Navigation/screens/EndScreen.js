@@ -4,10 +4,20 @@ import * as React from 'react';
 import { View, Text, Button, Linking, StyleSheet, TouchableOpacity, Image} from 'react-native';
 const BG_IMG= require('../images/thumbnail_images/M22.jpg');
 import { ScrollView } from 'react-native-gesture-handler'; //note: use M19 for image
-import { LinearGradient } from 'expo-linear-gradient';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 //const chosenImage= require('../images/thumbnail_images/M19.jpg');
 
-export default function EndScreen({ navigation }) {
+export default function EndScreen({navigation}) {
+    React.useEffect(() => {
+        navigation.setOptions({
+            headerLeft: () => (
+                <TouchableOpacity onPress={() => {navigation.navigate("Markers")}}>
+                    <Ionicons name="chevron-back-outline" size={20}>All Markes</Ionicons>
+                </TouchableOpacity>
+            )
+        });
+    })
+
     return (
             <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: "#efe4be"}}>
             <Image 

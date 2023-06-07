@@ -22,7 +22,7 @@ const popUpText =
         Fortunately, there are enough seeds that fall to the ground and ensure the tree’s survival.
     </Text>
 
-const map = require('../../images/2_3map.jpg')
+const map = require('../../images/map/2.jpg');
 
 export default function MarkerScreen({ navigation }) {
     return (

@@ -26,7 +26,7 @@ const popUpText =
         Unfortunately, many plants adapted to fire are no match for the mega-fires brought about by climate change.
     </Text> 
 
-const map = require('../../images/Marker_1_1.jpg')
+const map = require('../../images/map/8.jpg')
 
 export default function MarkerScreen({ navigation }) {
     return (

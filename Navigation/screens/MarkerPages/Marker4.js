@@ -24,7 +24,7 @@ const popUpText =
         whereas the agave is monocarpic (blooms only once in its lifetime).</Text>
     </Text> 
 
-const map = require('../../images/Marker_1_1.jpg')
+const map = require('../../images/map/4.jpg')
 
 export default function MarkerScreen({ navigation }) {
     return (

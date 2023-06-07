@@ -28,7 +28,7 @@ const popUpText =
         Can you guess why the bottle tree is so stout, and possesses green bark?</Text>
     </Text> 
 
-const map = require('../../images/Marker_1_1.jpg')
+const map = require('../../images/map/17.jpg')
 
 export default function MarkerScreen({ navigation }) {
     return (

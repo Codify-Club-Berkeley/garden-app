@@ -30,7 +30,7 @@ const popUpText =
         Reduced surface area, via small leaves (or no leaves in the case of cacti and a stressed Palo Verde tree) are adaptations for reducing evaporation/transpiration.    
     </Text> 
 
-const map = require('../../images/Marker_1_1.jpg')
+const map = require('../../images/map/12.jpg')
 
 export default function MarkerScreen({ navigation }) {
     return (

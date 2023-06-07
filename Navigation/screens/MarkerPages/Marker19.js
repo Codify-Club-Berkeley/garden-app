@@ -25,7 +25,7 @@ const popUpText =
         It may look like it covers a rock, but it doesn’t; this is just how it grows.     
     </Text>
 
-const map = require('../../images/Marker_1_1.jpg')
+const map = require('../../images/map/19.jpg')
 
 export default function MarkerScreen({ navigation }) {
     return (
