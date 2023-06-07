@@ -16,7 +16,7 @@ const text =
         {"\n"} {"\n"}
         Toward the center of the bed are the <Text style={{fontWeight: "bold"}}>only palms native to California, <Text style={{fontStyle: "italic"}}>Washingtonia filifera</Text>.</Text>
         {"\n"} {"\n"}
-        The <Text style={{fontWeight: "bold"}}>(<Text style={{fontStyle: "italic"}}>rythrina x bidwillii</Text>)</Text>, 
+        The <Text style={{fontWeight: "bold"}}>(<Text style={{fontStyle: "italic"}}>Erythrina x bidwillii</Text>)</Text>, 
         to the right of the palms is a blaze with red flowers in the summer and is cut back in winter.
     </Text>
 

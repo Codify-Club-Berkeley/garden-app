@@ -13,7 +13,7 @@ const images = [
 ]
 const text = 
     <Text style={{ padding: 20, paddingBottom: 37, fontFamily: "Times New Roman", fontSize: '20' }}>   
-       The <Text style={{fontWeight: "bold"}}>spiky, green clump in the foreground is a dyckia</Text>. 
+       The <Text style={{fontWeight: "bold"}}>spiky, green clump in the foreground are dykias</Text>. 
        These plants are characterized by sharply hooked spines edging their stiff leaves.
        {"\n"} {"\n"}
        On the other side of the path you will see more rosettes; this time the smooth leafed <Text style={{fontWeight: "bold"}}> 
