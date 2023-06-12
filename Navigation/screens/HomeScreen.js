@@ -1,13 +1,26 @@
 import * as React from 'react';
-import { View, Text, Button, Linking, StyleSheet, TouchableOpacity, Image} from 'react-native';
-const logoImage= require('../images/Logo.png');
+import { View, Text, Button, Linking, StyleSheet, TouchableOpacity, Image, ImageBackground} from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
+import { LinearGradient } from 'expo-linear-gradient';
+
+const logoImage= require('../images/Logo.png');
+const HOME_BG_IMG= require('../images/home_screen_blur.png');
+const HOME2_BG_IMG= require('../images/thumbnail_images/M22.jpg');
 
 export default function HomeScreen({ navigation }) {
     return (
         <ScrollView style = {styles.scrollStyle}>
+            <ImageBackground blurRadius={9} style = {styles.bgImg} source={HOME2_BG_IMG} resizeMode="cover">
+            <LinearGradient
+                colors={['transparent',"#efe4be"]}
+                end = {{x:0.5, y: 0.35}}
+                style={styles.linearGradient}
+            />
+            <View /> 
+            <View /> 
+            <View /> 
             <Image source = {logoImage} style = {styles.container}/>
-            <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: "#efe4be" }}>
+            <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: "efe4be"}}>
                 <View style={styles.titleblock}>
                     <Text style={styles.titleText}>Welcome to the Garden!</Text>
                 </View>
@@ -27,10 +40,19 @@ export default function HomeScreen({ navigation }) {
                 </TouchableOpacity>
                 </View>
             </View>
+            </ImageBackground>
         </ScrollView>
     );
 }
 const styles = StyleSheet.create({
+    bgImg: {
+        //paddingTop: 10,
+    },
+    linearGradient: {
+        position: 'absolute',
+        width: '100%', 
+        height: '100%',
+    },
     button: {
         backgroundColor: "#90C6CA",
         borderRadius: 10,
@@ -46,20 +68,28 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',  
         textAlign: 'center',
         
+        
     },
     titleblock: {
         marginTop: '5%',
         borderRadius: "20px",
         backgroundColor: "#90C6CA",
         shadowOpacity: 0.9,
-        shadowOffset: {height: 0, width: 1}        
+        shadowOffset: {height: 1, width: 0}        
     },
     container: {
         resizeMode: 'contain',
         flex: 0.35,
         height:  180, // percentile heights was giving problems
+        paddingTop: 10,
         width: '100%',
-      justifyContent: 'center',
+      justifyContent: 'center',        
+      shadowColor: "#000",
+      shadowOpacity: 0.4,
+      elevation: 6,
+      shadowRadius: 10,
+      shadowOffset : { width: 1, height: 3},
+
     },
     bodyText: {
         marginTop: 10,
@@ -76,8 +106,8 @@ const styles = StyleSheet.create({
     scrollStyle: {
         flex: 1,
         backgroundColor: "#efe4be",
-        paddingTop: 25,
         paddingBottom: 50,  
+        //paddingTop: 15,
      },
     learnMoreText: {
         paddingLeft: 30,
