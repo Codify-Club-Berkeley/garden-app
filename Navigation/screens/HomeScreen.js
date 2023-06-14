@@ -1,21 +1,11 @@
 import * as React from 'react';
-<<<<<<< HEAD
 import { View, Text, Button, Linking, StyleSheet, TouchableOpacity, Image, ImageBackground} from 'react-native';
-=======
-import {Animated, View, Text, Button, Linking, StyleSheet, TouchableOpacity, Image, ImageBackground} from 'react-native';
->>>>>>> home_ui
 import { ScrollView } from 'react-native-gesture-handler';
 import { LinearGradient } from 'expo-linear-gradient';
 
 const logoImage= require('../images/Logo.png');
 const HOME_BG_IMG= require('../images/home_screen_blur.png');
 const HOME2_BG_IMG= require('../images/thumbnail_images/M22.jpg');
-
-<<<<<<< HEAD
-=======
-fadeIn = new Animated.Value(0);
-
->>>>>>> home_ui
 
 export default function HomeScreen({ navigation }) {
     return (
