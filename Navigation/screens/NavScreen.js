@@ -1,13 +1,23 @@
 import * as React from 'react';
-import { View, Text, Image, StyleSheet, SafeAreaView, Button, Alert, Pressable, Linking, TouchableOpacity} from 'react-native';
+import { View, Text, Image, StyleSheet, SafeAreaView, Button, Alert, Pressable, Linking, TouchableOpacity, ImageBackground} from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
+import { LinearGradient } from 'expo-linear-gradient';
+
 
 const logoImage= require('../images/Logo.png');
 const sampleMarker = require('../images/SampleMarker.jpg')
+const HOME_BG_IMG= require('../images/home_screen_blur.png');
+const HOME2_BG_IMG= require('../images/navScreenBG.png');
 
 export default function NavScreen({ navigation }) {
     return (
+        <ImageBackground blurRadius={3} style = {styles.bgImg} source={HOME2_BG_IMG} resizeMode="cover">
         <ScrollView style = {styles.scrollStyle}>
+            <LinearGradient
+                    colors={['transparent',"#efe4be"]}
+                    end = {{x:0.5, y: 0.12}}
+                    style={styles.linearGradient}
+                />
             <Image source = {logoImage} style = {styles.container}/>         
             <Text 
                 style={styles.bodyText}>This self-guided tour highlights some of the iconic plants in the collection.  <Text style={{fontWeight: 'bold'}}>As you walk, look for brass markers to pair with the app descriptions.</Text>
@@ -24,11 +34,17 @@ export default function NavScreen({ navigation }) {
             </TouchableOpacity>
             </View>   
         </ScrollView>
+        </ImageBackground>
     );
 }
 const styles = StyleSheet.create({
+    linearGradient: {
+        position: 'absolute',
+        width: '100%', 
+        height: '120%',
+    },
     buttonText: {
-        fontSize: "25",
+        fontSize: 25,
         color: "white",
         padding: 10,
         paddingLeft: 80,
@@ -38,16 +54,17 @@ const styles = StyleSheet.create({
     button: {
         borderRadius: 10,
         backgroundColor: "#90C6CA",
+        marginBottom: 10,
     },
     scrollStyle: {
-        flex: 1,
-        backgroundColor: "#efe4be",
+        //flex: 1,
+        //backgroundColor: "#efe4be",
         paddingTop: 25,
         paddingBottom: 25,  
      },
     container: {
         resizeMode: 'contain',
-        flex: 0.35,
+        //flex: 0.35,
         height:  180, // percentile heights was giving problems
         width: '100%',
       justifyContent: 'center',
