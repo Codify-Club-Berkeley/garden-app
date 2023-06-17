@@ -30,7 +30,7 @@ export default function NavScreen({ navigation }) {
             <TouchableOpacity
                 style = {styles.button}
                 onPress = {() => Linking.openURL("https://www.ruthbancroftgarden.org/garden//")}>
-                <Text style = {styles.buttonText}> website </Text>
+                <Text style = {styles.buttonText}> Website </Text>
             </TouchableOpacity>
             </View>   
         </ScrollView>
@@ -47,14 +47,14 @@ const styles = StyleSheet.create({
         fontSize: 25,
         color: "white",
         padding: 10,
-        paddingLeft: 80,
-        paddingRight: 80,
+        // paddingLeft: 80,
+        // paddingRight: 80,
         textAlign: 'center',
     },
     button: {
         borderRadius: 10,
         backgroundColor: "#90C6CA",
-        marginBottom: 10,
+        marginBottom: 100,
     },
     scrollStyle: {
         //flex: 1,
@@ -84,7 +84,7 @@ const styles = StyleSheet.create({
     bodyText: {
         paddingLeft: 30,
         paddingRight: 20,
-        paddingBottom: 40,
+        paddingBottom: 20,
         paddingTop: 40,
         fontSize: 19,
         lineHeight: 40,

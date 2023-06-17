@@ -2,6 +2,7 @@ import * as React from 'react';
 import { View, Text, Button, Linking, StyleSheet, TouchableOpacity, Image, ImageBackground} from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 import { LinearGradient } from 'expo-linear-gradient';
+import { Link } from '@react-navigation/native';
 
 const logoImage= require('../images/Logo.png');
 const HOME_BG_IMG= require('../images/home_screen_blur.png');
@@ -9,7 +10,8 @@ const HOME2_BG_IMG= require('../images/thumbnail_images/M22.jpg');
 
 export default function HomeScreen({ navigation }) {
     return (
-        <View style = {styles.scrollStyle}>
+        <ScrollView>
+<View style = {styles.scrollStyle}>
             <ImageBackground blurRadius={12} style = {styles.bgImg} source={HOME2_BG_IMG} resizeMode="cover">
             <LinearGradient
                 colors={['transparent',"#efe4be"]}
@@ -43,8 +45,9 @@ export default function HomeScreen({ navigation }) {
                 </View>
             </View>
             </ImageBackground>   
-
         </View>
+        </ScrollView>
+        
     );
 }
 const styles = StyleSheet.create({
