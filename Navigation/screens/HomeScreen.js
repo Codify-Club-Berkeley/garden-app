@@ -1,8 +1,12 @@
 import * as React from 'react';
-import { View, Text, Button, Linking, StyleSheet, TouchableOpacity, Image, ImageBackground} from 'react-native';
+import { View, Text, Button, Linking, StyleSheet, TouchableOpacity, Image, ImageBackground, NavigationContainer} from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 import { LinearGradient } from 'expo-linear-gradient';
-import { Link } from '@react-navigation/native';
+import { useNavigation } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import NavScreen from './NavScreen';
+
+
 
 const logoImage= require('../images/Logo.png');
 const HOME_BG_IMG= require('../images/home_screen_blur.png');
@@ -39,8 +43,8 @@ export default function HomeScreen({ navigation }) {
                 <View style={styles.addInfo}>
                 <TouchableOpacity
                     style = {styles.button}
-                    onPress = {() => Linking.openURL("https://www.ruthbancroftgarden.org/garden//")}>
-                    <Text style = {styles.buttonText}> Website </Text>
+                    onPress = {()=>navigation.navigate("Guide")}>
+                    <Text style = {styles.buttonText}> Go to Guide </Text>
                 </TouchableOpacity>
                 </View>
             </View>
@@ -50,6 +54,9 @@ export default function HomeScreen({ navigation }) {
         
     );
 }
+
+
+
 const styles = StyleSheet.create({
     addInfo: {
        // flex: 1, 

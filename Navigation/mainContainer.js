@@ -50,6 +50,7 @@ function MainStackNavigator() {
                 <Stack.Screen name={name[0]} component={name[1]} />
             ))}
             <Stack.Screen name= "EndScreen" component = {EndScreen}/>
+            <Stack.Screen name = "NavScreen" component = {NavScreen}/>
         </Stack.Navigator>
       </NavigationContainer>
     );
