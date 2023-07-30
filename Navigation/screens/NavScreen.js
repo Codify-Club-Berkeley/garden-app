@@ -27,11 +27,16 @@ export default function NavScreen({ navigation }) {
                 style={styles.bodyText}>For a deeper dive into our collection, our plant’s origins, and horticultural needs visit
             </Text>
             <View style = {styles.buttonText}>
-            <TouchableOpacity
-                style = {styles.button}
-                onPress = {() => Linking.openURL("https://www.ruthbancroftgarden.org/garden//")}>
-                <Text style = {styles.buttonText}> Website </Text>
-            </TouchableOpacity>
+                <TouchableOpacity
+                    style = {styles.button}
+                    onPress = {() => Linking.openURL("https://www.ruthbancroftgarden.org/garden//")}>
+                    <Text style = {styles.buttonText}> Website </Text>
+                </TouchableOpacity>
+                <TouchableOpacity
+                    style = {styles.button}
+                    onPress = {() => navigation.navigate('Markers')}>
+                    <Text style = {styles.buttonText}> Go to Tour </Text>
+                </TouchableOpacity>
             </View>   
         </ScrollView>
         </ImageBackground>
