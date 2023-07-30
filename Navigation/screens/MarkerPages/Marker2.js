@@ -24,8 +24,10 @@ const popUpText =
 
 const map = require('../../images/map/2.jpg');
 
+const directions = <Text style={{ padding: 20, fontFamily: "Times New Roman", fontSize: '20' }}>test</Text>
+
 export default function MarkerScreen({ navigation }) {
     return (
-        <Marker images={images} num={2} text={text} popUpText={popUpText} navigation={navigation} map={map}></Marker>
+        <Marker images={images} num={2} text={text} popUpText={popUpText} navigation={navigation} map={map} directions={directions}></Marker>
     );
 }
