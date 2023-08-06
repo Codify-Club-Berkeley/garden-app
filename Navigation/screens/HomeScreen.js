@@ -36,7 +36,7 @@ export default function HomeScreen({ navigation }) {
                     </Text>
                 <Text
                     style= {styles.learnMoreText}>
-                    To learn more about our history collection and organizational offerings please visit our website below.{'\n'}
+                    To learn more about our history collection and organizational offerings please visit our website:{'\n'}
                     <Text style={{color: 'blue'}}
                         onPress={() => Linking.openURL('https://www.ruthbancroftgarden.org/garden//')}>
                         Ruth Bancroft Garden Website

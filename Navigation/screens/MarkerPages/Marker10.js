@@ -27,8 +27,13 @@ const popUpText =
 
 const map = require('../../images/map/10.jpg')
 
+const directions = <Text style={{ padding: 20, fontFamily: "Times New Roman", fontSize: '20' }}>
+    Continue on the path into the large clearing. 
+    To your right, and the right of the light pole, is Marker 11.
+    </Text>
+
 export default function MarkerScreen({ navigation }) {
     return (
-        <Marker images={images} num={10} text={text} popUpText={popUpText} navigation={navigation} map={map}></Marker>
+        <Marker images={images} num={10} text={text} popUpText={popUpText} navigation={navigation} map={map} directions={directions}></Marker>
     );
 }

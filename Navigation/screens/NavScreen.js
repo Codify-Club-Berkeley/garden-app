@@ -29,6 +29,10 @@ export default function NavScreen({ navigation }) {
                     onPress={() => Linking.openURL('https://www.ruthbancroftgarden.org/garden//')}>
                     Ruth Bancroft Garden Website
                 </Text>
+                {'\n'}{'\n'}
+                Upon entering the Garden, walk towards the covered patio. 
+                Three quarters of the way there stop before passing the giant gray-green Agave. 
+                On the right, find <Text style={{fontWeight: 'bold'}}>Marker 1</Text>.
             </Text>
             <View style = {styles.buttonText}>
                 <TouchableOpacity

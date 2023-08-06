@@ -34,8 +34,12 @@ const popUpText =
 
 const map = require('../../images/map/1.jpg')
 
+const directions = <Text style={{ padding: 20, fontFamily: "Times New Roman", fontSize: '20' }}>
+    Continue walking to the V in the path, staying left. Under the row of palm-like plants (Yuccas) find Marker 2. 
+    </Text>
+
 export default function MarkerScreen({ navigation }) {
     return (
-        <Marker images={images} num={1} text={text} popUpText={popUpText} navigation={navigation} map={map}></Marker>
+        <Marker images={images} num={1} text={text} popUpText={popUpText} navigation={navigation} map={map} directions={directions}></Marker>
     );
 }

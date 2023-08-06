@@ -27,8 +27,12 @@ const popUpText =
 
 const map = require('../../images/map/6.jpg')
 
+const directions = <Text style={{ padding: 20, fontFamily: "Times New Roman", fontSize: '20' }}>
+    Turn right down the small path. Just before the tree with red bark is Marker 7.
+    </Text>
+
 export default function MarkerScreen({ navigation }) {
     return (
-        <Marker images={images} num={6} text={text} popUpText={popUpText} navigation={navigation} map={map}></Marker>
+        <Marker images={images} num={6} text={text} popUpText={popUpText} navigation={navigation} map={map} directions={directions}></Marker>
     );
 }

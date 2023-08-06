@@ -26,8 +26,12 @@ const popUpText =
 
 const map = require('../../images/map/5.jpg')
 
+const directions = <Text style={{ padding: 20, fontFamily: "Times New Roman", fontSize: '20' }}>
+    Straight ahead, you will see a rock with a plaque on it. Marker 6 is right above it.
+    </Text>
+
 export default function MarkerScreen({ navigation }) {
     return (
-        <Marker images={images} num={5} text={text} popUpText={popUpText} navigation={navigation} map={map}></Marker>
+        <Marker images={images} num={5} text={text} popUpText={popUpText} navigation={navigation} map={map} directions={directions}></Marker>
     );
 }
