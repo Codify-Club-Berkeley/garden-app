@@ -145,7 +145,10 @@ export default function Marker(props) {
             <Modal transparent={true} visible={mapPopUp}>
                 <View style={{backgroundColor: "#000000aa", flex: 1, alignContent: 'center'}}>
                     <View style={{display: 'flex', backgroundColor: "#efe4be", margin: 30, marginTop: 150, padding: 15, borderRadius: 10, width: width/1.15, height: height/1.6, maxHeight: height, justifyContent: 'center', alignItems: 'center', alignSelf: 'center'}}>
-                        <Image  source={props.map} style={styles.map}></Image>
+                        <ScrollView>
+                            <View>{props.directions}</View>
+                            <Image  source={props.map} style={styles.map}></Image>
+                        </ScrollView>
                         <View style={{flexDirection: 'row'}}>
                             {/* Back */}
                             <TouchableHighlight onPress={() => {setMapPopUp(!mapPopUp)}} style={{ borderColor: "#efe4be", borderWidth: 5, borderRadius: 15, backgroundColor: "#90C6CA", justifyContent: 'center', width: width/2.7, marginBottom: 10, marginTop: 10, marginRight: 10, marginLeft: 5, shadowOpacity: 0.3, shadowRadius: 10}}>
