@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
         shadowOffset : { width: 1, height: 6},
     },
     buttonText: {
-        fontSize: "30",
+        fontSize: 30,
         color: "white",
         padding: 10,
     },

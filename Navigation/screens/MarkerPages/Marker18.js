@@ -31,9 +31,11 @@ const popUpText =
     </Text>
 
 const map = require('../../images/map/18.jpg')
+const directions = <Text style={{ padding: 20, fontFamily: "Times New Roman", fontSize: '20' }}>Continue onward to the fence. Under the spreading tree, find marker 19. </Text>
+
 
 export default function MarkerScreen({ navigation }) {
     return (
-        <Marker images={images} num={18} text={text} popUpText={popUpText} navigation={navigation} map={map}></Marker>
+        <Marker images={images} num={18} text={text} popUpText={popUpText} navigation={navigation} map={map} directions={directions}></Marker>
     );
 }

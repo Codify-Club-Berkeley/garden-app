@@ -28,9 +28,11 @@ const popUpText =
     </Text> 
 
 const map = require('../../images/map/14.jpg')
+const directions = <Text style={{ padding: 20, fontFamily: "Times New Roman", fontSize: '20' }}>Head towards the gazebo (aka Ruth’s Folly). Find Marker 15 next to the pond, on the left.</Text>
+
 
 export default function MarkerScreen({ navigation }) {
     return (
-        <Marker images={images} num={14} text={text} popUpText={popUpText} navigation={navigation} map={map}></Marker>
+        <Marker images={images} num={14} text={text} popUpText={popUpText} navigation={navigation} map={map} directions={directions}></Marker>
     );
 }

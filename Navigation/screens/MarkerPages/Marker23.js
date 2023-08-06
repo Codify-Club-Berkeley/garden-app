@@ -25,9 +25,10 @@ const popUpText =
     </Text> 
 
 const map = require('../../images/map/23.jpg')
+const directions = <Text style={{ padding: 20, fontFamily: "Times New Roman", fontSize: '20' }}>Walk to the very end of the bed of the covered-structure. The mound to the right of the covered bed holds Marker 24. </Text>
 
 export default function MarkerScreen({ navigation }) {
     return (
-        <Marker images={images} num={23} text={text} popUpText={popUpText} navigation={navigation} map={map}></Marker>
+        <Marker images={images} num={23} text={text} popUpText={popUpText} navigation={navigation} map={map}directions={directions}></Marker>
     );
 }
