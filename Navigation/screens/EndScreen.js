@@ -12,7 +12,7 @@ export default function EndScreen({navigation}) {
         navigation.setOptions({
             headerLeft: () => (
                 <TouchableOpacity onPress={() => {navigation.navigate("Markers")}}>
-                    <Ionicons name="chevron-back-outline" size={20}>All Markes</Ionicons>
+                    <Ionicons name="chevron-back-outline" size={20}>All Markers</Ionicons>
                 </TouchableOpacity>
             )
         });
