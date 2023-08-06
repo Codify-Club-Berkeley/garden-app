@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { View, Text, Button, Linking, StyleSheet, TouchableOpacity, Image, ImageBackground} from 'react-native';
-import { ScrollView } from 'react-native-gesture-handler';
+import { View, Text, Button, Linking, ScrollView, StyleSheet, TouchableOpacity, Image, ImageBackground} from 'react-native';
+// import { ScrollView } from 'react-native-gesture-handler';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Link } from '@react-navigation/native';
 
