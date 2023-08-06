@@ -35,8 +35,12 @@ export default function HomeScreen({ navigation }) {
                             The Garden’s mission is to preserve, promote, and enhance Ruth Bancroft’s world-class collection of water-conserving plants displayed in her exceptionally designed garden, for the education, inspiration, and enjoyment of the public.
                     </Text>
                 <Text
-                style= {styles.learnMoreText}>
-                To learn more about our history collection and organizational offerings please visit our website below.
+                    style= {styles.learnMoreText}>
+                    To learn more about our history collection and organizational offerings please visit our website below.{'\n'}
+                    <Text style={{color: 'blue'}}
+                        onPress={() => Linking.openURL('https://www.ruthbancroftgarden.org/garden//')}>
+                        Ruth Bancroft Garden Website
+                    </Text>
                 </Text>
                 <View style={styles.buttonText}>
                 </View>

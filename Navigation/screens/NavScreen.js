@@ -24,7 +24,11 @@ export default function NavScreen({ navigation }) {
             </Text>     
             <Image source = {sampleMarker} style = {styles.markerPic}/>
             <Text 
-                style={styles.bodyText}>For a deeper dive into our collection, our plant’s origins, and horticultural needs visit
+                style={styles.bodyText}>For a deeper dive into our collection, our plant’s origins, and horticultural needs visit:{'\n'}
+                <Text style={{color: 'blue'}}
+                    onPress={() => Linking.openURL('https://www.ruthbancroftgarden.org/garden//')}>
+                    Ruth Bancroft Garden Website
+                </Text>
             </Text>
             <View style = {styles.buttonText}>
                 <TouchableOpacity
