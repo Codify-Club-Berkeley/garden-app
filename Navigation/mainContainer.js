@@ -1,6 +1,6 @@
 import { NavigationContainer, DefaultTheme, StackActions } from '@react-navigation/native';
 import { View, Text } from 'react-native';
-import { BottomTabBar, createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
@@ -89,7 +89,7 @@ export default function mainContainer(){
                     ],
                     headerStyle: {backgroundColor:"#90C6CA"},
                     tabBarStyle: {backgroundColor: "#90C6CA", padding: 10, height: 90},
-                    tabBarLabelStyle: {fontSize: 12}
+                    tabBarLabelStyle: {display: "none"}
                 })}
             >
                 <Tab.Screen name={HomeName} component= {HomeScreen}/>
