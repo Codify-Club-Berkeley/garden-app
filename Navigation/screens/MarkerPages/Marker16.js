@@ -11,7 +11,7 @@ const images = [
     require('../../images/Marker_16_3.jpg')
 ]
 const text = 
-    <Text style={{ padding: 20, paddingBottom: 37, fontFamily: "Times New Roman", fontSize: '20' }}>   
+    <Text style={{ padding: 20, paddingBottom: 37, fontFamily: "Times New Roman", fontSize: 20 }}>   
         Along the path is a drift of <Text style={{fontWeight: "bold", fontStyle: "italic"}}>aloes</Text>.
         {"\n"} {"\n"}
         Toward the center of the bed are the <Text style={{fontWeight: "bold"}}>only palms native to California, <Text style={{fontStyle: "italic"}}>Washingtonia filifera</Text>.</Text>
@@ -21,14 +21,14 @@ const text =
     </Text>
 
 const popUpText = 
-    <Text style={{padding: 15, fontFamily: "Times New Roman", fontSize: '20'}}>
+    <Text style={{padding: 15, fontFamily: "Times New Roman", fontSize: 20}}>
         Like the majority of plants in the Garden, these <Text style={{fontWeight: "bold"}}>specimens all come from Mediterranean climates, 
         characterized by hot dry summers and wet winters</Text>. 
         Gardeners wishing to save water, should select plants that are adapted to a Mediterranean climate.    
     </Text> 
 
 const map = require('../../images/map/16.jpg')
-const directions = <Text style={{ padding: 20, fontFamily: "Times New Roman", fontSize: '20' }}>Keep walking to the gazebo/folly. Marker 17 is in the bed on the right nearest to the Folly. </Text>
+const directions = <Text style={{ padding: 20, fontFamily: "Times New Roman", fontSize: 20 }}>Keep walking to the gazebo/folly. Marker 17 is in the bed on the right nearest to the Folly. </Text>
 
 
 export default function MarkerScreen({ navigation }) {
