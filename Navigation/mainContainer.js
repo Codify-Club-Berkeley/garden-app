@@ -47,7 +47,7 @@ function MainStackNavigator() {
                     tabBarLabelStyle: {fontSize: 12}})}>
             <Stack.Screen name="Markers" component={MarkerScreen}/>
             {markers.map((name) => (
-                <Stack.Screen name={name[0]} component={name[1]} />
+                <Stack.Screen name={name[0]} component={name[1]} key={name[0]}/>
             ))}
             <Stack.Screen name= "EndScreen" component = {EndScreen}/>
             <Stack.Screen name = "NavScreen" component = {NavScreen}/>
