@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { View, Text, Image, FlatList, StyleSheet} from 'react-native';
 import Marker from '../Marker';
-import {markerTextStyle} from './MarkerStyle';
+import * as markerTextStyle from './MarkerStyle';
 import {markerImages} from './MarkerImages';
 
 Text.defaultProps = {}
