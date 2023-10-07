@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
         height: 350,
         width: 400,
         top: 0,
-        resizeMode: "resize",
+        resizeMode: "stretch",
         height: height*0.4, 
         width: width,
     },
@@ -39,10 +39,10 @@ const styles = StyleSheet.create({
         padding: 5
       },
       map: {
-        resizeMode: "resize",
+        resizeMode: "stretch",
         height: height*0.5, 
         width: width * 0.8,
-        borderRadius: '10px',
+        borderRadius: 10,
       }
   })
 
@@ -93,7 +93,7 @@ export default function Marker(props) {
             </Swiper>
             {/* Marker Heading */}
             <View style={{ borderColor: "#efe4be", borderWidth: 5, borderRadius: 15, marginTop: -25, marginBottom: 10, backgroundColor: "#90C6CA", maxWidth: width/1.2, shadowOpacity: 0.3, shadowRadius: 20}}>
-                <Text style={{ padding: 10, fontFamily: "Times New Roman", fontSize: '30', alignSelf: "center", color: "white" }}>Marker {props.num}</Text>
+                <Text style={{ padding: 10, fontFamily: "Times New Roman", fontSize: 30, alignSelf: "center", color: "white" }}>Marker {props.num}</Text>
             </View>
             {/* Text */}
             <ScrollView style={{height: 0}}>{props.text}</ScrollView>
@@ -111,11 +111,11 @@ export default function Marker(props) {
             <View style={{flexDirection: 'row'}}>
                 {/* Learn More */}
                 <TouchableHighlight onPress={() => {setPopUp(!popUp)}} style={{ borderColor: "#efe4be", borderWidth: 5, borderRadius: 15, backgroundColor: "#90C6CA", maxWidth: width/1.2, marginBottom: 10, marginTop: 10, marginLeft: 5, shadowOpacity: 0.3, shadowRadius: 10}}>
-                        <Text style={{ padding: 10, fontFamily: "Times New Roman", fontSize: '20', alignSelf: "center", color: "white" }}>Learn More</Text>
+                        <Text style={{ padding: 10, fontFamily: "Times New Roman", fontSize: 20, alignSelf: "center", color: "white" }}>Learn More</Text>
                 </TouchableHighlight>
                 {/* Next Marker Map Popup*/}
                 <TouchableHighlight onPress={() => {lastMarker()}} style={{ borderColor: "#efe4be", borderWidth: 5, borderRadius: 15, backgroundColor: "#90C6CA", maxWidth: width/1.2, marginBottom: 10, marginTop: 10, marginLeft: 20, shadowOpacity: 0.3, shadowRadius: 10}}>
-                        <Text style={{ padding: 10, fontFamily: "Times New Roman", fontSize: '20', alignSelf: "center", color: "white" }}>Next Marker</Text>
+                        <Text style={{ padding: 10, fontFamily: "Times New Roman", fontSize: 20, alignSelf: "center", color: "white" }}>Next Marker</Text>
                 </TouchableHighlight>
             </View>
 
@@ -127,7 +127,7 @@ export default function Marker(props) {
                         <View style={{flexDirection: 'row'}}>
                             {/* More Pictures */}
                             <TouchableHighlight onPress={() => {setPopUp(!popUp)}} style={{ borderColor: "#efe4be", borderWidth: 5, borderRadius: 15, backgroundColor: "#90C6CA", justifyContent: 'center', width: width/2.7, marginBottom: 10, marginTop: 10, marginRight: 10, marginLeft: 5, shadowOpacity: 0.3, shadowRadius: 10}}>
-                                <Text style={{ padding: 10, fontFamily: "Times New Roman", fontSize: '19', alignSelf: "center", color: "white" }}>More Pictures</Text>
+                                <Text style={{ padding: 10, fontFamily: "Times New Roman", fontSize: 19, alignSelf: "center", color: "white" }}>More Pictures</Text>
                             </TouchableHighlight>
                             {/* Next Marker */}
                             <TouchableHighlight 
@@ -135,7 +135,7 @@ export default function Marker(props) {
                                     {setPopUp(!popUp)
                                     lastMarker()}}
                                 style={{ borderColor: "#efe4be", borderWidth: 5, borderRadius: 15, backgroundColor: "#90C6CA", justifyContent: 'center', width: width/2.7, marginBottom: 10, marginTop: 10, shadowOpacity: 0.3, shadowRadius: 10}}>
-                                <Text style={{ padding: 10, fontFamily: "Times New Roman", fontSize: '19', alignSelf: "center", color: "white" }}>Next Marker</Text>
+                                <Text style={{ padding: 10, fontFamily: "Times New Roman", fontSize: 19, alignSelf: "center", color: "white" }}>Next Marker</Text>
                             </TouchableHighlight>
                         </View>
                     </View>
@@ -152,13 +152,13 @@ export default function Marker(props) {
                         <View style={{flexDirection: 'row'}}>
                             {/* Back */}
                             <TouchableHighlight onPress={() => {setMapPopUp(!mapPopUp)}} style={{ borderColor: "#efe4be", borderWidth: 5, borderRadius: 15, backgroundColor: "#90C6CA", justifyContent: 'center', width: width/2.7, marginBottom: 10, marginTop: 10, marginRight: 10, marginLeft: 5, shadowOpacity: 0.3, shadowRadius: 10}}>
-                                <Text style={{ padding: 10, fontFamily: "Times New Roman", fontSize: '19', alignSelf: "center", color: "white" }}>Back</Text>
+                                <Text style={{ padding: 10, fontFamily: "Times New Roman", fontSize: 19, alignSelf: "center", color: "white" }}>Back</Text>
                             </TouchableHighlight>
                             {/* Next Marker */}
                             <TouchableHighlight onPress={() => {setMapPopUp(!mapPopUp)
                                 nextMarker()}}
                                 style={{ borderColor: "#efe4be", borderWidth: 5, borderRadius: 15, backgroundColor: "#90C6CA", justifyContent: 'center', width: width/2.7, marginBottom: 10, marginTop: 10, shadowOpacity: 0.3, shadowRadius: 10}}>
-                                <Text style={{ padding: 10, fontFamily: "Times New Roman", fontSize: '19', alignSelf: "center", color: "white" }}>Proceed</Text>
+                                <Text style={{ padding: 10, fontFamily: "Times New Roman", fontSize: 19, alignSelf: "center", color: "white" }}>Proceed</Text>
                             </TouchableHighlight>
                         </View>
                         
