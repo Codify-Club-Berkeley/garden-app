@@ -1,14 +1,20 @@
 import * as React from "react";
 import { View, Text, Image, FlatList, StyleSheet } from "react-native";
 import Marker from "../Marker";
+import {markerTextStyle} from './MarkerStyle';
 
 Text.defaultProps = {};
 Text.defaultProps.maxFontSizeMultiplier = 2.5;
+
+const num = 3;
+
+const style = markerTextStyle;
 
 const images = [
   require("../../images/Marker_3_1.jpg"),
   require("../../images/Marker_3_2.jpg"),
 ];
+
 const text = (
   <Text
     style={{
@@ -58,7 +64,7 @@ export default function MarkerScreen({ navigation }) {
   return (
     <Marker
       images={images}
-      num={3}
+      num={num}
       text={text}
       popUpText={popUpText}
       navigation={navigation}

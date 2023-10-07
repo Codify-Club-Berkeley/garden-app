@@ -5,6 +5,8 @@ import Marker from "../Marker";
 Text.defaultProps = {};
 Text.defaultProps.maxFontSizeMultiplier = 2.5;
 
+const num = 18
+
 const images = [
   require("../../images/Marker_18_1.jpg"),
   require("../../images/Marker_18_2.jpg"),
@@ -60,7 +62,7 @@ export default function MarkerScreen({ navigation }) {
   return (
     <Marker
       images={images}
-      num={18}
+      num={num}
       text={text}
       popUpText={popUpText}
       navigation={navigation}

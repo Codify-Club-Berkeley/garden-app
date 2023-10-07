@@ -5,6 +5,8 @@ import Marker from "../Marker";
 Text.defaultProps = {};
 Text.defaultProps.maxFontSizeMultiplier = 2.5;
 
+const num = 16
+
 const images = [
   require("../../images/Marker_16_1.jpg"),
   require("../../images/Marker_16_2.jpg"),
