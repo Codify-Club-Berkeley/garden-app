@@ -1,9 +1,9 @@
-import * as React from 'react';
-import { View, Text, Image, FlatList, StyleSheet} from 'react-native';
-import Marker from '../Marker';
+import * as React from "react";
+import { View, Text, Image, FlatList, StyleSheet } from "react-native";
+import Marker from "../Marker";
 
-Text.defaultProps = {}
-Text.defaultProps.maxFontSizeMultiplier = 2.5
+Text.defaultProps = {};
+Text.defaultProps.maxFontSizeMultiplier = 2.5;
 
 const images = [
     require('../../images/Marker_18_1.jpg'),
@@ -29,13 +29,22 @@ const popUpText =
         {"\n"} {"\n"}
         <Text style={{fontStyle: "italic"}}>Are any plants in the Garden used in your culture’s cuisine?</Text>
     </Text>
+;
 
 const map = require('../../images/map/18.jpg')
 const directions = <Text style={{ padding: 20, fontFamily: "Times New Roman", fontSize: '20' }}>Continue onward to the fence. Under the spreading tree, find marker 19. </Text>
 
 
 export default function MarkerScreen({ navigation }) {
-    return (
-        <Marker images={images} num={18} text={text} popUpText={popUpText} navigation={navigation} map={map} directions={directions}></Marker>
-    );
+  return (
+    <Marker
+      images={images}
+      num={18}
+      text={text}
+      popUpText={popUpText}
+      navigation={navigation}
+      map={map}
+      directions={directions}
+    ></Marker>
+  );
 }

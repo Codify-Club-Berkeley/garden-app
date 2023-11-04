@@ -1,9 +1,9 @@
-import * as React from 'react';
-import { View, Text, Image, FlatList, StyleSheet} from 'react-native';
-import Marker from '../Marker';
+import * as React from "react";
+import { View, Text, Image, FlatList, StyleSheet } from "react-native";
+import Marker from "../Marker";
 
-Text.defaultProps = {}
-Text.defaultProps.maxFontSizeMultiplier = 2.5
+Text.defaultProps = {};
+Text.defaultProps.maxFontSizeMultiplier = 2.5;
 
 const images = [
     require('../../images/Marker_13_1.jpg'),
@@ -20,6 +20,7 @@ const text =
        hybrid of <Text style={{fontStyle: "italic"}}>Agave</Text> and <Text style={{fontStyle: "italic"}}>Manfreda</Text>, 
        known as <Text style={{fontStyle: "italic"}}>Mangave</Text>.</Text>
     </Text>
+;
 
 const popUpText = 
     <Text style={{padding: 15, fontFamily: "Times New Roman", fontSize: '20'}}>
@@ -32,7 +33,15 @@ const directions = <Text style={{ padding: 20, fontFamily: "Times New Roman", fo
 
 
 export default function MarkerScreen({ navigation }) {
-    return (
-        <Marker images={images} num={13} text={text} popUpText={popUpText} navigation={navigation} map={map} directions={directions}></Marker>
-    );
+  return (
+    <Marker
+      images={images}
+      num={13}
+      text={text}
+      popUpText={popUpText}
+      navigation={navigation}
+      map={map}
+      directions={directions}
+    ></Marker>
+  );
 }

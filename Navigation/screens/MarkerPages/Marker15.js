@@ -1,9 +1,9 @@
-import * as React from 'react';
-import { View, Text, Image, FlatList, StyleSheet} from 'react-native';
-import Marker from '../Marker';
+import * as React from "react";
+import { View, Text, Image, FlatList, StyleSheet } from "react-native";
+import Marker from "../Marker";
 
-Text.defaultProps = {}
-Text.defaultProps.maxFontSizeMultiplier = 2.5
+Text.defaultProps = {};
+Text.defaultProps.maxFontSizeMultiplier = 2.5;
 
 const images = [
     require('../../images/Marker_15_1.jpg'),
@@ -17,6 +17,7 @@ const text =
         To your back sits <Text style={{fontWeight: "bold"}}>Ruth’s Folly, the tall gazebo structure </Text>
         that once <Text style={{fontWeight: "bold"}}>served as the Garden’s entrance.</Text>
     </Text>
+;
 
 const popUpText = 
     <Text style={{padding: 15, fontFamily: "Times New Roman", fontSize: '20'}}>
@@ -26,11 +27,24 @@ const popUpText =
     </Text> 
 
 const map = require('../../images/map/15.jpg')
+<<<<<<< Updated upstream
 const directions = <Text style={{ padding: 20, fontFamily: "Times New Roman", fontSize: '20' }}>Continue ahead toward the three large palms. Marker 16 sits next to the light pole.</Text>
 
+=======
+const directions = <Text style={{ padding: 20, fontFamily: "Times New Roman", fontSize: 20 }}>Continue ahead toward the three large palms. Marker 16 sits next to the light pole.</Text>
+;
+>>>>>>> Stashed changes
 
 export default function MarkerScreen({ navigation }) {
-    return (
-        <Marker images={images} num={15} text={text} popUpText={popUpText} navigation={navigation} map={map} directions={directions}></Marker>
-    );
+  return (
+    <Marker
+      images={images}
+      num={15}
+      text={text}
+      popUpText={popUpText}
+      navigation={navigation}
+      map={map}
+      directions={directions}
+    ></Marker>
+  );
 }

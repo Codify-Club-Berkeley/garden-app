@@ -1,9 +1,9 @@
-import * as React from 'react';
-import { View, Text, Image, FlatList, StyleSheet} from 'react-native';
-import Marker from '../Marker';
+import * as React from "react";
+import { View, Text, Image, FlatList, StyleSheet } from "react-native";
+import Marker from "../Marker";
 
-Text.defaultProps = {}
-Text.defaultProps.maxFontSizeMultiplier = 2.3
+Text.defaultProps = {};
+Text.defaultProps.maxFontSizeMultiplier = 2.3;
 
 const images = [
     require('../../images/Marker_24_1.jpg'),
@@ -18,6 +18,7 @@ const text =
         On the right is a <Text style={{fontWeight: "bold"}}>member of the Proteaceae family, <Text style={{fontStyle: "italic"}}>Grevillea ‘Kings Fire’</Text></Text>.
         Members of the Proteaceae family are found in South Africa, South America and Australia.
     </Text>
+;
 
 const popUpText = 
     <Text style={{padding: 15, fontFamily: "Times New Roman", fontSize: '20'}}>
@@ -29,7 +30,13 @@ const popUpText =
 // const map = require('../../images/map/24.jpg')
 
 export default function MarkerScreen({ navigation }) {
-    return (
-        <Marker images={images} num={24} text={text} popUpText={popUpText} navigation={navigation}></Marker>
-    );
+  return (
+    <Marker
+      images={images}
+      num={24}
+      text={text}
+      popUpText={popUpText}
+      navigation={navigation}
+    ></Marker>
+  );
 }

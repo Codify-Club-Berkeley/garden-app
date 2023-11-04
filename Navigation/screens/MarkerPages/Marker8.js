@@ -1,9 +1,9 @@
-import * as React from 'react';
-import { View, Text, Image, FlatList, StyleSheet} from 'react-native';
-import Marker from '../Marker';
+import * as React from "react";
+import { View, Text, Image, FlatList, StyleSheet } from "react-native";
+import Marker from "../Marker";
 
-Text.defaultProps = {}
-Text.defaultProps.maxFontSizeMultiplier = 2.5
+Text.defaultProps = {};
+Text.defaultProps.maxFontSizeMultiplier = 2.5;
 
 const images = [
     require('../../images/Marker_8_1.jpg'),
@@ -17,6 +17,7 @@ const text =
         (<Text style={{fontStyle: "italic"}}>Xanthorrhoea preissii</Text>) 
         from Australia will eventually develop a trunk up to 12 feet tall!</Text>
     </Text>
+;
 
 const popUpText = 
     <Text style={{padding: 15, fontFamily: "Times New Roman", fontSize: '20'}}>
@@ -26,14 +27,22 @@ const popUpText =
         Unfortunately, many plants adapted to fire are no match for the mega-fires brought about by climate change.
     </Text> 
 
-const map = require('../../images/map/8.jpg')
+const map = require("../../images/map/8.jpg");
 
 const directions = <Text style={{ padding: 20, fontFamily: "Times New Roman", fontSize: '20' }}>
     Turn left and head towards the double gates; once you are within 20 feet, look right and see more ‘grass trees’ and Marker 9.
     </Text>
 
 export default function MarkerScreen({ navigation }) {
-    return (
-        <Marker images={images} num={8} text={text} popUpText={popUpText} navigation={navigation} map={map} directions={directions}></Marker>
-    );
+  return (
+    <Marker
+      images={images}
+      num={8}
+      text={text}
+      popUpText={popUpText}
+      navigation={navigation}
+      map={map}
+      directions={directions}
+    ></Marker>
+  );
 }

@@ -1,9 +1,9 @@
-import * as React from 'react';
-import { View, Text, Image, FlatList, StyleSheet} from 'react-native';
-import Marker from '../Marker';
+import * as React from "react";
+import { View, Text, Image, FlatList, StyleSheet } from "react-native";
+import Marker from "../Marker";
 
-Text.defaultProps = {}
-Text.defaultProps.maxFontSizeMultiplier = 2.5
+Text.defaultProps = {};
+Text.defaultProps.maxFontSizeMultiplier = 2.5;
 
 const images = [
     require('../../images/Marker_4_1.jpg'),
@@ -15,6 +15,7 @@ const text =
         but unlike the agave that originates in the Americas, 
         the <Text style={{fontWeight: "bold"}}>aloe comes from Africa, Arabia, and Madagascar.</Text> 
     </Text>
+;
 
 const popUpText = 
     <Text style={{padding: 15, fontFamily: "Times New Roman", fontSize: '20'}}>
@@ -30,8 +31,19 @@ const directions = <Text style={{ padding: 20, fontFamily: "Times New Roman", fo
     About 25 feet ahead, across from the tree with green bark, look left and find Marker 5.
     </Text>
 
+;
+
+
 export default function MarkerScreen({ navigation }) {
-    return (
-        <Marker images={images} num={4} text={text} popUpText={popUpText} navigation={navigation} map={map} directions={directions}></Marker>
-    );
+  return (
+    <Marker
+      images={images}
+      num={4}
+      text={text}
+      popUpText={popUpText}
+      navigation={navigation}
+      map={map}
+      directions={directions}
+    ></Marker>
+  );
 }

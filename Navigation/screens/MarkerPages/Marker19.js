@@ -1,9 +1,9 @@
-import * as React from 'react';
-import { View, Text, Image, FlatList, StyleSheet} from 'react-native';
-import Marker from '../Marker';
+import * as React from "react";
+import { View, Text, Image, FlatList, StyleSheet } from "react-native";
+import Marker from "../Marker";
 
-Text.defaultProps = {}
-Text.defaultProps.maxFontSizeMultiplier = 2.5
+Text.defaultProps = {};
+Text.defaultProps.maxFontSizeMultiplier = 2.5;
 
 const images = [
     require('../../images/Marker_19_1.jpg'),
@@ -25,13 +25,22 @@ const popUpText =
         Further along the path, notice the <Text style={{fontWeight: "bold"}}>lumpy masses of <Text style={{fontStyle: "italic"}}>Deuterocohnia brevifolia</Text></Text>. 
         It may look like it covers a rock, but it doesn’t; this is just how it grows.     
     </Text>
+;
 
 const map = require('../../images/map/19.jpg')
 const directions = <Text style={{ padding: 20, fontFamily: "Times New Roman", fontSize: '20' }}>Take the small path to the right. In the snake-like cacti, spot Marker 20. </Text>
 
 
 export default function MarkerScreen({ navigation }) {
-    return (
-        <Marker images={images} num={19} text={text} popUpText={popUpText} navigation={navigation} map={map} directions={directions}></Marker>
-    );
+  return (
+    <Marker
+      images={images}
+      num={19}
+      text={text}
+      popUpText={popUpText}
+      navigation={navigation}
+      map={map}
+      directions={directions}
+    ></Marker>
+  );
 }

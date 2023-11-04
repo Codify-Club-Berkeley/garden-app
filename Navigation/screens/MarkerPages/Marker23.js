@@ -1,9 +1,9 @@
-import * as React from 'react';
-import { View, Text, Image, FlatList, StyleSheet} from 'react-native';
-import Marker from '../Marker';
+import * as React from "react";
+import { View, Text, Image, FlatList, StyleSheet } from "react-native";
+import Marker from "../Marker";
 
-Text.defaultProps = {}
-Text.defaultProps.maxFontSizeMultiplier = 2.5
+Text.defaultProps = {};
+Text.defaultProps.maxFontSizeMultiplier = 2.5;
 
 const images = [
     require('../../images/Marker_23_1.jpg'),
@@ -17,6 +17,7 @@ const text =
         to the repetition of the bright-green, low-clumping <Text style={{fontWeight: "bold", fontStyle: "italic"}}>Agave mitis</Text>, 
         to the left where the gigantic dark-green leaves of <Text style={{fontWeight: "bold", fontStyle: "italic"}}>Agave salmiana</Text> dominate.
     </Text>
+;
 
 const popUpText = 
     <Text style={{padding: 15, fontFamily: "Times New Roman", fontSize: '20'}}>
@@ -28,7 +29,15 @@ const map = require('../../images/map/23.jpg')
 const directions = <Text style={{ padding: 20, fontFamily: "Times New Roman", fontSize: '20' }}>Walk to the very end of the bed of the covered-structure. The mound to the right of the covered bed holds Marker 24. </Text>
 
 export default function MarkerScreen({ navigation }) {
-    return (
-        <Marker images={images} num={23} text={text} popUpText={popUpText} navigation={navigation} map={map}directions={directions}></Marker>
-    );
+  return (
+    <Marker
+      images={images}
+      num={23}
+      text={text}
+      popUpText={popUpText}
+      navigation={navigation}
+      map={map}
+      directions={directions}
+    ></Marker>
+  );
 }
