@@ -10,7 +10,7 @@ const images = [
     require('../../images/Marker_8_2.jpg')
 ]
 const text = 
-    <Text style={{ padding: 20, paddingBottom: 37, fontFamily: "Times New Roman", fontSize: '20' }}>   
+    <Text style={{ padding: 20, paddingBottom: 37, fontFamily: "Times New Roman", fontSize: 20 }}>   
         There are tall plants in this bed distinctive for their fountains of long grass-like leaves.
         {"\n"} {"\n"}
         This species of <Text style={{fontWeight: "bold"}}>
@@ -20,7 +20,7 @@ const text =
 ;
 
 const popUpText = 
-    <Text style={{padding: 15, fontFamily: "Times New Roman", fontSize: '20'}}>
+    <Text style={{padding: 15, fontFamily: "Times New Roman", fontSize: 20}}>
         From the center of the Xanthorrhoea foliage arises a tall, 
         spear-like flower stalk. Fire stimulates increased flower production.
         {"\n"} {"\n"}
@@ -29,7 +29,7 @@ const popUpText =
 
 const map = require("../../images/map/8.jpg");
 
-const directions = <Text style={{ padding: 20, fontFamily: "Times New Roman", fontSize: '20' }}>
+const directions = <Text style={{ padding: 20, fontFamily: "Times New Roman", fontSize: 20 }}>
     Turn left and head towards the double gates; once you are within 20 feet, look right and see more ‘grass trees’ and Marker 9.
     </Text>
 

@@ -10,7 +10,7 @@ const images = [
     require('../../images/Marker_20_2.jpg')
 ]
 const text = 
-    <Text style={{ padding: 20, paddingBottom: 37, fontFamily: "Times New Roman", fontSize: '20' }}>   
+    <Text style={{ padding: 20, paddingBottom: 37, fontFamily: "Times New Roman", fontSize: 20 }}>   
         The spectacular multi branched cactus adjacent to the fence is from the genus 
         <Text style={{fontWeight: "bold", fontStyle: "italic"}}> Cereus</Text>, 
         whose name is derived from the Latin word for “candle,” suggested by its form. 
@@ -23,14 +23,14 @@ const text =
 ;
 
 const popUpText = 
-    <Text style={{padding: 15, fontFamily: "Times New Roman", fontSize: '20'}}>
+    <Text style={{padding: 15, fontFamily: "Times New Roman", fontSize: 20}}>
         <Text style={{fontWeight: "bold"}}>Both cacti are pollinated by bats</Text>, 
         yet take distinctively different forms.
     </Text>
 ;
 
 const map = require('../../images/map/20.jpg')
-const directions = <Text style={{ padding: 20, fontFamily: "Times New Roman", fontSize: '20' }}>Continue on the path, past the large barrel cactus on the right, look at the tree’s base for Marker 21. </Text>
+const directions = <Text style={{ padding: 20, fontFamily: "Times New Roman", fontSize: 20 }}>Continue on the path, past the large barrel cactus on the right, look at the tree’s base for Marker 21. </Text>
 
 
 export default function MarkerScreen({ navigation }) {

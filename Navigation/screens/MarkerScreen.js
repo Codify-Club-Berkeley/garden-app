@@ -273,13 +273,6 @@ export default function MarkerScreen ({navigation={MainStackNavigator}}) {
       },
       item: {
         backgroundColor: 'rgba(88, 141, 152, .9)',
-        shadowColor: "#000",
-        shadowOffset: {
-            width: 0,
-            height: 10
-        },
-        shadowOpacity: 0.3,
-        shadowRadius: 20,
         flexDirection: 'row', 
         padding: SPACING,
         marginBottom: SPACING,

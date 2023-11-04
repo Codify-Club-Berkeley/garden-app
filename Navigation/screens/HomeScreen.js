@@ -106,12 +106,9 @@ const styles = StyleSheet.create({
         height:  185, // percentile heights was giving problems
         paddingTop: 10,
         width: '100%',
-      justifyContent: 'center',        
-      shadowColor: "#000",
-      shadowOpacity: 0.3,
-      //elevation: 6,
-      shadowRadius: 5,
-      //shadowOffset : { width: 3, height: 2},
+        justifyContent: 'center',        
+        //elevation: 6,
+        shadowRadius: 5,
         marginTop: 15,
     },
     bodyText: {

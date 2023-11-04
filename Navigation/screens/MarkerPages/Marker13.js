@@ -12,7 +12,7 @@ const images = [
     require('../../images/Marker_13_4.jpg')
 ]
 const text = 
-    <Text style={{ padding: 20, paddingBottom: 37, fontFamily: "Times New Roman", fontSize: '20' }}>   
+    <Text style={{ padding: 20, paddingBottom: 37, fontFamily: "Times New Roman", fontSize: 20 }}>   
        The <Text style={{fontWeight: "bold"}}>spiky, green clump in the foreground are dykias</Text>. 
        These plants are characterized by sharply hooked spines edging their stiff leaves.
        {"\n"} {"\n"}
@@ -23,13 +23,13 @@ const text =
 ;
 
 const popUpText = 
-    <Text style={{padding: 15, fontFamily: "Times New Roman", fontSize: '20'}}>
+    <Text style={{padding: 15, fontFamily: "Times New Roman", fontSize: 20}}>
         Dykias vary in color by species and can include green, silver, and purple. 
         Mangaves also have unique coloring, including combinations of red, brown, white, and purple.    
     </Text> 
 
 const map = require('../../images/map/13.jpg')
-const directions = <Text style={{ padding: 20, fontFamily: "Times New Roman", fontSize: '20' }}>A few yards ahead, at the base of the palm tree, is Marker 14. </Text>
+const directions = <Text style={{ padding: 20, fontFamily: "Times New Roman", fontSize: 20 }}>A few yards ahead, at the base of the palm tree, is Marker 14. </Text>
 
 
 export default function MarkerScreen({ navigation }) {

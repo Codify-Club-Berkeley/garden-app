@@ -12,7 +12,7 @@ const images = [
     require('../../images/Marker_18_4.jpg'),
 ]
 const text = 
-    <Text style={{ padding: 20, paddingBottom: 37, fontFamily: "Times New Roman", fontSize: '20' }}>   
+    <Text style={{ padding: 20, paddingBottom: 37, fontFamily: "Times New Roman", fontSize: 20 }}>   
         This garden bed is dominated by cacti of various species and forms, all native to the Americas.
         {"\n"} {"\n"}
         You can see the <Text style={{fontWeight: "bold"}}>three forms cacti</Text> take: 
@@ -22,7 +22,7 @@ const text =
     </Text>
 
 const popUpText = 
-    <Text style={{padding: 15, fontFamily: "Times New Roman", fontSize: '20'}}>
+    <Text style={{padding: 15, fontFamily: "Times New Roman", fontSize: 20}}>
         Opuntia cactus pads <Text style={{fontWeight: "bold"}}>(<Text style={{fontStyle: "italic"}}>nopales</Text>) </Text>
         are used in Mexican cuisine; their fruit is also edible (known as
         <Text style={{fontWeight: "bold"}}><Text style={{fontStyle: "italic"}}> tunas</Text> or prickly pears)</Text>. 
@@ -32,7 +32,7 @@ const popUpText =
 ;
 
 const map = require('../../images/map/18.jpg')
-const directions = <Text style={{ padding: 20, fontFamily: "Times New Roman", fontSize: '20' }}>Continue onward to the fence. Under the spreading tree, find marker 19. </Text>
+const directions = <Text style={{ padding: 20, fontFamily: "Times New Roman", fontSize: 20 }}>Continue onward to the fence. Under the spreading tree, find marker 19. </Text>
 
 
 export default function MarkerScreen({ navigation }) {

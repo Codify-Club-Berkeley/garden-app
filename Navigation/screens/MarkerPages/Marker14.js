@@ -12,7 +12,7 @@ const images = [
     require('../../images/Marker_14_4.jpg')
 ]
 const text = 
-    <Text style={{ padding: 20, paddingBottom: 37, fontFamily: "Times New Roman", fontSize: '20' }}>   
+    <Text style={{ padding: 20, paddingBottom: 37, fontFamily: "Times New Roman", fontSize: 20 }}>   
         Overhead, the <Text style={{fontWeight: "bold"}}>Mexican blue fan palm (<Text style={{fontStyle: "italic"}}>Brahea armata</Text>) </Text>
         is an example of a palmate leaf palm.
         {"\n"} {"\n"}
@@ -22,13 +22,13 @@ const text =
     </Text>
 
 const popUpText = 
-    <Text style={{padding: 15, fontFamily: "Times New Roman", fontSize: '20'}}>
+    <Text style={{padding: 15, fontFamily: "Times New Roman", fontSize: 20}}>
         Some Euphorbia <Text style={{fontWeight: "bold"}}>look a lot like cacti, but once again, this is an example of convergent evolution</Text>. 
         Similar adaptations occur in lineages that emerged in geographic isolation from one another.
     </Text> 
 
 const map = require('../../images/map/14.jpg')
-const directions = <Text style={{ padding: 20, fontFamily: "Times New Roman", fontSize: '20' }}>Head towards the gazebo (aka Ruth’s Folly). Find Marker 15 next to the pond, on the left.</Text>
+const directions = <Text style={{ padding: 20, fontFamily: "Times New Roman", fontSize: 20 }}>Head towards the gazebo (aka Ruth’s Folly). Find Marker 15 next to the pond, on the left.</Text>
 
 
 export default function MarkerScreen({ navigation }) {

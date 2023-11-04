@@ -10,7 +10,7 @@ const images = [
     require('../../images/Marker_15_2.jpg'),
 ]
 const text = 
-    <Text style={{ padding: 20, paddingBottom: 37, fontFamily: "Times New Roman", fontSize: '20' }}>   
+    <Text style={{ padding: 20, paddingBottom: 37, fontFamily: "Times New Roman", fontSize: 20 }}>   
         The <Text style={{fontWeight: "bold"}}>pond provides an oasis within the Garden</Text>, 
         acting as a cool, shady counterpoint to the sun-exposed areas.
         {"\n"} {"\n"}
@@ -20,20 +20,15 @@ const text =
 ;
 
 const popUpText = 
-    <Text style={{padding: 15, fontFamily: "Times New Roman", fontSize: '20'}}>
+    <Text style={{padding: 15, fontFamily: "Times New Roman", fontSize: 20}}>
         Ruth started the Garden <Text style={{fontStyle: "italic"}}>at age 63. 
         {"\n"} {"\n"}
         What projects can you imagine starting at this age?</Text>
     </Text> 
 
 const map = require('../../images/map/15.jpg')
-<<<<<<< Updated upstream
-const directions = <Text style={{ padding: 20, fontFamily: "Times New Roman", fontSize: '20' }}>Continue ahead toward the three large palms. Marker 16 sits next to the light pole.</Text>
 
-=======
 const directions = <Text style={{ padding: 20, fontFamily: "Times New Roman", fontSize: 20 }}>Continue ahead toward the three large palms. Marker 16 sits next to the light pole.</Text>
-;
->>>>>>> Stashed changes
 
 export default function MarkerScreen({ navigation }) {
   return (
