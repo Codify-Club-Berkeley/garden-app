@@ -19,12 +19,7 @@
     ],
     "ios": {
       "supportsTablet": true,
-<<<<<<< Updated upstream
       "bundleIdentifier": "com.ruthbancroftgardenandnursery.ruthbancroftgardenandnurseryguide"
-=======
-      "bundleIdentifier": "com.ruthbancroftgardenandnursery.ruthbancroftgardenandnurseryguide",
-      "buildNumber": "5"
->>>>>>> Stashed changes
     },
     "android": {
       "adaptiveIcon": {
