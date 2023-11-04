@@ -1,7 +1,7 @@
 //Change Marker.js navigation of marker 24 after creating this page!
 
 import * as React from 'react';
-import { View, Text, Button, Linking, StyleSheet, TouchableOpacity, Image} from 'react-native';
+import { View, Text, Linking, StyleSheet, TouchableOpacity, Image} from 'react-native';
 const BG_IMG= require('../images/thumbnail_images/M22.jpg');
 // import { ScrollView } from 'react-native-gesture-handler'; //note: use M19 for image
 import Ionicons from 'react-native-vector-icons/Ionicons';
