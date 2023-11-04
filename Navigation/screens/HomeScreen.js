@@ -1,12 +1,7 @@
 import * as React from 'react';
-import { View, Text, Button, Linking, ScrollView, StyleSheet, TouchableOpacity, Image, ImageBackground} from 'react-native';
+import { View, Text, Linking, ScrollView, StyleSheet, TouchableOpacity, Image, ImageBackground} from 'react-native';
 // import { ScrollView } from 'react-native-gesture-handler';
 import { LinearGradient } from 'expo-linear-gradient';
-import { useNavigation } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
-import NavScreen from './NavScreen';
-
-
 
 const logoImage= require('../images/Logo.png');
 const HOME_BG_IMG= require('../images/home_screen_blur.png');

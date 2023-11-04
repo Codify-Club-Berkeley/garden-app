@@ -1,0 +1,24 @@
+{
+  "cli": {
+    "version": ">= 5.4.0"
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal"
+    },
+    "preview": {
+      "distribution": "internal"
+    },
+    "production": {}
+  },
+  "submit": {
+    "production": {
+      "ios": {
+        "appleId": "rayna_b@berkeley.edu",
+        "ascAppId": "6470103631",
+        "appleTeamId": "NBLSR4U8Y7"
+      }
+    }
+  }
+}

@@ -1,5 +1,4 @@
 import React from 'react';
-import { View, Text, ScrollView, StyleSheet, Button} from 'react-native';
 
 const OneMark = (props) => {
     <div data-testid='marker-component'>

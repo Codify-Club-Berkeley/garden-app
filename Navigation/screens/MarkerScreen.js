@@ -1,10 +1,5 @@
 import * as React from 'react';
-import { StatusBar, FlatList, Image, Text, View, Dimensions, StyleSheet, SafeAreaView} from 'react-native';
-import { useNavigation } from '@react-navigation/native';
-const { width, height } = Dimensions.get('screen');
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
-import Marker from './Marker';
+import { StatusBar, FlatList, Image, Text, View, StyleSheet, SafeAreaView} from 'react-native';
 
 
 //TODO: create more markers (make sure the photo and text correspond), make box highlight upon click
