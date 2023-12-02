@@ -9,6 +9,7 @@
     "web": "expo start --web"
   },
   "dependencies": {
+    "@babel/core": "^7.20.0",
     "@react-native-community/masked-view": "^0.1.11",
     "@react-navigation/bottom-tabs": "^6.4.0",
     "@react-navigation/native": "^6.0.13",
@@ -18,8 +19,9 @@
     "expo-status-bar": "~1.6.0",
     "react": "18.2.0",
     "react-image-gallery": "^1.2.11",
-    "react-native": "0.72.6",
+    "react-native": "0.72.7",
     "react-native-animated-dots": "^0.0.4",
+    "react-native-eject": "^0.2.0",
     "react-native-gesture-handler": "~2.12.0",
     "react-native-image-slider-box": "^2.0.7",
     "react-native-maps": "1.7.1",
@@ -28,8 +30,7 @@
     "react-native-screens": "~3.22.0",
     "react-native-swiper": "^1.6.0",
     "react-navigation": "^4.4.4",
-    "react-simple-image-slider": "^2.4.1",
-    "@babel/core": "^7.20.0"
+    "react-simple-image-slider": "^2.4.1"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0"
