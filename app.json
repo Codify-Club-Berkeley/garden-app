@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "rbgApp",
-    "slug": "rbgApp",
+    "slug": "rbg-app",
     "version": "1.0.4",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
