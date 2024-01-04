@@ -80,7 +80,7 @@ const styles = StyleSheet.create({
     linearGradient: {
         position: 'absolute',
         width: '100%', 
-        height: '110%',
+        height: '129%',
     },
     button: {
         backgroundColor: "#90C6CA",
