@@ -17,8 +17,8 @@ import EndScreen from './screens/EndScreen';
 
 const HomeName = 'Home';
 const NavName = 'Guide';
-const MapName= 'Map';
-const MarkerName= 'Markers';
+const MapName = 'Map';
+const MarkerName = 'Markers';
 const EndName = 'EndScreen';
 
 const Tab = createBottomTabNavigator();
@@ -50,7 +50,7 @@ function MainStackNavigator() {
                 <Stack.Screen name={name[0]} component={name[1]} key={name[0]}/>
             ))}
             <Stack.Screen name= "EndScreen" component = {EndScreen}/>
-            <Stack.Screen name = "NavScreen" component = {NavScreen}/>
+            <Stack.Screen name = "MapScreen" component = {MapScreen}/>
         </Stack.Navigator>
       </NavigationContainer>
     );
@@ -69,13 +69,13 @@ export default function mainContainer(){
                             iconName=focused ? 'home' : 'home-outline'
                         }
                         else if (rn === MapName){
+                            iconName=focused ? 'compass' : 'compass-outline'
+                        }
+                        else if (rn === NavName){
                             iconName=focused ? 'map' : 'map-outline'
                         }
                         else if (rn === MarkerName){
                             iconName=focused ? 'apps' : 'apps-outline'
-                        }
-                        else if (rn == NavName){
-                            iconName= focused ? 'compass' : 'compass-outline'
                         }
                         size = 30
                         return <Ionicons name={iconName} size={size} color={color}/>
@@ -94,6 +94,7 @@ export default function mainContainer(){
             >
                 <Tab.Screen name={HomeName} component= {HomeScreen}/>
                 <Tab.Screen name={NavName} component= {NavScreen}/>
+                <Tab.Screen name={MapName} component= {MapScreen}/>
                 <Tab.Screen name={MarkerName} component= {MainStackNavigator} options={{headerShown: false}}/>
             </Tab.Navigator>
 
