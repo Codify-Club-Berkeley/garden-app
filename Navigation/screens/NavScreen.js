@@ -19,19 +19,11 @@ export default function NavScreen({ navigation }) {
                 />
             <Image source = {logoImage} style = {styles.container}/>         
             <Text 
-                style={styles.bodyText}>This self-guided tour highlights some of the iconic plants in the collection.  <Text style={{fontWeight: 'bold'}}>As you walk, look for brass markers to pair with the app descriptions.</Text>
+                style={styles.bodyText}> As you walk, you will be looking for brass markers, like shown in the picture, to pair with the app descriptions. <Text style={{fontWeight: 'bold'}}>As you walk, look for brass markers to pair with the app descriptions.</Text>
             </Text>     
             <Image source = {sampleMarker} style = {styles.markerPic}/>
             <Text 
-                style={styles.bodyText}>For a deeper dive into our collection, our plant’s origins, and horticultural needs visit:{'\n'}
-                <Text style={{color: 'blue'}}
-                    onPress={() => Linking.openURL('https://www.ruthbancroftgarden.org/garden//')}>
-                    Ruth Bancroft Garden Website
-                </Text>
-                {'\n'}{'\n'}
-                Upon entering the Garden, walk towards the covered patio. 
-                Three quarters of the way there stop before passing the giant gray-green Agave. 
-                On the right, find <Text style={{fontWeight: 'bold'}}>Marker 1</Text>.
+                style={styles.bodyText}>To get started, enter through the Garden gates heading towards the patio, keep your eye out for Marker 1.
             </Text>
             <View style = {styles.buttonText}>
                 <TouchableOpacity

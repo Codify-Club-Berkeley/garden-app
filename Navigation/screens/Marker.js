@@ -169,7 +169,7 @@ export default function Marker(props) {
     );
     function nextMarker() {
         if (props.num == 24) {
-           props.navigation.navigate('EndScreen')
+           props.navigation.navigate('PastNextScreen')
            //alert('You have reached the end :)')
         } else {
             props.navigation.navigate('Marker ' + (eval(props.num) + 1))

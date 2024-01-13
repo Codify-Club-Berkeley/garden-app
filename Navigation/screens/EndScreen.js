@@ -34,6 +34,12 @@ export default function EndScreen({navigation}) {
                     style= {styles.learnMoreText}>
                         {'\t'}Please consider becoming a member. Memberships help support our Garden and allow us to uphold our mission of education and preservation. 
                         We appreciate the valuable support our Members provide and are eager to continue to share Ruth’s Garden with our growing community!
+                        {'\n'}
+                        {'\n'} For a deeper dive into our collection, our plants’ origins, and horticultural needs visit {space}
+                    </Text>
+                    <Text style={styles.linkText}
+                            onPress={() => Linking.openURL('https://www.ruthbancroftgarden.org/garden/')}>
+                            here.
                     </Text>
                     <View style={styles.buttonText}>
                 </View>
@@ -61,6 +67,13 @@ const styles = StyleSheet.create({
         fontSize: 30,
         color: "white",
         padding: 10,
+    },
+    linkText: {
+        color: 'blue', 
+        fontSize: 16, 
+        lineHeight: 30,
+        paddingLeft: 30, 
+        fontWeight: 'bold'
     },
     boxRound: {
         padding: 10,

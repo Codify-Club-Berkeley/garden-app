@@ -12,6 +12,7 @@ import MarkerScreen from './screens/MarkerScreen';
 
 import * as Markers from './screens/MarkerExport';
 import EndScreen from './screens/EndScreen';
+import PastNextScreen from './screens/PastNextScreen';
 
 // Screen names
 
@@ -51,10 +52,24 @@ function MainStackNavigator() {
             ))}
             <Stack.Screen name= "EndScreen" component = {EndScreen}/>
             <Stack.Screen name = "NavScreen" component = {NavScreen}/>
+            <Stack.Screen name = "PastNextScreen" component = {PastNextScreen}/>
         </Stack.Navigator>
       </NavigationContainer>
     );
   }
+  
+  function MiniStackNavigator() {
+    return(
+        <NavigationContainer independent={true} theme={navTheme} screenOptions={headerStyle={backgroundColor:"#90C6CA"}}>
+            <Stack.Navigator initialRouteName='./screens/HomeScreen' screenOptions={() => ({headerStyle: {backgroundColor:"#90C6CA"},
+                tabBarStyle: {backgroundColor: "#90C6CA", padding: 10, height: 90},
+                tabBarLabelStyle: {fontSize: 12}})}>
+            <Stack.Screen name = "HomeScreen" component ={HomeScreen}/>
+            <Stack.Screen name = "NavScreen" component = {NavScreen}/>
+        </Stack.Navigator>
+    </NavigationContainer>
+    )
+  } 
 
 export default function mainContainer(){
     return(
@@ -72,7 +87,7 @@ export default function mainContainer(){
                             iconName=focused ? 'map' : 'map-outline'
                         }
                         else if (rn === MarkerName){
-                            iconName=focused ? 'apps' : 'apps-outline'
+                            iconName=focused ? 'list' : 'list-outline'
                         }
                         else if (rn == NavName){
                             iconName= focused ? 'compass' : 'compass-outline'
@@ -92,7 +107,7 @@ export default function mainContainer(){
                     tabBarLabelStyle: {display: "none"}
                 })}
             >
-                <Tab.Screen name={HomeName} component= {HomeScreen}/>
+                <Tab.Screen name={HomeName} component= {MiniStackNavigator}/>
                 <Tab.Screen name={NavName} component= {NavScreen}/>
                 <Tab.Screen name={MarkerName} component= {MainStackNavigator} options={{headerShown: false}}/>
             </Tab.Navigator>
