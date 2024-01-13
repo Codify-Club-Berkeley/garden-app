@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
     linearGradient: {
         position: 'absolute',
         width: '100%', 
-        height: '120%',
+        height: '145%',
     },
     buttonText: {
         fontSize: 25,
@@ -55,7 +55,8 @@ const styles = StyleSheet.create({
     button: {
         borderRadius: 10,
         backgroundColor: "#90C6CA",
-        marginBottom: 100,
+        marginBottom: 200,
+        marginHorizontal: '30%',
     },
     scrollStyle: {
         //flex: 1,
@@ -68,6 +69,7 @@ const styles = StyleSheet.create({
         //flex: 0.35,
         height:  180, // percentile heights was giving problems
         width: '100%',
+        marginTop: 20,
       justifyContent: 'center',
     },
     markerPic: {
@@ -85,8 +87,8 @@ const styles = StyleSheet.create({
     bodyText: {
         paddingLeft: 30,
         paddingRight: 20,
-        paddingBottom: 20,
-        paddingTop: 40,
+        paddingBottom: 50,
+        paddingTop: 50,
         fontSize: 19,
         lineHeight: 40,
     },

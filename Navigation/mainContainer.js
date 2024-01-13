@@ -14,9 +14,9 @@ import * as Markers from './screens/MarkerExport';
 import EndScreen from './screens/EndScreen';
 import PastNextScreen from './screens/PastNextScreen';
 
-// Screen names
+// Screen names show on the top
 
-const HomeName = 'Home';
+const HomeName = 'Home Navigation';
 const NavName = 'Guide';
 const MapName = 'Map';
 const MarkerName = 'Markers';
@@ -42,7 +42,7 @@ function MainStackNavigator() {
         i = i + 1;
     }
     return (
-      <NavigationContainer independent={true} theme={navTheme} screenOptions={headerStyle={backgroundColor:"#90C6CA"}}>
+      //<NavigationContainer independent={true} theme={navTheme} screenOptions={headerStyle={backgroundColor:"#90C6CA"}}>
         <Stack.Navigator initialRouteName='./screens/MarkerScreen' screenOptions={() => ({headerStyle: {backgroundColor:"#90C6CA"},
                     tabBarStyle: {backgroundColor: "#90C6CA", padding: 10, height: 90},
                     tabBarLabelStyle: {fontSize: 12}})}>
@@ -54,24 +54,25 @@ function MainStackNavigator() {
             <Stack.Screen name = "PastNextScreen" component = {PastNextScreen}/>
             <Stack.Screen name = "MapScreen" component = {MapScreen}/>
         </Stack.Navigator>
-      </NavigationContainer>
+      //</NavigationContainer>
     );
   }
   
   function MiniStackNavigator() {
     return(
-        <NavigationContainer independent={true} theme={navTheme} screenOptions={headerStyle={backgroundColor:"#90C6CA"}}>
-            <Stack.Navigator initialRouteName='./screens/HomeScreen' screenOptions={() => ({headerStyle: {backgroundColor:"#90C6CA"},
+        //<NavigationContainer independent={true} theme={navTheme} screenOptions={headerStyle={backgroundColor:"#90C6CA"}}>
+            <Stack.Navigator initialRouteName='./screens/HomeScreen' screenOptions={() => ({headerStyle: {backgroundColor:"#90C6CA"}, headerShown: false,
                 tabBarStyle: {backgroundColor: "#90C6CA", padding: 10, height: 90},
                 tabBarLabelStyle: {fontSize: 12}})}>
             <Stack.Screen name = "HomeScreen" component ={HomeScreen}/>
             <Stack.Screen name = "NavScreen" component = {NavScreen}/>
+            <Stack.Screen name="MarkerFromNav" component= {MainStackNavigator} options={{headerShown: false}}/>
         </Stack.Navigator>
-    </NavigationContainer>
+    //</NavigationContainer>
     )
   } 
 
-export default function mainContainer(){
+export default function MainContainer(){
     return(
         <NavigationContainer>
             <Tab.Navigator initialRouteName={HomeName}
@@ -108,7 +109,6 @@ export default function mainContainer(){
                 })}
             >
                 <Tab.Screen name={HomeName} component= {MiniStackNavigator}/>
-                <Tab.Screen name={NavName} component= {NavScreen}/>
                 <Tab.Screen name={MapName} component= {MapScreen}/>
                 <Tab.Screen name={MarkerName} component= {MainStackNavigator} options={{headerShown: false}}/>
             </Tab.Navigator>
