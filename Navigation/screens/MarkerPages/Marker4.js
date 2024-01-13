@@ -6,6 +6,7 @@ Text.defaultProps = {}
 Text.defaultProps.maxFontSizeMultiplier = 2.5
 
 const images = [
+    require('../../images/New_Marker_4_1.jpg'),
     require('../../images/Marker_4_1.jpg'),
     require('../../images/Marker_4_2.jpg')
 ]
@@ -27,8 +28,12 @@ const popUpText =
 const map = require('../../images/map/4.jpg')
 
 const directions = <Text style={{ padding: 20, fontFamily: "Times New Roman", fontSize: 20 }}>
-    About 25 feet ahead, across from the tree with green bark, look left and find Marker 5.
+    Continue down the path, across from the tree with green bark look left and find Marker 5.
     </Text>
+
+// const directions = <Text style={{ padding: 20, fontFamily: "Times New Roman", fontSize: 20 }}>
+//     About 25 feet ahead, across from the tree with green bark, look left and find Marker 5.
+//     </Text>
 
 export default function MarkerScreen({ navigation }) {
     return (

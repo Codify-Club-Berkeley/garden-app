@@ -9,6 +9,8 @@
     "web": "expo start --web"
   },
   "dependencies": {
+    "@dudigital/react-native-zoomable-view": "^1.1.4",
+    "@openspacelabs/react-native-zoomable-view": "^2.1.5",
     "@react-native-community/masked-view": "^0.1.11",
     "@react-navigation/bottom-tabs": "^6.4.0",
     "@react-navigation/native": "^6.0.13",

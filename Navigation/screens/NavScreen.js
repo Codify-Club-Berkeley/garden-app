@@ -17,13 +17,15 @@ export default function NavScreen({ navigation }) {
                     end = {{x:0.5, y: 0.12}}
                     style={styles.linearGradient}
                 />
-            <Image source = {logoImage} style = {styles.container}/>         
+            <Image source = {logoImage} style = {styles.container}/>            
+            {/* <Image source = {sampleMarker} style = {styles.markerPic}/> */}
             <Text 
-                style={styles.bodyText}> As you walk, you will be looking for brass markers, like shown in the picture, to pair with the app descriptions. <Text style={{fontWeight: 'bold'}}>As you walk, look for brass markers to pair with the app descriptions.</Text>
-            </Text>     
-            <Image source = {sampleMarker} style = {styles.markerPic}/>
-            <Text 
-                style={styles.bodyText}>To get started, enter through the Garden gates heading towards the patio, keep your eye out for Marker 1.
+                style={styles.bodyText}>
+                As you walk, you will be looking for brass markers 
+                to pair with the app descriptions. 
+                {'\n'}
+                To get started, enter through the Garden 
+                gates heading towards the patio, keep your eye out for Marker 1.
             </Text>
             <View style = {styles.buttonText}>
                 <TouchableOpacity
