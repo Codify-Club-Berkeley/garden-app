@@ -11,7 +11,7 @@ space = ' ';
 export default function HomeScreen({ navigation }) {
     return (
         <ScrollView>
-<View style = {styles.scrollStyle}>
+    <View style = {styles.scrollStyle}>
             <ImageBackground blurRadius={12} style = {styles.bgImg} source={HOME2_BG_IMG} resizeMode="cover">
             <LinearGradient
                 colors={['transparent',"#efe4be"]}
@@ -51,7 +51,7 @@ export default function HomeScreen({ navigation }) {
                 <View style={styles.addInfo}>
                 <TouchableOpacity
                     style = {styles.button}
-                    onPress = {()=>navigation.navigate("Guide")}>
+                    onPress = {()=>navigation.navigate("NavScreen")}>
                     <Text style = {styles.buttonText}> Go to Guide </Text>
                 </TouchableOpacity>
                 </View>

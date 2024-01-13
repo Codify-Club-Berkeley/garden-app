@@ -1,24 +1,24 @@
-import * as React from 'react';
-import { MapView, Overlay} from 'react-native-maps';
+import React from 'react';
+import { View, Image, Dimensions} from 'react-native';
+import { ReactNativeZoomableView } from '@openspacelabs/react-native-zoomable-view';
+
+const height = Dimensions.get('window').height;
+const width = Dimensions.get('window').width;
+
+const map = require('../images/map/Map.png');
+const mapStyle = {
+  resizeMode: "contain",
+  height: height * 0.7, 
+  width: width,
+  borderRadius: 0,
+};
 
 export default function MapScreen({ navigation }) {
     return (
-        <MapView
-        style={{ flex: 1 }}
-        initialRegion={{
-          latitude: 37.78825,
-          longitude: -122.4324,
-          latitudeDelta: 0.0922,
-          longitudeDelta: 0.0421,
-        }}
-      >
-        <Overlay 
-            image="https://www.lib.utexas.edu/maps/historical/newark_nj_1922.jpg"
-            bounds={[
-                [40.712216, -74.22655], 
-                [40.773941, -74.12544]
-            ]}
-        />
-    </MapView>
+      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: "#FFFFFF" }}>                    
+        <ReactNativeZoomableView maxZoom={8} minZoom={1} contentWidth={width} contentHeight={height * 0.7}>
+          <Image source={map} style={mapStyle}></Image>
+        </ReactNativeZoomableView>
+      </View>
     );
 }

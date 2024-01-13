@@ -3,9 +3,10 @@ import { View, Text, Image, ScrollView, Modal, Dimensions, TouchableHighlight, T
 import Swiper from 'react-native-swiper';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import { MarkerStyle } from './MarkerStyle';
+import { ReactNativeZoomableView } from '@openspacelabs/react-native-zoomable-view';
 
-var height = Dimensions.get('window').height;
-var width = Dimensions.get('window').width;
+const height = Dimensions.get('window').height;
+const width = Dimensions.get('window').width;
 
 Text.defaultProps = {}
 Text.defaultProps.maxFontSizeMultiplier = 1.7
@@ -16,7 +17,7 @@ const renderPagination = (index, total, context) => {
             <Text style={MarkerStyle.paginationText}>{index + 1}/{total}</Text>
         </View>
     )
-  }
+  };
 
 export default function Marker(props) {
     const [popUp, setPopUp] = useState(false);
@@ -100,8 +101,11 @@ export default function Marker(props) {
                 <View style={{backgroundColor: "#000000aa", flex: 1, alignContent: 'center'}}>
                     <View style={MarkerStyle.modal}>
                         <ScrollView>
+                            {/* Map Zoom In and Out */}
+                            <ReactNativeZoomableView maxZoom={8} minZoom={1} contentWidth={width*0.8} contentHeight={height*0.5}>
+                                <Image source={props.map} style={styles.map}></Image>
+                            </ReactNativeZoomableView>
                             <View>{props.directions}</View>
-                            <Image  source={props.map} style={MarkerStyle.map}></Image>
                         </ScrollView>
                         <View style={{flexDirection: 'row'}}>
                             {/* Back */}
@@ -131,7 +135,7 @@ export default function Marker(props) {
 
     function nextMarker() {
         if (props.num == 24) {
-           props.navigation.navigate('EndScreen')
+           props.navigation.navigate('PastNextScreen')
         } else {
             props.navigation.navigate('Marker ' + (eval(props.num) + 1))
         }
