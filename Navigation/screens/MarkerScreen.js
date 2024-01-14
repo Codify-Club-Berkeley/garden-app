@@ -11,7 +11,7 @@ const DATA = [
         id: "1",
         title: "Marker 1",
         plant: 'Quercus lobata',
-        imge: require('../images/thumbnail_images/M1.jpg'),
+        imge: require('../images/thumbnail_images/NM1.jpg'),
         whereTo: 'Marker 1'
     },
     {
@@ -33,7 +33,7 @@ const DATA = [
         id: "4",
         title: "Marker 4",
         plant: "Aloe ferox",
-        imge: require('../images/thumbnail_images/M4.jpg'),
+        imge: require('../images/thumbnail_images/NM4.jpg'),
         whereTo: 'Marker 4'
     },
     {
@@ -47,7 +47,7 @@ const DATA = [
         id: "6",
         title: "Marker 6",
         plant: "Pinus torreyana",
-        imge: require('../images/thumbnail_images/M6.jpg'),
+        imge: require('../images/thumbnail_images/NM6.jpg'),
         whereTo: 'Marker 6'
     },
     {
@@ -75,21 +75,21 @@ const DATA = [
       id: "10",
       title: "Marker 10",
       plant: "Gasteria bicolor",
-      imge: require('../images/thumbnail_images/M10.jpg'),
+      imge: require('../images/thumbnail_images/NM10.jpg'),
       whereTo: 'Marker 10'
     },
     {
       id: "11",
       title: "Marker 11",
       plant: "Aloe speciosa",
-      imge: require('../images/thumbnail_images/M11.jpg'),
+      imge: require('../images/thumbnail_images/NM11.jpg'),
       whereTo: 'Marker 11'
     },
     {
       id: "12",
       title: "Marker 12",
       plant: "Euphorbia rigida",
-      imge: require('../images/thumbnail_images/M12.jpg'),
+      imge: require('../images/thumbnail_images/NM12.jpg'),
       whereTo: 'Marker 12'
     },
     {
@@ -110,7 +110,7 @@ const DATA = [
       id: "15",
       title: "Marker 15",
       plant: "Filling the Pond Ruth and Philip Bancroft",
-      imge: require('../images/thumbnail_images/M15.jpg'),
+      imge: require('../images/thumbnail_images/NM15.jpg'),
       whereTo: 'Marker 15'
     },
     {
@@ -131,7 +131,7 @@ const DATA = [
       id: "18",
       title: "Marker 18",
       plant: "Opunita leucotricha",
-      imge: require('../images/thumbnail_images/M18.jpg'),
+      imge: require('../images/thumbnail_images/NM18.jpg'),
       whereTo: 'Marker 18'
     },
     {
@@ -166,7 +166,7 @@ const DATA = [
       id: "23",
       title: "Marker 23",
       plant: "Agave mitis",
-      imge: require('../images/thumbnail_images/M23.jpg'),
+      imge: require('../images/thumbnail_images/NM23.jpg'),
       whereTo: 'Marker 23'
     },
     {

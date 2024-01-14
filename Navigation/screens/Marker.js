@@ -1,12 +1,10 @@
-import React, { useEffect, useState } from 'react';
-import { View, Text, Image, StyleSheet, ScrollView, Modal, Dimensions, 
-    TouchableHighlight, TouchableOpacity } from 'react-native';
+import React, {useEffect, useState} from 'react';
+import { View, Text, Image, StyleSheet, ScrollView, Modal, Dimensions, TouchableHighlight, TouchableOpacity} from 'react-native';
 import Swiper from 'react-native-swiper';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import { ReactNativeZoomableView } from '@openspacelabs/react-native-zoomable-view';
 
-const height = Dimensions.get('window').height;
-const width = Dimensions.get('window').width;
+var height = Dimensions.get('window').height;
+var width = Dimensions.get('window').width;
 
 Text.defaultProps = {}
 Text.defaultProps.maxFontSizeMultiplier = 1.7
@@ -41,12 +39,14 @@ const styles = StyleSheet.create({
         padding: 5
       },
       map: {
-        resizeMode: "contain",
+        resizeMode: "stretch",
         height: height*0.5, 
-        width: width*0.8,
+        width: width * 0.8,
         borderRadius: 10,
       }
-  });
+  })
+
+
 
 const renderPagination = (index, total, context) => {
     return (
@@ -54,7 +54,7 @@ const renderPagination = (index, total, context) => {
             <Text style={styles.paginationText}>{index + 1}/{total}</Text>
         </View>
     )
-  };
+  }
 
 export default function Marker(props) {
     const [popUp, setPopUp] = useState(false);
@@ -144,13 +144,10 @@ export default function Marker(props) {
             {/* Map Pop-Up */}
             <Modal transparent={true} visible={mapPopUp}>
                 <View style={{backgroundColor: "#000000aa", flex: 1, alignContent: 'center'}}>
-                    <View style={{display: 'flex', backgroundColor: "#efe4be", margin: 30, marginTop: 100, padding: 10, borderRadius: 10, width: width/1.1, maxHeight: height/1.28, justifyContent: 'center', alignItems: 'center', alignSelf: 'center'}}>                       
+                    <View style={{display: 'flex', backgroundColor: "#efe4be", margin: 30, marginTop: 150, padding: 15, borderRadius: 10, width: width/1.15, height: height/1.6, maxHeight: height, justifyContent: 'center', alignItems: 'center', alignSelf: 'center'}}>
                         <ScrollView>
-                            {/* Map Zoom In and Out */}
-                            <ReactNativeZoomableView maxZoom={8} minZoom={1} contentWidth={width*0.8} contentHeight={height*0.5}>
-                                <Image source={props.map} style={styles.map}></Image>
-                            </ReactNativeZoomableView>
                             <View>{props.directions}</View>
+                            <Image  source={props.map} style={styles.map}></Image>
                         </ScrollView>
                         <View style={{flexDirection: 'row'}}>
                             {/* Back */}
@@ -164,7 +161,7 @@ export default function Marker(props) {
                                 <Text style={{ padding: 10, fontFamily: "Times New Roman", fontSize: 19, alignSelf: "center", color: "white" }}>Proceed</Text>
                             </TouchableHighlight>
                         </View>
-    
+                        
                     </View>
                 </View>
             </Modal>
