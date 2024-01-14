@@ -1,7 +1,10 @@
 import React, {useEffect, useState} from 'react';
 import { View, Text, Image, StyleSheet, ScrollView, Modal, Dimensions, TouchableHighlight, TouchableOpacity} from 'react-native';
+import React, {useEffect, useState} from 'react';
+import { View, Text, Image, ScrollView, Modal, Dimensions, TouchableHighlight, TouchableOpacity} from 'react-native';
 import Swiper from 'react-native-swiper';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import { MarkerStyle } from './MarkerStyle';
 
 var height = Dimensions.get('window').height;
 var width = Dimensions.get('window').width;
@@ -50,8 +53,8 @@ const styles = StyleSheet.create({
 
 const renderPagination = (index, total, context) => {
     return (
-        <View style={{backgroundColor: 'grey', maxHeight: height/16, maxWidth: width/6, alignSelf: 'flex-end', marginRight:10, marginTop: -50, borderRadius: 10}}>
-            <Text style={styles.paginationText}>{index + 1}/{total}</Text>
+        <View style={MarkerStyle.pagination}>
+            <Text style={MarkerStyle.paginationText}>{index + 1}/{total}</Text>
         </View>
     )
   }
@@ -59,6 +62,7 @@ const renderPagination = (index, total, context) => {
 export default function Marker(props) {
     const [popUp, setPopUp] = useState(false);
     const [mapPopUp, setMapPopUp] = useState(false);
+    
 
     useEffect(() => {
         props.navigation.setOptions({
@@ -74,68 +78,59 @@ export default function Marker(props) {
         <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: "#efe4be" }}>
             {/* images */}
             <Swiper
-            style={styles.swiperContainer}
             loop={false}
             index={0}
             renderPagination={renderPagination}
             // paginationStyle={{ bottom: 28 }}
-            dotStyle={styles.dot}
-            activeDotStyle={styles.activeDot}
             dotColor={"#808080"}
             activeDotColor={"#efe4be"}>
             {props.images.map((image, index) => (
                 <Image
                 key={index}
-                style={styles.image}
+                style={MarkerStyle.image}
                 source={image}
                 />
             ))}
             </Swiper>
             {/* Marker Heading */}
-            <View style={{ borderColor: "#efe4be", borderWidth: 5, borderRadius: 15, marginTop: -25, marginBottom: 10, backgroundColor: "#90C6CA", maxWidth: width/1.2, shadowOpacity: 0.3, shadowRadius: 20}}>
-                <Text style={{ padding: 10, fontFamily: "Times New Roman", fontSize: 30, alignSelf: "center", color: "white" }}>Marker {props.num}</Text>
+            <View style={MarkerStyle.header}>
+                <Text style={MarkerStyle.headerText}>Marker {props.num}</Text>
             </View>
             {/* Text */}
             <ScrollView style={{height: 0}}>{props.text}</ScrollView>
-            {/*<View style={{ borderColor: "#efe4be", borderWidth: 1, borderRadius: 15, backgroundColor: "#90C6CA", maxWidth: width/1.2, marginBottom: 10, marginTop: 10, shadowOpacity: 0.3, shadowRadius: 10}}>
-                <Button
-                    onPress={() => {
-                        setPopUp(!popUp)
-                    }}
-                    title="Learn More"
-                    color="black"
-                />
-                </View>*/}
 
             {/* Bottom Buttons */}
             <View style={{flexDirection: 'row'}}>
                 {/* Learn More */}
-                <TouchableHighlight onPress={() => {setPopUp(!popUp)}} style={{ borderColor: "#efe4be", borderWidth: 5, borderRadius: 15, backgroundColor: "#90C6CA", maxWidth: width/1.2, marginBottom: 10, marginTop: 10, marginLeft: 5, shadowOpacity: 0.3, shadowRadius: 10}}>
-                        <Text style={{ padding: 10, fontFamily: "Times New Roman", fontSize: 20, alignSelf: "center", color: "white" }}>Learn More</Text>
+                <TouchableHighlight onPress={() => {prevMarker()}} style={MarkerStyle.button}>
+                        <Text style={MarkerStyle.buttonText}>Prev Marker</Text>
+                </TouchableHighlight>
+                <TouchableHighlight onPress={() => {setPopUp(!popUp)}} style={MarkerStyle.button}>
+                        <Text style={MarkerStyle.buttonText}>Learn More</Text>
                 </TouchableHighlight>
                 {/* Next Marker Map Popup*/}
-                <TouchableHighlight onPress={() => {lastMarker()}} style={{ borderColor: "#efe4be", borderWidth: 5, borderRadius: 15, backgroundColor: "#90C6CA", maxWidth: width/1.2, marginBottom: 10, marginTop: 10, marginLeft: 20, shadowOpacity: 0.3, shadowRadius: 10}}>
-                        <Text style={{ padding: 10, fontFamily: "Times New Roman", fontSize: 20, alignSelf: "center", color: "white" }}>Next Marker</Text>
+                <TouchableHighlight onPress={() => {lastMarker()}} style={MarkerStyle.button}>
+                        <Text style={MarkerStyle.buttonText}>Next Marker</Text>
                 </TouchableHighlight>
             </View>
 
             {/* Learn More Pop-Up */}
             <Modal transparent={true} visible={popUp}>
                 <View style={{backgroundColor: "#000000aa", flex: 1, alignContent: 'center'}}>
-                    <View style={{display: 'flex', backgroundColor: "#efe4be", margin: 30, marginTop: 250, padding: 15, borderRadius: 10, width: width/1.15, maxHeight: height/2, justifyContent: 'center', alignItems: 'center', alignSelf: 'center'}}>
+                    <View style={MarkerStyle.modal}>
                         <ScrollView>{props.popUpText}</ScrollView>
                         <View style={{flexDirection: 'row'}}>
                             {/* More Pictures */}
-                            <TouchableHighlight onPress={() => {setPopUp(!popUp)}} style={{ borderColor: "#efe4be", borderWidth: 5, borderRadius: 15, backgroundColor: "#90C6CA", justifyContent: 'center', width: width/2.7, marginBottom: 10, marginTop: 10, marginRight: 10, marginLeft: 5, shadowOpacity: 0.3, shadowRadius: 10}}>
-                                <Text style={{ padding: 10, fontFamily: "Times New Roman", fontSize: 19, alignSelf: "center", color: "white" }}>More Pictures</Text>
+                            <TouchableHighlight onPress={() => {setPopUp(!popUp)}} style={MarkerStyle.button}>
+                                <Text style={MarkerStyle.buttonText}>More Pictures</Text>
                             </TouchableHighlight>
                             {/* Next Marker */}
                             <TouchableHighlight 
                                 onPress={() => 
                                     {setPopUp(!popUp)
                                     lastMarker()}}
-                                style={{ borderColor: "#efe4be", borderWidth: 5, borderRadius: 15, backgroundColor: "#90C6CA", justifyContent: 'center', width: width/2.7, marginBottom: 10, marginTop: 10, shadowOpacity: 0.3, shadowRadius: 10}}>
-                                <Text style={{ padding: 10, fontFamily: "Times New Roman", fontSize: 19, alignSelf: "center", color: "white" }}>Next Marker</Text>
+                                style={MarkerStyle.button}>
+                                <Text style={MarkerStyle.buttonText}>Next Marker</Text>
                             </TouchableHighlight>
                         </View>
                     </View>
@@ -144,33 +139,40 @@ export default function Marker(props) {
             {/* Map Pop-Up */}
             <Modal transparent={true} visible={mapPopUp}>
                 <View style={{backgroundColor: "#000000aa", flex: 1, alignContent: 'center'}}>
-                    <View style={{display: 'flex', backgroundColor: "#efe4be", margin: 30, marginTop: 150, padding: 15, borderRadius: 10, width: width/1.15, height: height/1.6, maxHeight: height, justifyContent: 'center', alignItems: 'center', alignSelf: 'center'}}>
+                    <View style={MarkerStyle.modal}>
                         <ScrollView>
                             <View>{props.directions}</View>
                             <Image  source={props.map} style={styles.map}></Image>
                         </ScrollView>
                         <View style={{flexDirection: 'row'}}>
                             {/* Back */}
-                            <TouchableHighlight onPress={() => {setMapPopUp(!mapPopUp)}} style={{ borderColor: "#efe4be", borderWidth: 5, borderRadius: 15, backgroundColor: "#90C6CA", justifyContent: 'center', width: width/2.7, marginBottom: 10, marginTop: 10, marginRight: 10, marginLeft: 5, shadowOpacity: 0.3, shadowRadius: 10}}>
-                                <Text style={{ padding: 10, fontFamily: "Times New Roman", fontSize: 19, alignSelf: "center", color: "white" }}>Back</Text>
+                            <TouchableHighlight onPress={() => {setMapPopUp(!mapPopUp)}} style={MarkerStyle.button}>
+                                <Text style={MarkerStyle.buttonText}>Back</Text>
                             </TouchableHighlight>
                             {/* Next Marker */}
                             <TouchableHighlight onPress={() => {setMapPopUp(!mapPopUp)
                                 nextMarker()}}
-                                style={{ borderColor: "#efe4be", borderWidth: 5, borderRadius: 15, backgroundColor: "#90C6CA", justifyContent: 'center', width: width/2.7, marginBottom: 10, marginTop: 10, shadowOpacity: 0.3, shadowRadius: 10}}>
-                                <Text style={{ padding: 10, fontFamily: "Times New Roman", fontSize: 19, alignSelf: "center", color: "white" }}>Proceed</Text>
+                                style={MarkerStyle.button}>
+                                <Text style={MarkerStyle.buttonText}>Proceed</Text>
                             </TouchableHighlight>
                         </View>
-                        
                     </View>
                 </View>
             </Modal>
         </View>
     );
+
+    function prevMarker() {
+        if (props.num == 1) {
+            props.navigation.navigate('Markers')
+         } else {
+             props.navigation.navigate('Marker ' + (eval(props.num) - 1))
+         }
+    }
+
     function nextMarker() {
         if (props.num == 24) {
            props.navigation.navigate('PastNextScreen')
-           //alert('You have reached the end :)')
         } else {
             props.navigation.navigate('Marker ' + (eval(props.num) + 1))
         }
