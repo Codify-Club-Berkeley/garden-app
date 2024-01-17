@@ -115,7 +115,7 @@ export default function Marker(props) {
                 <Image
                 key={index}
                 style={styles.image}
-                source={image}
+                source={{uri: image}}
                 />
             ))}
             </Swiper>

@@ -1,14 +1,25 @@
 import * as React from "react";
 import { View, Text, Image, FlatList, StyleSheet } from "react-native";
 import Marker from "../Marker";
+import { db } from '../../../Firebase/firebase'
+import { ref, onValue } from 'firebase/database'
 
 Text.defaultProps = {};
 Text.defaultProps.maxFontSizeMultiplier = 2.5;
 
-const images = [
-    require('../../images/Marker_3_1.jpg'),
-    require('../../images/Marker_3_2.jpg')
-]
+const markerRef = ref(db, 'plants/Marker3');
+var data;
+onValue(markerRef, (snapshot) => {
+    data = snapshot.val() || {};
+});
+
+const images = data.imgFirebaseURLs;
+
+// const images = [
+//     require('../../images/Marker_3_1.jpg'),
+//     require('../../images/Marker_3_2.jpg')
+// ]
+
 const text = 
     <Text style={{ padding: 20, paddingBottom: 37, fontFamily: "Times New Roman", fontSize: 20 }}>   
         <Text style={{fontStyle: "italic"}}>When you think of the word “succulent,” what comes to mind?</Text>
