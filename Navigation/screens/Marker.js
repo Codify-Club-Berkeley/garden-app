@@ -1,7 +1,5 @@
 import React, {useEffect, useState} from 'react';
 import { View, Text, Image, StyleSheet, ScrollView, Modal, Dimensions, TouchableHighlight, TouchableOpacity} from 'react-native';
-import React, {useEffect, useState} from 'react';
-import { View, Text, Image, ScrollView, Modal, Dimensions, TouchableHighlight, TouchableOpacity} from 'react-native';
 import Swiper from 'react-native-swiper';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import { MarkerStyle } from './MarkerStyle';
