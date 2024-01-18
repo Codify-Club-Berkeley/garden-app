@@ -24,7 +24,7 @@ const text =
 const popUpText = 
     <Text style={{padding: 15, fontFamily: "Times New Roman", fontSize: 20}}>
         These cacti take distinctively different forms, but 
-        <Text style={{fontWeight: "bold"}}> both are pollinated by bats</Text>
+        <Text style={{fontWeight: "bold"}}> both are pollinated by bats.</Text>
     </Text>
 
 const map = require('../../images/map/20.jpg')

@@ -6,12 +6,13 @@ Text.defaultProps = {}
 Text.defaultProps.maxFontSizeMultiplier = 2.5
 
 const images = [
+    require('../../images/Marker_10_0.jpg'),
     require('../../images/Marker_10_1.jpg'),
     require('../../images/Marker_10_2.jpg')
 ]
 const text = 
     <Text style={{ padding: 20, paddingBottom: 37, fontFamily: "Times New Roman", fontSize: 20 }}>   
-        This bed contains numerous <Text style={{fontWeight: "bold"}}> gasterias</Text>. 
+        This bed contains numerous<Text style={{fontWeight: "bold"}}> gasterias</Text>. 
         Relatives of the aloe, the name <Text style={{fontStyle: "italic"}}>gaster</Text> (Greek for stomach), 
         describes the plant’s pot-bellied flowers.
     </Text>
@@ -28,8 +29,7 @@ const popUpText =
 const map = require('../../images/map/10.jpg')
 
 const directions = <Text style={{ padding: 20, fontFamily: "Times New Roman", fontSize: 20 }}>
-    Continue on the path into the large clearing. 
-    To your right, and the right of the light pole, is Marker 11.
+    Continue on the path, as you enter the large clearing, look right and find Marker 11.
     </Text>
 
 export default function MarkerScreen({ navigation }) {

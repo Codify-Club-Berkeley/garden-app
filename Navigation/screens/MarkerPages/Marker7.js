@@ -12,9 +12,10 @@ const images = [
 ]
 const text = 
     <Text style={{ padding: 20, paddingBottom: 37, fontFamily: "Times New Roman", fontSize: 20 }}>   
-        The path here is constricted by two interesting plants. On the right is the native, <Text style={{fontWeight: "bold"}}>red-barked manzanita (<Text style={{fontStyle: "italic"}}>Arctostaphylos</Text> ‘Ruth Bancroft’).</Text>
+        The path here is constricted by two interesting plants. On the right is the small red-barked manzanita tree <Text style={{fontWeight: "bold"}}>(<Text style={{fontStyle: "italic"}}>Arctostaphylos</Text> ‘Ruth Bancroft’). </Text>
+         Manzanita is an iconic native California plant.
         {"\n"} {"\n"}
-        The tree on the left, with <Text style={{fontWeight: "bold"}}>weeping foliage, is the Australian <Text style={{fontStyle: "italic"}}>Melaleuca preissiana</Text>, </Text>
+        The tree on the left, with weeping foliage and secret understory, is the<Text style={{fontWeight: "bold"}}> Australian <Text style={{fontStyle: "italic"}}>Melaleuca preissiana</Text>, </Text>
         also known as a tea tree.
     </Text>
 

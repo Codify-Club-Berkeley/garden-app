@@ -22,14 +22,13 @@ const popUpText =
     <Text style={{padding: 15, fontFamily: "Times New Roman", fontSize: 20}}>
         From the center of the Xanthorrhoea foliage arises a tall, 
         spear-like flower stalk. Fire stimulates increased flower production.
-        {"\n"} {"\n"}
-        Unfortunately, many plants adapted to fire are no match for the mega-fires brought about by climate change.
+        {"\n"}
     </Text> 
 
 const map = require('../../images/map/8.jpg')
 
 const directions = <Text style={{ padding: 20, fontFamily: "Times New Roman", fontSize: 20 }}>
-    Turn left and head towards the double gates; once you are within 20 feet, look right and see more ‘grass trees’ and Marker 9.
+    Turn left and head towards the double gates; keep your eyes out for Marker 9 on top of a mound on the right. 
     </Text>
 
 export default function MarkerScreen({ navigation }) {

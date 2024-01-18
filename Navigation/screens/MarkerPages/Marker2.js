@@ -38,7 +38,7 @@ const popUpText =
 const map = require('../../images/map/2.jpg');
 
 const directions = <Text style={{ padding: 20, fontFamily: "Times New Roman", fontSize: 20 }}>
-    Walk a few yards further, to your left you will see a super stout palm and Marker 3.
+    Walk a few yards further, to your left you will see a tall, super stout palm and Marker 3.
     </Text>
 
 export default function MarkerScreen({ navigation }) {

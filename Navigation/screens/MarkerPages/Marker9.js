@@ -27,8 +27,7 @@ const popUpText =
 const map = require('../../images/map/9.jpg')
 
 const directions = <Text style={{ padding: 20, fontFamily: "Times New Roman", fontSize: 20 }}>
-    Turn around towards the clearing. Head left on the path. 
-    Marker 10 is on the left edge of the mounded bed with very exposed rocks. 
+    Turn back around towards the clearing. Take the path on the left that goes by the bed mounded bed with very exposed rocks. Find Marker 10 in that bed. 
     </Text>
 
 export default function MarkerScreen({ navigation }) {
