@@ -1,15 +1,53 @@
 import React, {useEffect, useState} from 'react';
-import { View, Text, Image, ScrollView, Modal, Dimensions, TouchableHighlight, TouchableOpacity} from 'react-native';
+import { View, Text, Image, StyleSheet, ScrollView, Modal, Dimensions, TouchableHighlight, TouchableOpacity} from 'react-native';
 import Swiper from 'react-native-swiper';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import { MarkerStyle } from './MarkerStyle';
-import { ReactNativeZoomableView } from '@openspacelabs/react-native-zoomable-view';
 
-const height = Dimensions.get('window').height;
-const width = Dimensions.get('window').width;
+var height = Dimensions.get('window').height;
+var width = Dimensions.get('window').width;
 
 Text.defaultProps = {}
 Text.defaultProps.maxFontSizeMultiplier = 1.7
+
+const styles = StyleSheet.create({
+    wrapper: {},
+    container: {
+        backgroundColor: 'transparent',
+        position: 'relative',
+        flex: 5
+      },
+    image: {
+        height: 350,
+        width: 400,
+        top: 0,
+        resizeMode: "stretch",
+        height: height*0.4, 
+        width: width,
+    },
+    paginationStyle: {
+        position: 'absolute',
+        //bottom: 10,
+        //right: 10,
+        //justifyContent: 'center',
+        //alignItems: 'center',
+        alignSelf: 'center'
+      },
+      paginationText: {
+        color: 'white',
+        fontSize: 17,
+        //alignSelf: 'center',
+        padding: 5
+      },
+      map: {
+        resizeMode: "stretch",
+        height: height*0.5, 
+        width: width * 0.8,
+        borderRadius: 10,
+      }
+  })
+
+
 
 const renderPagination = (index, total, context) => {
     return (
@@ -17,7 +55,7 @@ const renderPagination = (index, total, context) => {
             <Text style={MarkerStyle.paginationText}>{index + 1}/{total}</Text>
         </View>
     )
-  };
+  }
 
 export default function Marker(props) {
     const [popUp, setPopUp] = useState(false);

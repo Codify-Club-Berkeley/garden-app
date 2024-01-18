@@ -6,6 +6,7 @@ Text.defaultProps = {}
 Text.defaultProps.maxFontSizeMultiplier = 2.5
 
 const images = [
+    require('../../images/NewMarker_23_1.jpg'),
     require('../../images/Marker_23_1.jpg'),
     require('../../images/Marker_23_2.jpg'),
     require('../../images/Marker_23_3.jpg')

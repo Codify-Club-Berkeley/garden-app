@@ -55,7 +55,7 @@ export default function EndScreen({navigation}) {
 }
 const styles = StyleSheet.create({
     button: {
-        backgroundColor: "#90C6CA",
+        backgroundColor: "rgb(217, 81, 31)",
         borderRadius: 10,
         shadowColor: '#000',
         shadowOpacity: 0.75,

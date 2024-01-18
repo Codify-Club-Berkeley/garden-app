@@ -66,7 +66,7 @@ function MainStackNavigator() {
                 tabBarLabelStyle: {fontSize: 12}})}>
             <Stack.Screen name = "HomeScreen" component ={HomeScreen}/>
             <Stack.Screen name = "NavScreen" component = {NavScreen}/>
-            <Stack.Screen name="MarkerFromNav" component= {MainStackNavigator} options={{headerShown: false}}/>
+            <Stack.Screen name={"MarkerFromNav"} component= {MainStackNavigator} options={{headerShown: false}}/>
         </Stack.Navigator>
     //</NavigationContainer>
     )
@@ -103,7 +103,7 @@ export default function MainContainer(){
                     },
                         null
                     ],
-                    headerStyle: {backgroundColor:"#90C6CA"},
+                    headerStyle: {backgroundColor:"#90C6CA"}, //original color: #90C6CA
                     tabBarStyle: {backgroundColor: "#90C6CA", padding: 10, height: 90},
                     tabBarLabelStyle: {display: "none"}
                 })}

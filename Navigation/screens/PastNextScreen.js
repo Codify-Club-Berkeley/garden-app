@@ -1,8 +1,12 @@
-import { View, Text, Linking, StyleSheet, TouchableOpacity, Image} from 'react-native';
+import React, {useEffect, useState} from 'react';
+import { View, Text, Linking, StyleSheet, TouchableOpacity, Image, Modal, Dimensions} from 'react-native';
 const BG_IMG= require('../images/thumbnail_images/M20.jpg');
-
+const map = require('../../Navigation/images/map/mapToExit.jpg');
+var height = Dimensions.get('window').height;
+var width = Dimensions.get('window').width;
 
 export default function PastNextScreen({navigation}) {
+    const [mapPopUp, setMapPopUp] = useState(false);
     return (
         <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: "#efe4be"}}>
         <Image 
@@ -18,11 +22,21 @@ export default function PastNextScreen({navigation}) {
                 </Text>
             </View>
             <View style = {styles.buttonContainer}>
-            <TouchableOpacity
-                style = {styles.button}
-                onPress = {() => navigation.navigate('EndScreen')}>
-                <Text style = {styles.buttonText}> Map </Text>
+            <TouchableOpacity style = {styles.button} onPress = {() => setMapPopUp(true)}>
+                    <Text style = {styles.buttonText}> Map to Exit </Text>
             </TouchableOpacity>
+            <Modal transparent={true} visible={mapPopUp}>
+                <View style={styles.outerPopUpStyle}>
+                    <View style = {styles.popUpStyle}>
+                        <Image  source={map} style={styles.map}></Image>
+                        <View style = {{marginHorizontal: width/3}}>
+                            <TouchableOpacity style = {styles.button} onPress = {() => setMapPopUp(!mapPopUp)}>
+                                <Text style = {styles.buttonText}> Close </Text>
+                            </TouchableOpacity>
+                        </View>
+                    </View>
+                </View>
+            </Modal>
             <TouchableOpacity
                 style = {styles.button}
                 onPress = {() => navigation.navigate('EndScreen')}>
@@ -32,12 +46,34 @@ export default function PastNextScreen({navigation}) {
         </View>
 );
 }
+
 const styles = StyleSheet.create({
 buttonContainer: {
     flexDirection: 'row',
 },
+outerPopUpStyle: {
+    backgroundColor: "#000000aa", 
+    flex: 1, 
+    alignContent: 'center', 
+    display: 'flex', 
+    justifyContent: 'center'
+},
+popUpStyle: {
+    backgroundColor: "#efe4be", 
+    paddingVertical: 20, 
+    marginHorizontal: 17, 
+    borderRadius: 10
+},
+map: {
+    resizeMode: "stretch",
+    height: height*0.5, 
+    width: width * 0.8,
+    borderRadius: 10,
+    alignSelf: "center",
+    marginBottom: 10,
+  },
 button: {
-    backgroundColor: "#90C6CA",
+    backgroundColor: "rgb(217, 81, 31)",
     borderRadius: 10,
     shadowColor: '#000',
     shadowOpacity: 0.75,
@@ -47,9 +83,10 @@ button: {
     margin: 8,
 },
 buttonText: {
-    fontSize: 30,
+    fontSize: 27,
     color: "white",
     padding: 10,
+    textAlign: 'center',
 },
 boxRound: {
     paddingHorizontal: 10,
