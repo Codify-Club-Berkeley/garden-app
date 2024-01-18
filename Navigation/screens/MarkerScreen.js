@@ -10,14 +10,14 @@ const DATA = [
     {
         id: "1",
         title: "Marker 1",
-        plant: 'Quercus lobata',
+        plant: 'Agave franzosinii',
         imge: require('../images/thumbnail_images/NM1.jpg'),
         whereTo: 'Marker 1'
     },
     {
         id: "2",
         title: "Marker 2",
-        plant: 'Variety of Yucca',
+        plant: 'Aloe Bed',
         imge: require('../images/thumbnail_images/M2.jpg'),
         whereTo: 'Marker 2'
     },
@@ -46,7 +46,7 @@ const DATA = [
     {
         id: "6",
         title: "Marker 6",
-        plant: "Pinus torreyana",
+        plant: "Aloe ‘Hellskloofs Bells'",
         imge: require('../images/thumbnail_images/NM6.jpg'),
         whereTo: 'Marker 6'
     },
@@ -74,21 +74,21 @@ const DATA = [
     {
       id: "10",
       title: "Marker 10",
-      plant: "Gasteria bicolor",
+      plant: "Gasteria Mound",
       imge: require('../images/thumbnail_images/NM10.jpg'),
       whereTo: 'Marker 10'
     },
     {
       id: "11",
       title: "Marker 11",
-      plant: "Aloe speciosa",
+      plant: "Aloe arborescens",
       imge: require('../images/thumbnail_images/NM11.jpg'),
       whereTo: 'Marker 11'
     },
     {
       id: "12",
       title: "Marker 12",
-      plant: "Euphorbia rigida",
+      plant: "Tradescantia pallida ‘Purple Heart’",
       imge: require('../images/thumbnail_images/NM12.jpg'),
       whereTo: 'Marker 12'
     },
@@ -109,7 +109,7 @@ const DATA = [
     {
       id: "15",
       title: "Marker 15",
-      plant: "Filling the Pond Ruth and Philip Bancroft",
+      plant: "Pond",
       imge: require('../images/thumbnail_images/NM15.jpg'),
       whereTo: 'Marker 15'
     },
@@ -130,7 +130,7 @@ const DATA = [
     {
       id: "18",
       title: "Marker 18",
-      plant: "Opunita leucotricha",
+      plant: "Opuntia ficus-indica",
       imge: require('../images/thumbnail_images/NM18.jpg'),
       whereTo: 'Marker 18'
     },
@@ -165,7 +165,7 @@ const DATA = [
     {
       id: "23",
       title: "Marker 23",
-      plant: "Agave mitis",
+      plant: "Parkinsonia ‘Desert Museum’",
       imge: require('../images/thumbnail_images/NM23.jpg'),
       whereTo: 'Marker 23'
     },

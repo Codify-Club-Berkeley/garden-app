@@ -18,7 +18,6 @@ export default function NavScreen({ navigation }) {
                     style={styles.linearGradient}
                 />
             <Image source = {logoImage} style = {styles.container}/>            
-            {/* <Image source = {sampleMarker} style = {styles.markerPic}/> */}
             <Text 
                 style={styles.bodyText}>
                 As you walk, you will be looking for brass markers 
@@ -27,6 +26,8 @@ export default function NavScreen({ navigation }) {
                 To get started, enter through the Garden 
                 gates heading towards the patio, keep your eye out for Marker 1.
             </Text>
+
+            { <Image source = {sampleMarker} style = {styles.markerPic}/>}
             <View style = {styles.buttonText}>
                 <TouchableOpacity
                     style = {styles.button}
@@ -76,6 +77,7 @@ const styles = StyleSheet.create({
         resizeMode: 'contain',
         //flex: 0.4,
         height:  200,
+        marginBottom: 10,
         width: '100%',
     },
     titleText: {
@@ -87,8 +89,8 @@ const styles = StyleSheet.create({
     bodyText: {
         paddingLeft: 30,
         paddingRight: 20,
-        paddingBottom: 50,
-        paddingTop: 50,
+        paddingBottom: 15,
+        paddingTop: 35,
         fontSize: 19,
         lineHeight: 40,
     },
