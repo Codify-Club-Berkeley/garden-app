@@ -102,10 +102,10 @@ export default function Marker(props) {
                     <View style={MarkerStyle.modal}>
                         <ScrollView>
                             {/* Map Zoom In and Out */}
-                            <ReactNativeZoomableView maxZoom={8} minZoom={1} contentWidth={width*0.8} contentHeight={height*0.5}>
-                                <Image source={props.map} style={styles.map}></Image>
-                            </ReactNativeZoomableView>
                             <View>{props.directions}</View>
+                            <ReactNativeZoomableView maxZoom={8} minZoom={1} contentWidth={width*0.8} contentHeight={height*0.5}>
+                                <Image source={props.map} style={MarkerStyle.map}></Image>
+                            </ReactNativeZoomableView>
                         </ScrollView>
                         <View style={{flexDirection: 'row'}}>
                             {/* Back */}
