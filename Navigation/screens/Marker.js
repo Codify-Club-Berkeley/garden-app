@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import { View, Text, Image, StyleSheet, ScrollView, Modal, Dimensions, TouchableHighlight, TouchableOpacity} from 'react-native';
+import { ReactNativeZoomableView } from '@openspacelabs/react-native-zoomable-view';
 import Swiper from 'react-native-swiper';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import { MarkerStyle } from './MarkerStyle';

@@ -12,23 +12,19 @@ const images = [
 ]
 const text = 
     <Text style={{ padding: 20, paddingBottom: 37, fontFamily: "Times New Roman", fontSize: 20 }}>   
-        Along the path is a drift of <Text style={{fontWeight: "bold", fontStyle: "italic"}}>aloes</Text>.
+        Along the path is a drift of <Text style={{fontStyle: "italic"}}>aloes</Text> <Text style={{fontWeight: "bold", fontStyle: "italic"}}>(Aloe striata).</Text>.
         {"\n"} {"\n"}
         Toward the center of the bed are the <Text style={{fontWeight: "bold"}}>only palms native to California, <Text style={{fontStyle: "italic"}}>Washingtonia filifera</Text>.</Text>
-        {"\n"} {"\n"}
-        The <Text style={{fontWeight: "bold"}}>(<Text style={{fontStyle: "italic"}}>Erythrina x bidwillii</Text>)</Text>, 
-        to the right of the palms is a blaze with red flowers in the summer and is cut back in winter.
     </Text>
 
 const popUpText = 
     <Text style={{padding: 15, fontFamily: "Times New Roman", fontSize: 20}}>
-        Like the majority of plants in the Garden, these <Text style={{fontWeight: "bold"}}>specimens all come from Mediterranean climates, 
-        characterized by hot dry summers and wet winters</Text>. 
-        Gardeners wishing to save water, should select plants that are adapted to a Mediterranean climate.    
+        The <Text style={{fontWeight: "bold"}}>shrub coral tree </Text><Text style={{fontWeight: "bold", fontStyle: "italic"}}>(Erythrina x bidwillii)</Text>, 
+        to the right of the palms is ablaze with red flowers in the summer and is cut back in winter.     
     </Text> 
 
 const map = require('../../images/map/16.jpg')
-const directions = <Text style={{ padding: 20, fontFamily: "Times New Roman", fontSize: 20 }}>Keep walking to the gazebo/folly. Marker 17 is in the bed on the right nearest to the Folly. </Text>
+const directions = <Text style={{ padding: 20, fontFamily: "Times New Roman", fontSize: 20 }}>Keep walking to the tall green structure (“Ruth’s folly”). Marker 17 is in the bed on the right nearest to the Folly. </Text>
 
 
 export default function MarkerScreen({ navigation }) {

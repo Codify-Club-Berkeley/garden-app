@@ -12,24 +12,22 @@ const images = [
 ]
 const text = 
     <Text style={{ padding: 20, paddingBottom: 37, fontFamily: "Times New Roman", fontSize: 20 }}>   
-        This bed displays two dramatic specimens, 
-        the <Text style={{fontWeight: "bold"}}>golden barrel cacti (<Text style={{fontStyle: "italic"}}>Echinocactus grusonii</Text>) </Text>
-        and the <Text style={{fontWeight: "bold"}}>Queen Victoria’s agave (<Text style={{fontStyle: "italic"}}>Agave victoriae-reginae</Text>) </Text>
-        with their striking white markings on sculptural, dark-green leaves.
-        {"\n"} {"\n"}
-        Following the small path to the right, you will arrive at a stout tree whose swollen trunk gives it the name of
+        The remarkable  
+        <Text style={{fontWeight: "bold"}}> golden barrel cacti (<Text style={{fontStyle: "italic"}}>Echinocactus grusonii</Text>) </Text>
+        and the white striped <Text style={{fontWeight: "bold"}}>Queen Victoria’s agave (<Text style={{fontStyle: "italic"}}>Agave victoriae-reginae</Text>) </Text>
+        can be found here.
+        Following the small path to the right, keep your eyes peeled for a tree with a big swollen trunk which gives it the name of 
         <Text style={{fontWeight: "bold"}}> Australian bottle tree (<Text style={{fontStyle: "italic"}}>Brachychiton rupestris</Text>).</Text>
     </Text>
 
 const popUpText = 
     <Text style={{padding: 15, fontFamily: "Times New Roman", fontSize: 20}}>
-        <Text style={{fontStyle: "italic"}}>Remember the Palo Verde with its green bark, 
-        or the thick Chilean Wine Palm at the beginning of the tour? 
-        Can you guess why the bottle tree is so stout, and possesses green bark?</Text>
-    </Text> 
+    When you see that tree, remember a succulent is anything that sucks up water. This tree is some succulent!
+    </Text>
+    
 
 const map = require('../../images/map/17.jpg')
-const directions = <Text style={{ padding: 20, fontFamily: "Times New Roman", fontSize: 20 }}>On the right, take the small path parallel to the gazebo/folly’s shadehouse, towards the distant fence. Under the pine, is Marker 18. </Text>
+const directions = <Text style={{ padding: 20, fontFamily: "Times New Roman", fontSize: 20 }}>From the stout tree, look ahead and see Marker 18. </Text>
 
 
 export default function MarkerScreen({ navigation }) {
