@@ -28,13 +28,13 @@ export const MarkerStyle = StyleSheet.create({
         borderWidth: 3, 
         borderRadius: 15, 
         backgroundColor: "rgb(217, 81, 31)", 
-        maxWidth: width/1.2, 
+        maxWidth: width/1.2,
         marginBottom: 10, 
         marginTop: 10, 
         marginLeft: 5, 
         shadowOpacity: 0.3, 
         shadowRadius: 10,
-        width: "31%"
+        width: width/3.2
     },
     buttonText: {
         padding: 5, 
@@ -77,9 +77,22 @@ export const MarkerStyle = StyleSheet.create({
         height: height*0.4, 
         width: width,
     },
+    mapView: {
+        display: 'flex', 
+        backgroundColor: "#efe4be", 
+        margin: 30, 
+        marginTop: 120, 
+        padding: 5, 
+        borderRadius: 10, 
+        width: width/1.1, 
+        maxHeight: height/1.28, 
+        justifyContent: 'center', 
+        alignItems: 'center', 
+        alignSelf: 'center'
+    },
     map: {
         resizeMode: "stretch",
-        height: height*0.5, 
+        height: height*0.47, 
         width: width * 0.8,
         borderRadius: 10,
     }

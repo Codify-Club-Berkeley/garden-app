@@ -2,6 +2,7 @@
 
 import * as React from 'react';
 import { View, Text, Linking, StyleSheet, TouchableOpacity, Image} from 'react-native';
+import { ScrollView } from 'react-native-gesture-handler';
 const BG_IMG= require('../images/thumbnail_images/M22.jpg');
 // import { ScrollView } from 'react-native-gesture-handler'; //note: use M19 for image
 import Ionicons from 'react-native-vector-icons/Ionicons';
@@ -19,6 +20,7 @@ export default function EndScreen({navigation}) {
     })
 
     return (
+        <ScrollView>
             <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: "#efe4be"}}>
             <Image 
                 source={BG_IMG}
@@ -51,6 +53,7 @@ export default function EndScreen({navigation}) {
                     <Text style = {styles.buttonText}> Join </Text>
                 </TouchableOpacity>
             </View>
+        </ScrollView>
     );
 }
 const styles = StyleSheet.create({
@@ -76,6 +79,7 @@ const styles = StyleSheet.create({
         fontWeight: 'bold'
     },
     boxRound: {
+        marginTop: 30,
         padding: 10,
         backgroundColor: "#efe4be",
                 borderRadius: 15,

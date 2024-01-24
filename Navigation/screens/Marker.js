@@ -138,27 +138,29 @@ export default function Marker(props) {
             {/* Map Pop-Up */}
             <Modal transparent={true} visible={mapPopUp}>
                 <View style={{backgroundColor: "#000000aa", flex: 1, alignContent: 'center'}}>
-                    <View style={MarkerStyle.modal}>
-                        <ScrollView>
-                            {/* Map Zoom In and Out */}
-                            <View>{props.directions}</View>
-                            <ReactNativeZoomableView maxZoom={8} minZoom={1} contentWidth={width*0.8} contentHeight={height*0.5}>
-                                <Image source={props.map} style={MarkerStyle.map}></Image>
-                            </ReactNativeZoomableView>
-                        </ScrollView>
-                        <View style={{flexDirection: 'row'}}>
-                            {/* Back */}
-                            <TouchableHighlight onPress={() => {setMapPopUp(!mapPopUp)}} style={MarkerStyle.button}>
-                                <Text style={MarkerStyle.buttonText}>Back</Text>
-                            </TouchableHighlight>
-                            {/* Next Marker */}
-                            <TouchableHighlight onPress={() => {setMapPopUp(!mapPopUp)
-                                nextMarker()}}
-                                style={MarkerStyle.button}>
-                                <Text style={MarkerStyle.buttonText}>Proceed</Text>
-                            </TouchableHighlight>
-                        </View>
+                  <View style={MarkerStyle.mapView}>
+                    <ScrollView>
+                      <View>{props.directions}</View>
+                    </ScrollView>
+                    <ScrollView>
+                        {/* Map Zoom In and Out */}
+                        <ReactNativeZoomableView maxZoom={8} minZoom={1} contentWidth={width*0.8} contentHeight={height*0.5}>
+                            <Image source={props.map} style={MarkerStyle.map}></Image>
+                        </ReactNativeZoomableView>
+                    </ScrollView>
+                    <View style={{flexDirection: 'row'}}>
+                        {/* Back */}
+                        <TouchableHighlight onPress={() => {setMapPopUp(!mapPopUp)}} style={MarkerStyle.button}>
+                            <Text style={MarkerStyle.buttonText}>Back</Text>
+                        </TouchableHighlight>
+                        {/* Next Marker */}
+                        <TouchableHighlight onPress={() => {setMapPopUp(!mapPopUp)
+                            nextMarker()}}
+                            style={MarkerStyle.button}>
+                            <Text style={MarkerStyle.buttonText}>Proceed</Text>
+                        </TouchableHighlight>
                     </View>
+                  </View>
                 </View>
             </Modal>
         </View>

@@ -1,5 +1,9 @@
 import React, {useEffect, useState} from 'react';
-import { View, Text, Linking, StyleSheet, TouchableOpacity, Image, Modal, Dimensions} from 'react-native';
+import { View, Text, Linking, StyleSheet, TouchableOpacity, Image, Modal, Dimensions, ScrollView} from 'react-native';
+import { ReactNativeZoomableView } from '@openspacelabs/react-native-zoomable-view';
+import { MarkerStyle } from './MarkerStyle';
+import Marker from './Marker';
+
 const BG_IMG= require('../images/thumbnail_images/M20.jpg');
 const map = require('../../Navigation/images/map/mapToExit.jpg');
 var height = Dimensions.get('window').height;
@@ -15,35 +19,39 @@ export default function PastNextScreen({navigation}) {
             blurRadius={15}
             >
         </Image>
-            <View style = {styles.boxRound}>
-                <Text
-                style= {styles.learnMoreText}>
-                    {'\t'}You have reached the end of the self-guided tour, but not the adventure of finding plants that leave you amazed by their beauty and adaptability. We encourage you to continue your stroll, then follow the map to the exit and visit us again!
-                </Text>
-            </View>
-            <View style = {styles.buttonContainer}>
+        <View style = {styles.boxRound}>
+            <Text
+            style= {styles.learnMoreText}>
+                {'\t'}You have reached the end of the self-guided tour, but not the adventure of finding plants that leave you amazed by their beauty and adaptability. We encourage you to continue your stroll, then follow the map to the exit and visit us again!
+            </Text>
+        </View>
+        <View style = {styles.buttonContainer}>
             <TouchableOpacity style = {styles.button} onPress = {() => setMapPopUp(true)}>
-                    <Text style = {styles.buttonText}> Map to Exit </Text>
-            </TouchableOpacity>
-            <Modal transparent={true} visible={mapPopUp}>
-                <View style={styles.outerPopUpStyle}>
-                    <View style = {styles.popUpStyle}>
-                        <Image  source={map} style={styles.map}></Image>
-                        <View style = {{marginHorizontal: width/3}}>
-                            <TouchableOpacity style = {styles.button} onPress = {() => setMapPopUp(!mapPopUp)}>
-                                <Text style = {styles.buttonText}> Close </Text>
-                            </TouchableOpacity>
-                        </View>
-                    </View>
-                </View>
-            </Modal>
+                <Text style = {styles.buttonText}> Map to Exit </Text>
+            </TouchableOpacity>    
             <TouchableOpacity
                 style = {styles.button}
                 onPress = {() => navigation.navigate('EndScreen')}>
                 <Text style = {styles.buttonText}> Next </Text>
             </TouchableOpacity>
         </View>
-        </View>
+        <Modal transparent={true} visible={mapPopUp}>
+            <View style = {styles.outerPopUpStyle}>
+                <View style = {styles.popUpStyle}>
+                    <ScrollView>
+                        <ReactNativeZoomableView maxZoom={8} minZoom={1} contentWidth={width*0.8} contentHeight={height*0.45}>
+                            <Image source={map} style={styles.map}></Image>
+                        </ReactNativeZoomableView>
+                    </ScrollView>
+                    <View style = {{marginHorizontal: width/4}}>
+                        <TouchableOpacity style = {styles.button} onPress = {() => setMapPopUp(!mapPopUp)}>
+                            <Text style = {styles.buttonText}>Close</Text>
+                        </TouchableOpacity>
+                    </View>
+                </View>  
+            </View>
+        </Modal>
+    </View>
 );
 }
 
