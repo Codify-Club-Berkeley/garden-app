@@ -23,12 +23,12 @@ const text =
 
 const popUpText = 
     <Text style={{padding: 15, fontFamily: "Times New Roman", fontSize: 20}}>
-        <Text style={{fontWeight: "bold"}}>Both cacti are pollinated by bats</Text>, 
-        yet take distinctively different forms.
+        These cacti take distinctively different forms, but 
+        <Text style={{fontWeight: "bold"}}> both are pollinated by bats.</Text>
     </Text>
 
 const map = require('../../images/map/20.jpg')
-const directions = <Text style={{ padding: 20, fontFamily: "Times New Roman", fontSize: 20 }}>Continue on the path, past the large barrel cactus on the right, look at the tree’s base for Marker 21. </Text>
+const directions = <Text style={{ padding: 20, fontFamily: "Times New Roman", fontSize: 20 }}>Continue on the small path, just before you reach the next T intersection - stop. On your left, there will be a big tree with Marker 21 at its base. </Text>
 
 
 export default function MarkerScreen({ navigation }) {

@@ -2,6 +2,7 @@
 
 import * as React from 'react';
 import { View, Text, Linking, StyleSheet, TouchableOpacity, Image} from 'react-native';
+import { ScrollView } from 'react-native-gesture-handler';
 const BG_IMG= require('../images/thumbnail_images/M22.jpg');
 // import { ScrollView } from 'react-native-gesture-handler'; //note: use M19 for image
 import Ionicons from 'react-native-vector-icons/Ionicons';
@@ -19,6 +20,7 @@ export default function EndScreen({navigation}) {
     })
 
     return (
+        <ScrollView>
             <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: "#efe4be"}}>
             <Image 
                 source={BG_IMG}
@@ -34,6 +36,12 @@ export default function EndScreen({navigation}) {
                     style= {styles.learnMoreText}>
                         {'\t'}Please consider becoming a member. Memberships help support our Garden and allow us to uphold our mission of education and preservation. 
                         We appreciate the valuable support our Members provide and are eager to continue to share Ruth’s Garden with our growing community!
+                        {'\n'}
+                        {'\n'} For a deeper dive into our collection, our plants’ origins, and horticultural needs visit {space}
+                    </Text>
+                    <Text style={styles.linkText}
+                            onPress={() => Linking.openURL('https://www.ruthbancroftgarden.org/garden/')}>
+                            here.
                     </Text>
                     <View style={styles.buttonText}>
                 </View>
@@ -45,11 +53,12 @@ export default function EndScreen({navigation}) {
                     <Text style = {styles.buttonText}> Join </Text>
                 </TouchableOpacity>
             </View>
+        </ScrollView>
     );
 }
 const styles = StyleSheet.create({
     button: {
-        backgroundColor: "#90C6CA",
+        backgroundColor: "rgb(217, 81, 31)",
         borderRadius: 10,
         shadowColor: '#000',
         shadowOpacity: 0.75,
@@ -62,7 +71,15 @@ const styles = StyleSheet.create({
         color: "white",
         padding: 10,
     },
+    linkText: {
+        color: 'blue', 
+        fontSize: 16, 
+        lineHeight: 30,
+        paddingLeft: 30, 
+        fontWeight: 'bold'
+    },
     boxRound: {
+        marginTop: 30,
         padding: 10,
         backgroundColor: "#efe4be",
                 borderRadius: 15,

@@ -14,9 +14,9 @@ const images = [
 const text = 
     <Text style={{ padding: 20, paddingBottom: 37, fontFamily: "Times New Roman", fontSize: 20 }}>   
         On both sides of the path you will see <Text style={{fontWeight: "bold"}}>Ruth’s incredible use of color and texture </Text>
-        in the <Text style={{fontWeight: "bold"}}>groundcover tapestry of blue-gray <Text style={{fontStyle: "italic"}}>Euphorbia rigida</Text>, 
-        bright green (to red) <Text style={{fontStyle: "italic"}}>Sedum rubrotinctum</Text>, 
-        and purple <Text style={{fontStyle: "italic"}}>Tradescantia pallida ‘Purple Heart’</Text>.</Text>
+        in the <Text style={{fontWeight: "bold"}}>groundcover tapestry of the blue-gray <Text style={{fontStyle: "italic"}}>Euphorbia rigida</Text>, 
+        purple <Text style={{fontStyle: "italic"}}>Tradescantia pallida ‘Purple Heart’</Text>, and 
+        bright green (to red) <Text style={{fontStyle: "italic"}}>Sedum rubrotinctum</Text>.</Text>
         {"\n"} {"\n"}
         Look ahead to see the <Text style={{fontWeight: "bold"}}>Mexican palo verde (<Text style={{fontStyle: "italic"}}>Parkinsonia aculeata</Text>)</Text>, 
         with its green bark and fine-textured canopy.
@@ -24,9 +24,7 @@ const text =
 
 const popUpText = 
     <Text style={{padding: 15, fontFamily: "Times New Roman", fontSize: 20}}>
-        To prevent water loss, the Palo Verde drops its leaves during dry spells, 
-        yet it can still <Text style={{fontWeight: "bold"}}>photosynthesize through its green bark</Text>. 
-        Reduced surface area, via small leaves (or no leaves in the case of cacti and a stressed Palo Verde tree) are adaptations for reducing evaporation/transpiration.    
+        Planting ‘en masse’ (filling a space with a clump of the same plant), combining foliage color and textures are all design elements that help keep a garden interesting, even when there is nothing in bloom.    
     </Text> 
 
 const map = require('../../images/map/12.jpg')

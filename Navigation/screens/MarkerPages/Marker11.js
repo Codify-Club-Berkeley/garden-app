@@ -6,15 +6,18 @@ Text.defaultProps = {}
 Text.defaultProps.maxFontSizeMultiplier = 2.5
 
 const images = [
-    require('../../images/Marker_11_1.jpg'),
     require('../../images/Marker_11_2.jpg'),
+    require('../../images/Marker_11_1.jpg'),
     require('../../images/Marker_11_3.jpg'),
 ]
 const text = 
     <Text style={{ padding: 20, paddingBottom: 37, fontFamily: "Times New Roman", fontSize: 20 }}>   
-        Three remarkable specimens are in this bed, the <Text style={{fontWeight: "bold"}}><Text style={{fontStyle: "italic"}}>Eucalyptus kitsoniana</Text> with its wavy bark, </Text>
-        a hedge of <Text style={{fontWeight: "bold"}}>torch aloes (<Text style={{fontStyle: "italic"}}>Aloe arborescens</Text>) </Text>
-        before you, and to the right, the <Text style={{fontWeight: "bold"}}>tree-like Hercules aloe (<Text style={{fontStyle: "italic"}}>Aloe barberae x A. dichotoma</Text>).</Text>
+        Straight ahead you will notice a large stand of Aloes <Text style={{fontWeight: "bold"}}>(Aloe arborescens)</Text>. 
+        These winter bloomers provide color and a special treat for hummingbirds in the cold months. {"\n\n"}
+
+        Two other remarkable plants are in this bed. The <Text style={{fontWeight: "bold"}}>Eucalyptus kitsoniana </Text> 
+        with its wavy bark sits in the left corner of the bed. The <Text style={{fontWeight: "bold"}}>tree-like Hercules 
+        aloe (Aloe barberae x A. dichotoma)</Text> towers above the bed. 
     </Text>
 
 const popUpText = 
@@ -27,7 +30,7 @@ const popUpText =
 const map = require('../../images/map/11.jpg')
 
 const directions = <Text style={{ padding: 20, fontFamily: "Times New Roman", fontSize: 20 }}>
-   Pass through the clearing towards the bench and pine tree. Near the base of the tree you will find Marker 12.
+   Pass through the clearing towards the bench in the distance and start looking for Marker 12.
    </Text>
 
 export default function MarkerScreen({ navigation }) {

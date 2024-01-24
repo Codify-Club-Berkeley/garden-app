@@ -17,18 +17,18 @@ const text =
         is an example of a palmate leaf palm.
         {"\n"} {"\n"}
         <Text style={{fontWeight: "bold"}}>Palm leaves may also take a feather form, also known as pinnate.</Text>
-        {"\n"} {"\n"}
-        The bed to the right contains many <Text style={{fontWeight: "bold"}}>Euphorbias. </Text>
+        
+       
     </Text>
 
 const popUpText = 
     <Text style={{padding: 15, fontFamily: "Times New Roman", fontSize: 20}}>
-        Some Euphorbia <Text style={{fontWeight: "bold"}}>look a lot like cacti, but once again, this is an example of convergent evolution</Text>. 
+         The bed to the right contains many <Text style={{fontWeight: "bold"}}>Euphorbias. </Text>Some <Text style={{fontWeight: "bold"}}>look a lot like cacti, but once again, this is an example of convergent evolution</Text>. 
         Similar adaptations occur in lineages that emerged in geographic isolation from one another.
     </Text> 
 
 const map = require('../../images/map/14.jpg')
-const directions = <Text style={{ padding: 20, fontFamily: "Times New Roman", fontSize: 20 }}>Head towards the gazebo (aka Ruth’s Folly). Find Marker 15 next to the pond, on the left.</Text>
+const directions = <Text style={{ padding: 20, fontFamily: "Times New Roman", fontSize: 20 }}>Head towards the large green structure (aka Ruth’s Folly). Find Marker 15 on the left bank of the pond.</Text>
 
 
 export default function MarkerScreen({ navigation }) {

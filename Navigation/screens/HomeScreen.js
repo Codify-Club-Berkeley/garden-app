@@ -6,11 +6,12 @@ import { LinearGradient } from 'expo-linear-gradient';
 const logoImage= require('../images/Logo.png');
 const HOME_BG_IMG= require('../images/home_screen_blur.png');
 const HOME2_BG_IMG= require('../images/thumbnail_images/M22.jpg');
+space = ' ';
 
 export default function HomeScreen({ navigation }) {
     return (
         <ScrollView>
-<View style = {styles.scrollStyle}>
+    <View style = {styles.scrollStyle}>
             <ImageBackground blurRadius={12} style = {styles.bgImg} source={HOME2_BG_IMG} resizeMode="cover">
             <LinearGradient
                 colors={['transparent',"#efe4be"]}
@@ -23,18 +24,26 @@ export default function HomeScreen({ navigation }) {
             <Image source = {logoImage} style = {styles.container}/>
             <View style={styles.addInfo}>
                 <View style={styles.titleblock}>
-                    <Text style={styles.titleText}>Welcome to the Garden!</Text>
+                    <Text style={styles.titleText}>Welcome to the Garden</Text>
                 </View>
                     <Text
                         style={styles.bodyText}>
-                            The Garden’s mission is to preserve, promote, and enhance Ruth Bancroft’s world-class collection of water-conserving plants displayed in her exceptionally designed garden, for the education, inspiration, and enjoyment of the public.
+                        This self-guided tour will offer an introduction to some of the iconic plants of the Garden.
                     </Text>
                 <Text
                     style= {styles.learnMoreText}>
-                    To learn more about our history collection and organizational offerings please visit our website:{'\n'}
+                    To learn more about Ruth herself:{space}
                     <Text style={{color: 'blue'}}
-                        onPress={() => Linking.openURL('https://www.ruthbancroftgarden.org/garden//')}>
-                        Ruth Bancroft Garden Website
+                        onPress={() => Linking.openURL('https://www.ruthbancroftgarden.org/ruth-bancroft/')}>
+                        click here
+                    </Text>
+                </Text>
+                <Text
+                    style= {styles.learnMoreText}>
+                    To learn about our our mission, collection and programs: {space}
+                    <Text style={{color: 'blue'}}
+                        onPress={() => Linking.openURL('https://www.ruthbancroftgarden.org/')}>
+                        click here
                     </Text>
                 </Text>
                 <View style={styles.buttonText}>
@@ -42,7 +51,7 @@ export default function HomeScreen({ navigation }) {
                 <View style={styles.addInfo}>
                 <TouchableOpacity
                     style = {styles.button}
-                    onPress = {()=>navigation.navigate("Guide")}>
+                    onPress = {()=>navigation.navigate("NavScreen")}>
                     <Text style = {styles.buttonText}> Go to Guide </Text>
                 </TouchableOpacity>
                 </View>
@@ -71,10 +80,10 @@ const styles = StyleSheet.create({
     linearGradient: {
         position: 'absolute',
         width: '100%', 
-        height: '110%',
+        height: '129%',
     },
     button: {
-        backgroundColor: "#90C6CA",
+        backgroundColor: "rgb(217, 81, 31)",
         borderRadius: 10,
     },
     buttonText: {

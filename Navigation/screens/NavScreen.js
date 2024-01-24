@@ -17,22 +17,17 @@ export default function NavScreen({ navigation }) {
                     end = {{x:0.5, y: 0.12}}
                     style={styles.linearGradient}
                 />
-            <Image source = {logoImage} style = {styles.container}/>         
+            <Image source = {logoImage} style = {styles.container}/>            
             <Text 
-                style={styles.bodyText}>This self-guided tour highlights some of the iconic plants in the collection.  <Text style={{fontWeight: 'bold'}}>As you walk, look for brass markers to pair with the app descriptions.</Text>
-            </Text>     
-            <Image source = {sampleMarker} style = {styles.markerPic}/>
-            <Text 
-                style={styles.bodyText}>For a deeper dive into our collection, our plant’s origins, and horticultural needs visit:{'\n'}
-                <Text style={{color: 'blue'}}
-                    onPress={() => Linking.openURL('https://www.ruthbancroftgarden.org/garden//')}>
-                    Ruth Bancroft Garden Website
-                </Text>
-                {'\n'}{'\n'}
-                Upon entering the Garden, walk towards the covered patio. 
-                Three quarters of the way there stop before passing the giant gray-green Agave. 
-                On the right, find <Text style={{fontWeight: 'bold'}}>Marker 1</Text>.
+                style={styles.bodyText}>
+                As you walk, you will be looking for brass markers 
+                to pair with the app descriptions. 
+                {'\n'}
+                To get started, enter through the Garden 
+                gates heading towards the patio, keep your eye out for Marker 1.
             </Text>
+
+            { <Image source = {sampleMarker} style = {styles.markerPic}/>}
             <View style = {styles.buttonText}>
                 <TouchableOpacity
                     style = {styles.button}
@@ -48,7 +43,7 @@ const styles = StyleSheet.create({
     linearGradient: {
         position: 'absolute',
         width: '100%', 
-        height: '120%',
+        height: '145%',
     },
     buttonText: {
         fontSize: 25,
@@ -60,8 +55,9 @@ const styles = StyleSheet.create({
     },
     button: {
         borderRadius: 10,
-        backgroundColor: "#90C6CA",
-        marginBottom: 100,
+        backgroundColor: "rgb(217, 81, 31)",
+        marginBottom: 200,
+        marginHorizontal: '30%',
     },
     scrollStyle: {
         //flex: 1,
@@ -74,12 +70,14 @@ const styles = StyleSheet.create({
         //flex: 0.35,
         height:  180, // percentile heights was giving problems
         width: '100%',
+        marginTop: 20,
       justifyContent: 'center',
     },
     markerPic: {
         resizeMode: 'contain',
         //flex: 0.4,
         height:  200,
+        marginBottom: 10,
         width: '100%',
     },
     titleText: {
@@ -91,8 +89,8 @@ const styles = StyleSheet.create({
     bodyText: {
         paddingLeft: 30,
         paddingRight: 20,
-        paddingBottom: 20,
-        paddingTop: 40,
+        paddingBottom: 15,
+        paddingTop: 35,
         fontSize: 19,
         lineHeight: 40,
     },

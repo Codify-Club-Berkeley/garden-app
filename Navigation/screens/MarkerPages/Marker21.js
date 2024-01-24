@@ -20,12 +20,12 @@ const text =
 
 const popUpText = 
     <Text style={{padding: 15, fontFamily: "Times New Roman", fontSize: 20}}>
-        The <Text style={{fontWeight: "bold"}}>cavity in the silk floss tree’s trunk is from freeze damage that occurred in 1990</Text>. 
-        Nonetheless, it has recovered well.   
+        The <Text style={{fontWeight: "bold"}}>cavity in its trunk is from freeze damage that occured in 1990. </Text>
+        Despite scarring, it continues to grow.  
     </Text> 
 
 const map = require('../../images/map/21.jpg')
-const directions = <Text style={{ padding: 20, fontFamily: "Times New Roman", fontSize: 20 }}>Ten feet ahead at the edge of the covered structure, find Marker 22. </Text>
+const directions = <Text style={{ padding: 20, fontFamily: "Times New Roman", fontSize: 20 }}> Just ahead, at the edge of the covered structure, find Marker 22. </Text>
 
 
 export default function MarkerScreen({ navigation }) {
