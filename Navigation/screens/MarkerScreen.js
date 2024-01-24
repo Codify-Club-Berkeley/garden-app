@@ -17,7 +17,7 @@ const DATA = [
     {
         id: "2",
         title: "Marker 2",
-        plant: 'Aloe Bed',
+        plant: 'Yucca',
         imge: require('../images/thumbnail_images/M2.jpg'),
         whereTo: 'Marker 2'
     },
@@ -32,7 +32,7 @@ const DATA = [
     {
         id: "4",
         title: "Marker 4",
-        plant: "Aloe ferox",
+        plant: "Aloe bed",
         imge: require('../images/thumbnail_images/NM4.jpg'),
         whereTo: 'Marker 4'
     },
@@ -53,7 +53,7 @@ const DATA = [
     {
       id: "7",
       title: "Marker 7",
-      plant: "Arcostaphylos Ruth Bancroft Check",
+      plant: "Arctostaphylos ‘Ruth Bancroft’",
       imge: require('../images/thumbnail_images/M7.jpg'),
       whereTo: 'Marker 7'
     },
@@ -123,7 +123,7 @@ const DATA = [
     {
       id: "17",
       title: "Marker 17",
-      plant: "Agave victoria-reginae",
+      plant: "Echinocactus grusonii",
       imge: require('../images/thumbnail_images/M17.jpg'),
       whereTo: 'Marker 17'
     },
@@ -227,8 +227,25 @@ export default function MarkerScreen ({navigation={MainStackNavigator}}) {
             contentContainerStyle={{
                 padding: SPACING,
             }}
-            renderItem={({item}) => {
-              
+            renderItem={({item}) => {  
+              if (item.plant == "Aloe ‘Hellskloofs Bells'") {
+                plantStyle = <Text><Text style = {styles.plant}>Aloe</Text><Text style = {styles.plantPlain}> 'Hellskloofs Bells' </Text></Text> //brute force approached... likely a better way of doing this
+              }
+              else if (item.plant == "Tradescantia pallida ‘Purple Heart’") {
+                plantStyle = <Text><Text style = {styles.plant}>Tradescantia pallida</Text><Text style = {styles.plantPlain}> 'Purple Heart' </Text></Text>
+              }
+              else if (item.plant == "Arctostaphylos ‘Ruth Bancroft’") {
+                plantStyle = <Text><Text style = {styles.plant}>Arctostaphylos</Text><Text style = {styles.plantPlain}> 'Ruth Bancroft' </Text></Text>
+              }
+              else if (item.plant == "Parkinsonia ‘Desert Museum’") {
+                plantStyle = <Text><Text style = {styles.plant}>Parkinsonia</Text><Text style = {styles.plantPlain}> 'Desert Museum' </Text></Text>
+              }
+              else if(!((item.plant == 'Yucca' ||item.plant == 'Aloe bed' || item.plant == 'Pond'))) {
+                plantStyle = <Text style= {styles.plant}>{item.plant}</Text>
+              }
+              else {
+                plantStyle = <Text style={styles.plantPlain}>{item.plant}</Text>
+              }
                 return <View style={styles.item} 
                 onStartShouldSetResponder ={() => true}
                 onResponderRelease={() => navigation.navigate(item.whereTo)}> 
@@ -239,7 +256,7 @@ export default function MarkerScreen ({navigation={MainStackNavigator}}) {
 
                     <View style={styles.txtbox} > 
                         <Text style={styles.title} >{item.title}</Text>
-                        <Text style={styles.plant}>{item.plant}</Text>
+                        {plantStyle}
                     </View> 
                 </View>
             }}
@@ -280,6 +297,11 @@ export default function MarkerScreen ({navigation={MainStackNavigator}}) {
         fontWeight: "bold",
       },
       plant: {
+        fontSize: 16,
+        color: "white",
+        fontStyle: "italic"
+      },
+      plantPlain: {
         fontSize: 16,
         color: "white",
       },
