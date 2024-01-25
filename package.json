@@ -4,8 +4,8 @@
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
     "start": "react-scripts start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
+    "android": "expo run:android",
+    "ios": "expo run:ios",
     "web": "expo start --web"
   },
   "dependencies": {
@@ -32,7 +32,8 @@
     "react-native-swiper": "^1.6.0",
     "react-navigation": "^4.4.4",
     "react-simple-image-slider": "^2.4.1",
-    "typescript": "^5.3.3"
+    "typescript": "^5.3.3",
+    "expo-splash-screen": "~0.20.5"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",

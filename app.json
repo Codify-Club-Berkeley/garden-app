@@ -2,7 +2,7 @@
   "expo": {
     "name": "rbgApp",
     "slug": "rbg-app",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -29,6 +29,11 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "eec0fb2f-9857-4803-9d12-b7a5386000a6"
+      }
     }
   }
 }
