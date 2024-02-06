@@ -16,7 +16,10 @@
     "@react-navigation/stack": "^6.3.14",
     "@types/react": "^18.2.47",
     "expo": "^49.0.0",
+    "expo-constants": "^15.4.5",
     "expo-linear-gradient": "~12.3.0",
+    "expo-modules-core": "^1.11.8",
+    "expo-splash-screen": "~0.20.5",
     "expo-status-bar": "~1.6.0",
     "react": "18.2.0",
     "react-image-gallery": "^1.2.11",
@@ -31,8 +34,7 @@
     "react-native-swiper": "^1.6.0",
     "react-navigation": "^4.4.4",
     "react-simple-image-slider": "^2.4.1",
-    "typescript": "^5.3.3",
-    "expo-splash-screen": "~0.20.5"
+    "typescript": "^5.3.3"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
