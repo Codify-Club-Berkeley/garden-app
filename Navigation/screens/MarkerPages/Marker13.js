@@ -1,16 +1,24 @@
 import * as React from 'react';
 import { View, Text, Image, FlatList, StyleSheet} from 'react-native';
 import Marker from '../Marker';
+import { db } from '../../../Firebase/firebase'
+import { ref, onValue } from 'firebase/database'
 
 Text.defaultProps = {}
 Text.defaultProps.maxFontSizeMultiplier = 2.5
 
-const images = [
-    require('../../images/Marker_13_1.jpg'),
-    //require('../../images/Marker_13_2.jpg'),
-    require('../../images/Marker_13_3.jpg'),
-    //require('../../images/Marker_13_4.jpg')
-]
+const markerRef = ref(db, 'plants/Marker13');
+var data;
+onValue(markerRef, (snapshot) => {
+    data = snapshot.val() || {};
+});
+const images = data.imgFirebaseURLs;
+// const images = [
+//     require('../../images/Marker_13_1.jpg'),
+//     //require('../../images/Marker_13_2.jpg'),
+//     require('../../images/Marker_13_3.jpg'),
+//     //require('../../images/Marker_13_4.jpg')
+// ]
 const text = 
     <Text style={{ padding: 20, paddingBottom: 37, fontFamily: "Times New Roman", fontSize: 20 }}>   
        The <Text style={{fontWeight: "bold"}}>spiky, green clump in the foreground are dyckia</Text>. 

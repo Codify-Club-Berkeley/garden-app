@@ -1,14 +1,22 @@
 import * as React from 'react';
 import { View, Text, Image, FlatList, StyleSheet} from 'react-native';
 import Marker from '../Marker';
+import { db } from '../../../Firebase/firebase'
+import { ref, onValue } from 'firebase/database'
 
 Text.defaultProps = {}
 Text.defaultProps.maxFontSizeMultiplier = 2.5
 
-const images = [
-    require('../../images/Marker_9_1.jpg'),
-    require('../../images/Marker_9_2.jpg')
-]
+const markerRef = ref(db, 'plants/Marker9');
+var data;
+onValue(markerRef, (snapshot) => {
+    data = snapshot.val() || {};
+});
+const images = data.imgFirebaseURLs;
+// const images = [
+//     require('../../images/Marker_9_1.jpg'),
+//     require('../../images/Marker_9_2.jpg')
+// ]
 const text = 
     <Text style={{ padding: 20, paddingBottom: 37, fontFamily: "Times New Roman", fontSize: 20 }}>   
         While this <Text style={{fontWeight: "bold"}}>Mexican grass tree (<Text style={{fontStyle: "italic"}}>Dasylirion longissimum</Text>) </Text>

@@ -1,15 +1,23 @@
 import * as React from 'react';
 import { View, Text, Image, FlatList, StyleSheet} from 'react-native';
 import Marker from '../Marker';
+import { db } from '../../../Firebase/firebase'
+import { ref, onValue } from 'firebase/database'
 
 Text.defaultProps = {}
 Text.defaultProps.maxFontSizeMultiplier = 2.5
 
-const images = [
-    require('../../images/Marker_7_1.jpg'),
-    require('../../images/Marker_7_2.jpg'),
-    require('../../images/Marker_7_3.jpg')
-]
+const markerRef = ref(db, 'plants/Marker7');
+var data;
+onValue(markerRef, (snapshot) => {
+    data = snapshot.val() || {};
+});
+const images = data.imgFirebaseURLs;
+// const images = [
+//     require('../../images/Marker_7_1.jpg'),
+//     require('../../images/Marker_7_2.jpg'),
+//     require('../../images/Marker_7_3.jpg')
+// ]
 const text = 
     <Text style={{ padding: 20, paddingBottom: 37, fontFamily: "Times New Roman", fontSize: 20 }}>   
         The path here is constricted by two interesting plants. On the right is the small red-barked manzanita tree <Text style={{fontWeight: "bold"}}>(<Text style={{fontStyle: "italic"}}>Arctostaphylos</Text> ‘Ruth Bancroft’). </Text>

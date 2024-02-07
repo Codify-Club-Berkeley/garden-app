@@ -1,16 +1,24 @@
 import * as React from 'react';
 import { View, Text, Image, FlatList, StyleSheet} from 'react-native';
 import Marker from '../Marker';
+import { db } from '../../../Firebase/firebase'
+import { ref, onValue } from 'firebase/database'
 
 Text.defaultProps = {}
 Text.defaultProps.maxFontSizeMultiplier = 2.5
 
-const images = [
-    require('../../images/Marker_22_1.jpg'),
-    require('../../images/NewMarker22_2.jpg'),
-    require('../../images/Marker_22_3.jpg'),
-    require('../../images/Marker_22_4.jpg')
-]
+const markerRef = ref(db, 'plants/Marker22');
+var data;
+onValue(markerRef, (snapshot) => {
+    data = snapshot.val() || {};
+});
+const images = data.imgFirebaseURLs;
+// const images = [
+//     require('../../images/Marker_22_1.jpg'),
+//     require('../../images/NewMarker22_2.jpg'),
+//     require('../../images/Marker_22_3.jpg'),
+//     require('../../images/Marker_22_4.jpg')
+// ]
 const text = 
     <Text style={{ padding: 20, paddingBottom: 37, fontFamily: "Times New Roman", fontSize: 20 }}>   
         The plants in this central covered bed all need extra protection from the summer sun and winter cold.

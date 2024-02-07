@@ -1,14 +1,22 @@
 import * as React from 'react';
 import { View, Text, Image, FlatList, StyleSheet} from 'react-native';
 import Marker from '../Marker';
+import { db } from '../../../Firebase/firebase'
+import { ref, onValue } from 'firebase/database'
 
 Text.defaultProps = {}
 Text.defaultProps.maxFontSizeMultiplier = 2.5
 
-const images = [
-    require('../../images/Marker_21_1.jpg'),
-    require('../../images/Marker_21_2.jpg')
-]
+const markerRef = ref(db, 'plants/Marker21');
+var data;
+onValue(markerRef, (snapshot) => {
+    data = snapshot.val() || {};
+});
+const images = data.imgFirebaseURLs;
+// const images = [
+//     require('../../images/Marker_21_1.jpg'),
+//     require('../../images/Marker_21_2.jpg')
+// ]
 const text = 
     <Text style={{ padding: 20, paddingBottom: 37, fontFamily: "Times New Roman", fontSize: 20 }}>   
         This tree with a remarkably spiny trunk is a <Text style={{fontWeight: "bold"}}>silk floss tree (<Text style={{fontStyle: "italic"}}>Ceiba speciosa)</Text>.</Text>

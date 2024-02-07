@@ -1,14 +1,24 @@
 import * as React from 'react';
 import { View, Text, Image, FlatList, StyleSheet} from 'react-native';
 import Marker from '../Marker';
+import { db } from '../../../Firebase/firebase'
+import { ref, onValue } from 'firebase/database'
 
 Text.defaultProps = {}
 Text.defaultProps.maxFontSizeMultiplier = 2.
 
-const images = [
-    require('../../images/New_Marker_1_1.jpg'),
-    require('../../images/Marker_1_1.jpg')
-]
+const markerRef = ref(db, 'plants/Marker1');
+var data;
+onValue(markerRef, (snapshot) => {
+    data = snapshot.val() || {};
+});
+
+const images = data.imgFirebaseURLs;
+
+// const images = [
+//     require('../../images/New_Marker_1_1.jpg'),
+//     require('../../images/Marker_1_1.jpg')
+// ]
 
 const styles = {
     text: {

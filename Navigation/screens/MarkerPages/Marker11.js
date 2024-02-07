@@ -1,15 +1,23 @@
 import * as React from 'react';
 import { View, Text, Image, FlatList, StyleSheet} from 'react-native';
 import Marker from '../Marker';
+import { db } from '../../../Firebase/firebase'
+import { ref, onValue } from 'firebase/database'
 
 Text.defaultProps = {}
 Text.defaultProps.maxFontSizeMultiplier = 2.5
 
-const images = [
-    require('../../images/Marker_11_2.jpg'),
-    require('../../images/Marker_11_1.jpg'),
-    require('../../images/Marker_11_3.jpg'),
-]
+const markerRef = ref(db, 'plants/Marker11');
+var data;
+onValue(markerRef, (snapshot) => {
+    data = snapshot.val() || {};
+});
+const images = data.imgFirebaseURLs;
+// const images = [
+//     require('../../images/Marker_11_2.jpg'),
+//     require('../../images/Marker_11_1.jpg'),
+//     require('../../images/Marker_11_3.jpg'),
+// ]
 const text = 
     <Text style={{ padding: 20, paddingBottom: 37, fontFamily: "Times New Roman", fontSize: 20 }}>   
         Straight ahead you will notice a large stand of Aloes <Text style={{fontWeight: "bold"}}>(Aloe arborescens)</Text>. 
