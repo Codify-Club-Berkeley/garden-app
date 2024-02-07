@@ -12,9 +12,18 @@ var data;
 onValue(markerRef, (snapshot) => {
     data = snapshot.val() || {};
 });
-
 const images = data.imgFirebaseURLs;
-
+// var images = []
+// const storageRef = fileref(storage, 'plants/' + 'Marker1');
+//     // List items in the folder
+//     listAll(storageRef).then((result) => {
+//       result.items.forEach((itemRef) => {
+//         // Get the download URL for each image
+//         getDownloadURL(itemRef).then((url) => {
+//           images.push(url)
+//         });
+//       });
+//     });
 // const images = [
 //     require('../../images/New_Marker_1_1.jpg'),
 //     require('../../images/Marker_1_1.jpg')
